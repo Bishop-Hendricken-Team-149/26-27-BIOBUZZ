@@ -8,10 +8,16 @@ Writes cad/out/HIVE_QUEEN_149_BOM_INVENTORY_CHECK.xlsx
   uv run --with openpyxl python cad/build_bom_inventory_check.py
 
 Column order: Check, Item, Price, Qty, Link, then the rest.
-Check = YES (own it -> pastel green) | PARTIAL (own some -> pastel amber) |
-        NO (buy/print/machine it) | N/A (field element, not purchased).
-"Line cost" is a live formula =IF(Check="YES",0,<cost if bought>), and the TOTAL cell is a
-SUMIF over every row that is not YES - so flipping a Check in Excel re-totals the sheet.
+
+Column A ("Have?") is the only cell a human edits - TRUE means we have it. Everything else is
+derived from it so checking a part off is ONE cell, not four:
+  - row colour comes from conditional formatting (green = ticked, amber = partial, grey = field
+    element), so it repaints the moment you tick;
+  - line cost is =IF($A{n}=FALSE,$N{n},0) - a blank or FALSE cell still costs money, TRUE (or any
+    text you type in it) zeroes the row;
+  - the TOTAL cell is =SUM of that live column, so it re-adds itself on every tick.
+Values are real booleans, so Excel 365's Insert > Checkbox and Google Sheets' Insert > Tick box
+both turn column A into one-click checkboxes.
 
 Team rule (2026-11): all M4 socket head cap screws are assumed on hand even though the
 inventory sheet does not list fasteners. M4 nylocks and heat-set inserts are NOT covered.
@@ -101,12 +107,17 @@ for r in body:
         "basis": r[I["Price basis / notes"]],
     })
 
-HDR = ["Check", "Item / Part Name", "Price (USD)", "Qty", "Link", "Have? (inventory check)", "Status",
-       "Category", "Stage / Subsystem", "Vendor / Process", "SKU / Part Number / Spec", "Pack qty",
-       "Packs to buy", "Cost if bought (USD)", "Line cost (USD)", "CAD Occurrence / Body Names",
-       "Notes", "Price basis / notes"]
-KEYS = ["check", "item", "price", "qty", "link", "why", "status", "category", "stage", "vendor",
+HDR = ["Have?", "Item / Part Name", "Price (USD)", "Qty", "Link", "Inventory says (reference)",
+       "BOM status (generated)", "Category", "Stage / Subsystem", "Vendor / Process",
+       "SKU / Part Number / Spec", "Pack qty", "Packs to buy", "Cost if bought (USD)",
+       "Line cost (USD)", "CAD Occurrence / Body Names", "Notes", "Price basis / notes"]
+KEYS = ["have", "item", "price", "qty", "link", "why", "status", "category", "stage", "vendor",
         "sku", "pack", "packs", "cost", None, "cad", "notes", "basis"]
+# Column A is the ONLY cell anyone edits: TRUE = we have it, FALSE/blank = still buying it.
+# Row colour, line cost and the totals are all derived from it by conditional formatting and
+# formulas, so checking a part off is one cell, not four.
+for r in rows:
+    r["have"] = (r["check"] == "YES")
 
 to_buy = sum(r["cost"] for r in rows if r["check"] != "YES" and isinstance(r["cost"], float))
 owned = sum(r["cost"] for r in rows if r["check"] == "YES" and isinstance(r["cost"], float))
@@ -118,50 +129,44 @@ print(f"total to buy ${to_buy:,.2f} | saved by inventory + M4 rule ${owned:,.2f}
 
 # --------------------------------------------------------------- workbook
 import openpyxl
+from openpyxl.formatting.rule import FormulaRule
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
-from openpyxl.worksheet.datavalidation import DataValidation
 
-GREEN, AMBER, GREY, HEAD = "D8F3DC", "FFF3C4", "EFEFEF", "1F2937"
+GREEN, AMBER, GREY, HEAD = "FFD8F3DC", "FFFFF3C4", "FFEFEFEF", "FF1F2937"
 wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = "BOM vs Inventory"
 ws.append(HDR)
 for n, r in enumerate(rows, start=2):
     ws.append([("" if k is None else r[k]) for k in KEYS])
-    ws.cell(n, 15).value = f'=IF($A{n}="YES",0,$N{n})'          # Line cost
+    # A blank or FALSE cell still costs money; TRUE (or any text you type) checks the row off.
+    ws.cell(n, 15).value = f"=IF($A{n}=FALSE,$N{n},0)"           # Line cost
 last = len(rows) + 1
 
 tot = last + 2
 ws.cell(tot, 13).value = "TOTAL to buy"
-ws.cell(tot, 14).value = f'=ROUND(SUMIF($A$2:$A${last},"<>YES",$N$2:$N${last}),2)'
-ws.cell(tot, 15).value = f'=ROUND(SUM($O$2:$O${last}),2)'
-ws.cell(tot, 16).value = "Items NOT in our inventory, qty + pack sizes included. Excludes tax, shipping, CNC quotes."
-ws.cell(tot + 1, 13).value = "Covered by inventory"
-ws.cell(tot + 1, 14).value = f'=ROUND(SUMIF($A$2:$A${last},"YES",$N$2:$N${last}),2)'
-ws.cell(tot + 1, 16).value = "List price of what we already have (incl. the M4 cap-screw assumption)"
+ws.cell(tot, 15).value = f"=ROUND(SUM($O$2:$O${last}),2)"
+ws.cell(tot, 16).value = "Everything still unchecked, qty + pack sizes included. Excludes tax, shipping, CNC quotes."
+ws.cell(tot + 1, 13).value = "Covered (checked off)"
+ws.cell(tot + 1, 15).value = f"=ROUND(SUM($N$2:$N${last})-SUM($O$2:$O${last}),2)"
+ws.cell(tot + 1, 16).value = f'=COUNTIF($A$2:$A${last},TRUE)&" of {len(rows)} rows checked off"'
 for rr in (tot, tot + 1):
     for cc in range(13, 17):
         ws.cell(rr, cc).font = Font(bold=(rr == tot), size=12 if rr == tot else 11)
-        ws.cell(rr, cc).fill = PatternFill("solid", fgColor="FDE68A" if rr == tot else GREEN)
-    ws.cell(rr, 14).number_format = '"$"#,##0.00'
+        ws.cell(rr, cc).fill = PatternFill("solid", fgColor="FFFDE68A" if rr == tot else GREEN)
     ws.cell(rr, 15).number_format = '"$"#,##0.00'
 
 # styling
-thin = Side(style="thin", color="D1D5DB")
+thin = Side(style="thin", color="FFD1D5DB")
 for c in ws[1]:
-    c.font = Font(bold=True, color="FFFFFF")
+    c.font = Font(bold=True, color="FFFFFFFF")
     c.fill = PatternFill("solid", fgColor=HEAD)
     c.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
 ws.row_dimensions[1].height = 32
 
-fill = {"YES": GREEN, "PARTIAL": AMBER, "N/A": GREY}
 for n, r in enumerate(rows, start=2):
     row = ws[n]
-    if r["check"] in fill:
-        pf = PatternFill("solid", fgColor=fill[r["check"]])
-        for c in row:
-            c.fill = pf
     for c in row:
         c.alignment = Alignment(wrap_text=True, vertical="top")
         c.border = Border(bottom=thin)
@@ -173,17 +178,35 @@ for n, r in enumerate(rows, start=2):
         lc = ws.cell(n, 5)
         lc.hyperlink = r["link"]
         lc.value = (r["vendor"] or "link") + " \u2192"
-        lc.font = Font(color="1D4ED8", underline="single")
+        lc.font = Font(color="FF1D4ED8", underline="single")
 
-dv = DataValidation(type="list", formula1='"YES,PARTIAL,NO,N/A"', allow_blank=True)
-ws.add_data_validation(dv)
-dv.add(f"A2:A{last}")
+# Live row colour, driven only by column A (plus the generated status for the amber/grey cases).
+# First rule wins, so a checked row is green even if the BOM called it Partial.
+band = f"A2:{get_column_letter(len(HDR))}{last}"
+for formula, colour in (
+    ("$A2<>FALSE", GREEN),                                       # checked off -> pastel green
+    ('AND($A2=FALSE,LEFT($G2,7)="Partial")', AMBER),             # own some, buying the balance
+    ('AND($A2=FALSE,$G2="Field Element")', GREY),                # not purchased at all
+):
+    # In a differential (conditional) style Excel paints the cell from bgColor, NOT fgColor -
+    # a solid patternFill with only fgColor set renders black. Match what Excel itself writes.
+    ws.conditional_formatting.add(band, FormulaRule(formula=[formula], stopIfTrue=True,
+                                                    fill=PatternFill(bgColor=colour)))
 
 for col, w in zip(range(1, len(HDR) + 1),
                   (9, 46, 11, 6, 18, 42, 20, 28, 20, 24, 28, 8, 8, 13, 13, 50, 70, 70)):
     ws.column_dimensions[get_column_letter(col)].width = w
 ws.freeze_panes = "C2"
 ws.auto_filter.ref = f"A1:R{last}"
+from openpyxl.comments import Comment
+ws["A1"].comment = Comment(
+    "Tick this box (TRUE) and the whole row turns pastel green, its line cost drops to 0 and the "
+    "TOTAL at the bottom re-adds itself. This is the ONLY column to edit - everything else is "
+    "generated.\n\n"
+    "Excel 365: select A2:A117, Insert > Checkbox, then click to tick.\n"
+    "Google Sheets: select A2:A117, Insert > Tick box.\n"
+    "Anywhere else: type TRUE (or x) and press Enter.\n\n"
+    "Filter this column to FALSE to see only what is still left to buy.", "build_bom_inventory_check.py")
 
 # ---- judgement calls: inventory lines that MIGHT cover a BOM row. Not auto-checked, because the
 # inventory uses shop nicknames and a wrong match ships a robot with the wrong bore. Eyeball these.
@@ -219,7 +242,7 @@ rv.append(["Inventory line", "BOM row it might cover", "What to check", "$ at st
 for r_ in REVIEW:
     rv.append(list(r_))
 for c in rv[1]:
-    c.font = Font(bold=True, color="FFFFFF")
+    c.font = Font(bold=True, color="FFFFFFFF")
     c.fill = PatternFill("solid", fgColor=HEAD)
     c.alignment = Alignment(wrap_text=True, vertical="center")
 for row in rv.iter_rows(min_row=2):
@@ -236,7 +259,7 @@ iv.append(["Part name", "# we have"])
 for k, v in inv.items():
     iv.append([k, v])
 for c in iv[1]:
-    c.font = Font(bold=True, color="FFFFFF")
+    c.font = Font(bold=True, color="FFFFFFFF")
     c.fill = PatternFill("solid", fgColor=HEAD)
 iv.column_dimensions["A"].width = 38
 iv.column_dimensions["B"].width = 12
