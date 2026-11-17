@@ -1,0 +1,376 @@
+{
+ "n_bodies": 1808,
+ "gate1_unfiltered_brep_overlaps": [],
+ "gate1_pass": true,
+ "gate2_multi_lumps_or_tiny": [],
+ "gate2_pass": true,
+ "gate3_r102_stowed": {
+  "min": [
+   -216.0,
+   -218.63,
+   -6.32
+  ],
+  "max": [
+   228.0,
+   229.0,
+   439.32
+  ],
+  "size": [
+   444.0,
+   447.63,
+   445.64
+  ],
+  "limit": [
+   448.0,
+   448.0,
+   450.0
+  ]
+ },
+ "gate3_pass": true,
+ "gate4_r105_expanded": {
+  "min": [
+   -216.0,
+   -218.63,
+   -6.32
+  ],
+  "max": [
+   248.78,
+   229.0,
+   439.32
+  ],
+  "size": [
+   464.78,
+   447.63,
+   445.64
+  ],
+  "limit": [
+   609.6,
+   457.0,
+   736.6
+  ]
+ },
+ "gate4_pass": true,
+ "gate5_nectar_92mm_swept": {
+  "1_intake_mouth": {
+   "center_xz": [
+    215.0,
+    45.98
+   ],
+   "hits": []
+  },
+  "2_floor_wedge": {
+   "center_xz": [
+    195.96,
+    51.87
+   ],
+   "hits": []
+  },
+  "3_lower_ramp": {
+   "center_xz": [
+    137.96,
+    76.49
+   ],
+   "hits": []
+  },
+  "4_center_crossbar": {
+   "center_xz": [
+    -6.04,
+    137.61
+   ],
+   "hits": []
+  },
+  "5_j_elbow": {
+   "center_xz": [
+    -54.25,
+    167.0
+   ],
+   "hits": []
+  },
+  "6_deck_throat": {
+   "center_xz": [
+    -64.01,
+    219.0
+   ],
+   "hits": []
+  },
+  "7_open_gate": {
+   "center_xz": [
+    -39.42,
+    152.67
+   ],
+   "hits": []
+  },
+  "8_expanded_nip": {
+   "center_xz": [
+    -62.48,
+    324.0
+   ],
+   "hits": []
+  },
+  "9_exit_past_hood_hinge_z382": {
+   "center_xz": [
+    -62.48,
+    382.0
+   ],
+   "hits": []
+  },
+  "10_exit_past_hood_hinge_z415": {
+   "center_xz": [
+    -62.48,
+    415.0
+   ],
+   "hits": []
+  }
+ },
+ "gate5_pass": true,
+ "gate6_floor_contact_zmin": {
+  "gobilda_mecanum_96mm_front_left:1": -0.145,
+  "gobilda_mecanum_96mm_front_right:1": -0.145,
+  "official_gobilda_4bar_odometry_pod:1": -0.15,
+  "gobilda_mecanum_96mm_front_right:2": -0.145,
+  "gobilda_mecanum_96mm_front_left:2": -0.145,
+  "floating_spoked_compliant_wheel_1": 53.0,
+  "floating_spoked_compliant_wheel_2": 53.0,
+  "floating_spoked_compliant_wheel_3": 53.0,
+  "floating_spoked_compliant_wheel_4": 53.0,
+  "floating_spoked_compliant_wheel_5": 53.0,
+  "official_gobilda_4bar_odometry_pod:2": -0.15
+ },
+ "gate6_pods": [
+  "official_gobilda_4bar_odometry_pod:1",
+  "official_gobilda_4bar_odometry_pod:2"
+ ],
+ "gate6_pass": true,
+ "gate7_keyholes": [],
+ "gate7_missing_arm_bearings": [],
+ "gate7_pass": true,
+ "gate8_topspin": {
+  "v_front": 5.781,
+  "v_rear": 8.671,
+  "v_exit": 7.226
+ },
+ "gate8_pass": true,
+ "gate9_mechanism_sweeps": {
+  "intake_float_low_to_high": {
+   "pivot": [
+    156.0,
+    144.0
+   ],
+   "travel_deg": 27.54,
+   "n_moving": 14,
+   "hits": {}
+  },
+  "gecko1_rest_to_lift": {
+   "pivot": [
+    104.0,
+    121.0
+   ],
+   "travel_deg": 27.53,
+   "n_moving": 11,
+   "hits": {}
+  },
+  "gecko2_rest_to_lift": {
+   "pivot": [
+    32.15,
+    158.4
+   ],
+   "travel_deg": -19.01,
+   "n_moving": 12,
+   "hits": {}
+  },
+  "counter_wheel_rest_to_max": {
+   "pivot": [
+    -107.71,
+    264.9
+   ],
+   "travel_deg": 23.54,
+   "n_moving": 15,
+   "hits": {}
+  },
+  "indexer_gate_retract": {
+   "pivot": [
+    -78.08,
+    93.15
+   ],
+   "travel_deg": 60.0,
+   "n_moving": 4,
+   "hits": {}
+  },
+  "g407_blocker_stowed_to_deployed": {
+   "pivot": [
+    156.0,
+    168.0
+   ],
+   "travel_deg": -121.76,
+   "n_moving": 4,
+   "hits": {}
+  }
+ },
+ "gate9_pass": true,
+ "gate10_unsupported_custom_bodies": [],
+ "gate10_pass": true,
+ "gate11_device_screw_paths": {
+  "rev_2m_distance_sensor_ball_count_1": {
+   "found": true,
+   "holes": 2,
+   "fastened": 2,
+   "need": 2,
+   "into": [
+    "sprung_magazine_shroud_left"
+   ]
+  },
+  "rev_2m_distance_sensor_ball_count_2": {
+   "found": true,
+   "holes": 2,
+   "fastened": 2,
+   "need": 2,
+   "into": [
+    "sprung_magazine_shroud_left"
+   ]
+  },
+  "rev_color_sensor_v3_throat": {
+   "found": true,
+   "holes": 2,
+   "fastened": 2,
+   "need": 2,
+   "into": [
+    "sprung_magazine_shroud_left"
+   ]
+  },
+  "rev_color_sensor_v3_lip": {
+   "found": true,
+   "holes": 2,
+   "fastened": 2,
+   "need": 2,
+   "into": [
+    "unified_continuous_j_chute"
+   ]
+  },
+  "rev_main_power_switch_31_1387": {
+   "found": true,
+   "holes": 3,
+   "fastened": 3,
+   "need": 3,
+   "into": [
+    "rev_main_power_switch_housing"
+   ]
+  },
+  "gobilda_servo_power_injector_3125": {
+   "found": true,
+   "holes": 4,
+   "fastened": 4,
+   "need": 4,
+   "into": [
+    "cnc_turret_mounting_deck_plate_clean"
+   ]
+  },
+  "dfrobot_huskylens_sen0305": {
+   "found": true,
+   "holes": 2,
+   "fastened": 2,
+   "need": 2,
+   "into": [
+    "dfrobot_huskylens_mount_block"
+   ]
+  }
+ },
+ "gate11_custom_joints": {
+  "dfrobot_huskylens_mount_block -> turret_outboard_double_shear_plate_right": {
+   "holes_in_a": 7,
+   "screwed_into_b": 5,
+   "need": 2
+  }
+ },
+ "gate11_pass": true,
+ "last_ball_handoff": {
+  "g2_top_contact_z": 222.9,
+  "counter_grab_z": 271.9,
+  "unpowered_gap_mm": 49.0,
+  "coast_mm_at_M8_rpm": 239.5,
+  "m8_rpm": 1150.0
+ },
+ "belts": {
+  "intake_stage1_m7_to_pivot": {
+   "c_mm": 57.5,
+   "pulleys": "20T/20T",
+   "pitch": 5.0,
+   "L_mm": 215.0,
+   "cots_L_mm": 215.0,
+   "teeth": 43,
+   "err_mm": 0.0
+  },
+  "intake_stage2_pivot_to_floating_shaft": {
+   "c_mm": 80.0,
+   "pulleys": "20T/20T",
+   "pitch": 5.0,
+   "L_mm": 260.0,
+   "cots_L_mm": 260.0,
+   "teeth": 52,
+   "err_mm": 0.0
+  },
+  "magazine_b1_m8_to_gecko1": {
+   "c_mm": 57.0,
+   "pulleys": "33T/33T",
+   "pitch": 3.0,
+   "L_mm": 213.0,
+   "cots_L_mm": 213.0,
+   "teeth": 71,
+   "err_mm": 0.0
+  },
+  "magazine_b2_m8_to_j2": {
+   "c_mm": 81.0,
+   "pulleys": "32T/32T",
+   "pitch": 3.0,
+   "L_mm": 258.0,
+   "cots_L_mm": 258.0,
+   "teeth": 86,
+   "err_mm": 0.0
+  },
+  "magazine_b3_j2_to_gecko2": {
+   "c_mm": 57.0,
+   "pulleys": "33T/33T",
+   "pitch": 3.0,
+   "L_mm": 213.0,
+   "cots_L_mm": 213.0,
+   "teeth": 71,
+   "err_mm": 0.0
+  },
+  "shooter_left_m5_to_front_wheel": {
+   "c_mm": 80.0,
+   "pulleys": "20T/20T",
+   "pitch": 5.0,
+   "L_mm": 260.0,
+   "cots_L_mm": 260.0,
+   "teeth": 52,
+   "err_mm": 0.0
+  },
+  "shooter_right_m6_to_counter_wheel": {
+   "c_mm": 61.175,
+   "pulleys": "32T/16T",
+   "pitch": 5.0,
+   "L_mm": 245.0,
+   "cots_L_mm": 245.0,
+   "teeth": 49,
+   "err_mm": 0.0
+  }
+ },
+ "belts_pass": true,
+ "motors": [
+  "gobilda_5203_motor_m1_drive:1",
+  "gobilda_5203_motor_m2_drive:1",
+  "gobilda_5203_motor_m3_drive:1",
+  "gobilda_5203_motor_m4_drive:1",
+  "gobilda_5203_motor_m5_shooter_master:1",
+  "gobilda_5203_motor_m6_shooter_follower:1",
+  "gobilda_5203_motor_m7_intake:1",
+  "gobilda_5203_motor_m8_magazine:1"
+ ],
+ "servos_visible": [
+  "servo_s1_g407_lip_gate:1",
+  "servo_s3_magazine_stopper:1",
+  "servo_s6_pitch_adjust:1"
+ ],
+ "rigid_groups": [],
+ "secs": 154.1,
+ "all_quantitative_pass": true
+}

@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Project HIVE-QUEEN — FTC 149 BIOBUZZ Interactive 3D/2D Robot Architecture</title>
+<style>
+  :root {
+    --bg-panel: var(--card, #0f172a);
+    --bg-sub: rgba(15, 23, 42, 0.75);
+    --fg: var(--foreground, #f8fafc);
+    --muted: var(--muted-foreground, #94a3b8);
+    --border-col: var(--border, #1e293b);
+    --cyan: #22d3ee;
+    --emerald: #34d399;
+    --amber: #fbbf24;
+    --rose: #fb7185;
+    --violet: #a78bfa;
+    --orange: #fb923c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    width: 100%;
+    max-width: 1120px;
+    color: var(--fg);
+    padding: 12px 14px 18px 14px;
+    user-select: none;
+  }
+
+  /* Header */
+  .hq-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-col);
+    margin-bottom: 12px;
+  }
+  .hq-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pulse-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 10px var(--amber);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.25); opacity: 0.65; }
+  }
+  .hq-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .hq-sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 2px 0 0 0;
+  }
+
+  /* Badges */
+  .badge-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border-col);
+    background: rgba(30, 41, 59, 0.55);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .badge.gold { border-color: rgba(251, 191, 36, 0.45); color: var(--amber); }
+  .badge.cyan { border-color: rgba(34, 211, 238, 0.45); color: var(--cyan); }
+  .badge.emerald { border-color: rgba(52, 211, 153, 0.45); color: var(--emerald); }
+  .badge.rose { border-color: rgba(251, 113, 133, 0.45); color: var(--rose); }
+
+  /* Tabs */
+  .tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .tab-btn {
+    background: rgba(30, 41, 59, 0.5);
+    color: var(--muted);
+    border: 1px solid var(--border-col);
+    padding: 7px 13px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tab-btn:hover {
+    color: var(--fg);
+    border-color: rgba(34, 211, 238, 0.4);
+  }
+  .tab-btn.active {
+    background: rgba(8, 51, 68, 0.55);
+    color: var(--cyan);
+    border-color: var(--cyan);
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.18);
+  }
+
+  /* Control Strip */
+  .control-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-col);
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .ctrl-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ctrl-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+  .ctrl-val {
+    color: var(--cyan);
+    font-family: monospace;
+  }
+  .btn-group {
+    display: flex;
+    gap: 4px;
+  }
+  .mini-btn {
+    flex: 1;
+    padding: 5px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid var(--border-col);
+    background: rgba(15, 23, 42, 0.7);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+  .mini-btn.active-pollen {
+    background: rgba(120, 53, 15, 0.45);
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+  .mini-btn.active-nectar {
+    background: rgba(136, 19, 55, 0.45);
+    border-color: var(--rose);
+    color: var(--rose);
+  }
+  .mini-btn.active-reject {
+    background: rgba(30, 58, 138, 0.55);
+    border-color: #60a5fa;
+    color: #93c5fd;
+  }
+  .mini-btn.active-toggle {
+    background: rgba(6, 78, 59, 0.45);
+    border-color: var(--emerald);
+    color: var(--emerald);
+  }
+  .fire-btn {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(251, 113, 133, 0.25));
+    border: 1px solid var(--amber);
+    color: var(--amber);
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .fire-btn:hover {
+    background: rgba(251, 191, 36, 0.35);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--cyan);
+    height: 5px;
+    cursor: pointer;
+  }
+
+  /* Main Workspace Grid: Viewport + Inspector */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .main-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Viewport Card */
+  .viewport-card {
+    background: #020617;
+    border: 1px solid var(--border-col);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  .viewport-top-overlay {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    z-index: 5;
+  }
+  .view-tag {
+    font-size: 10px;
+    font-family: monospace;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid #334155;
+    color: #cbd5e1;
+  }
+
+  .view-pane { display: none; width: 100%; }
+  .view-pane.active { display: block; }
+
+  canvas#isoCanvas {
+    width: 100%;
+    height: 480px;
+    display: block;
+    cursor: grab;
+  }
+  canvas#isoCanvas:active { cursor: grabbing; }
+
+  svg.diagram-svg {
+    width: 100%;
+    height: 480px;
+    display: block;
+  }
+
+  /* Subsystem Pills below Viewport */
+  .subsystem-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px 10px;
+    background: rgba(15, 23, 42, 0.9);
+    border-top: 1px solid var(--border-col);
+  }
+  .sub-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 9px;
+    border-radius: 999px;
+    border: 1px solid #334155;
+    background: rgba(30, 41, 59, 0.6);
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.12s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .sub-pill:hover { border-color: var(--cyan); color: #fff; }
+  .sub-pill.active {
+    background: rgba(34, 211, 238, 0.18);
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+  .dot-ind { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+
+  /* Right Inspector Panel */
+  .inspector-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-col);
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .insp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-col);
+    padding-bottom: 8px;
+  }
+  .insp-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .insp-tag {
+    font-size: 10px;
+    font-family: monospace;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(34, 211, 238, 0.15);
+    color: var(--cyan);
+    border: 1px solid rgba(34, 211, 238, 0.35);
+  }
+  .insp-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .metric-box {
+    background: rgba(2, 6, 23, 0.55);
+    border: 1px solid var(--border-col);
+    border-radius: 6px;
+    padding: 6px 8px;
+  }
+  .metric-k { font-size: 9px; text-transform: uppercase; color: var(--muted); }
+  .metric-v { font-size: 12px; font-weight: 700; font-family: monospace; color: var(--fg); margin-top: 2px; }
+
+  .insp-list {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--fg);
+  }
+  .insp-list li { margin-bottom: 5px; }
+  .insp-list code {
+    font-family: monospace;
+    font-size: 11px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: rgba(30, 41, 59, 0.8);
+    color: var(--amber);
+  }
+
+  .rule-callout {
+    background: rgba(120, 53, 15, 0.22);
+    border-left: 3px solid var(--amber);
+    padding: 8px 10px;
+    border-radius: 0 6px 6px 0;
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+  .rule-callout strong { color: var(--amber); }
+
+  /* Bottom Summary Cards */
+  .bottom-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .sum-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-col);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .sum-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sum-card p {
+    margin: 0;
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="hq-header">
+    <div>
+      <div class="hq-title-row">
+        <div class="pulse-dot"></div>
+        <h2 class="hq-title">PROJECT HIVE-QUEEN // FTC Team 149 BIOBUZZ Architecture</h2>
+      </div>
+      <p class="hq-sub">Interactive 3D Isometric &amp; 2D Cross-Section Blueprint • 100% Legal under BIOBUZZ Manual TU07 &amp; Official Q&amp;A</p>
+    </div>
+    <div class="badge-bar">
+      <span class="badge gold">16.5 lb (7.5 kg) • 14.5"W × 15.5"L</span>
+      <span class="badge cyan">8/8 Motors • 8/8 Servos</span>
+      <span class="badge emerald">98% CELL Retention (Topspin)</span>
+      <span class="badge rose">G407/G408 Pre-Control Lip Gate</span>
+    </div>
+  </div>
+
+  <!-- View Switcher Tabs -->
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchView('iso3d', this)">🧊 1. 3D Isometric Interactive Model</button>
+    <button class="tab-btn" onclick="switchView('side2d', this)">📐 2. 2D Side Cross-Section &amp; Ball Path</button>
+    <button class="tab-btn" onclick="switchView('top2d', this)">🧭 3. 2D Top-Down Packaging &amp; Field Geometry</button>
+    <button class="tab-btn" onclick="switchView('elec2d', this)">⚡ 4. Control System, Sensors &amp; Actuator Map</button>
+  </div>
+
+  <!-- Live Interactive Controls -->
+  <div class="control-strip">
+    <div class="ctrl-group">
+      <div class="ctrl-label"><span>Element &amp; Gate Mode</span><span class="ctrl-val" id="modeLabel">POLLEN (2.80")</span></div>
+      <div class="btn-group">
+        <button class="mini-btn active-pollen" id="btnPollen" onclick="setBallMode('pollen')">Pollen 2.8"</button>
+        <button class="mini-btn" id="btnNectar" onclick="setBallMode('nectar')">Nectar 3.6"</button>
+        <button class="mini-btn" id="btnReject" onclick="setBallMode('reject')">G408 Reject</button>
+      </div>
+    </div>
+
+    <div class="ctrl-group">
+      <div class="ctrl-label"><span>Turret Azimuth (270°)</span><span class="ctrl-val" id="turretVal">0° (Rear)</span></div>
+      <input type="range" id="turretSlider" min="-135" max="135" value="0" oninput="updateSliders()" />
+    </div>
+
+    <div class="ctrl-group">
+      <div class="ctrl-label"><span>Launch Pitch (60°–82°)</span><span class="ctrl-val" id="pitchVal">72° Lob</span></div>
+      <input type="range" id="pitchSlider" min="60" max="82" value="72" oninput="updateSliders()" />
+    </div>
+
+    <div class="ctrl-group">
+      <div class="ctrl-label"><span>Deployable Mechanisms</span><span class="ctrl-val" id="deployVal">Stowed (18" Cube)</span></div>
+      <div class="btn-group">
+        <button class="mini-btn" id="btnDepol" onclick="toggleMech('depol')">🌸 De-Pollinator</button>
+        <button class="mini-btn" id="btnStinger" onclick="toggleMech('stinger')">🐝 24" Stinger</button>
+        <button class="fire-btn" onclick="triggerVolley()">🚀 Fire 4-Ball Volley</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Grid: Diagram Viewport + Subsystem Inspector -->
+  <div class="main-grid">
+    <div class="viewport-card">
+      <div class="viewport-top-overlay">
+        <span class="view-tag" id="viewportHint">Drag to rotate 3D • Click any subsystem pill below to inspect</span>
+        <span class="view-tag" id="simReadout">Cam Gap: 67.0 mm (Pollen) | Flywheel: 4,850 RPM Topspin</span>
+      </div>
+
+      <!-- VIEW 1: 3D ISOMETRIC INTERACTIVE CANVAS -->
+      <div class="view-pane active" id="pane-iso3d">
+        <canvas id="isoCanvas" width="700" height="480"></canvas>
+      </div>
+
+      <!-- VIEW 2: 2D SIDE CROSS-SECTION SVG -->
+      <div class="view-pane" id="pane-side2d">
+        <svg class="diagram-svg" id="sideSvg" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="gridSide" width="30" height="30" patternUnits="userSpaceOnUse">
+              <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.6"/>
+            </pattern>
+            <marker id="arrowCyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#22d3ee"/>
+            </marker>
+            <marker id="arrowAmber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24"/>
+            </marker>
+          </defs>
+          <rect width="700" height="480" fill="#020617"/>
+          <rect width="700" height="480" fill="url(#gridSide)"/>
+
+          <!-- Floor Tile Line -->
+          <rect x="20" y="425" width="660" height="12" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+          <text x="30" y="452" fill="#94a3b8" font-family="monospace" font-size="10">FOAM FIELD TILES (z = 0.0 in) • FRONT (LEFT) ← ROBOT → REAR (RIGHT)</text>
+
+          <!-- R105 Expansion Box (24" L x 29" H) -->
+          <rect x="75" y="48" width="432" height="377" fill="none" stroke="#fb7185" stroke-width="1.3" stroke-dasharray="6,4" rx="4"/>
+          <text x="82" y="63" fill="#fb7185" font-family="monospace" font-size="10" font-weight="bold">R105.A EXPANSION LIMIT: 24.0" L × 29.0" H (Mechanically Hard-Stopped)</text>
+
+          <!-- R102 Starting Cube (18" L x 18" H) -->
+          <rect x="145" y="191" width="324" height="234" fill="rgba(34, 211, 238, 0.03)" stroke="#22d3ee" stroke-width="1.3" stroke-dasharray="4,4" rx="4"/>
+          <text x="152" y="206" fill="#22d3ee" font-family="monospace" font-size="10" font-weight="bold">R102 STARTING CUBE: 18.0" × 18.0" × 18.0" (Robot fits at 15.5" L × 17.5" H)</text>
+
+          <!-- FLOWER Reference on Left -->
+          <g id="svgFlowerRef" opacity="0.88">
+            <rect x="28" y="145" width="38" height="280" fill="rgba(52, 211, 153, 0.08)" stroke="#34d399" stroke-width="1.5" rx="3"/>
+            <rect x="24" y="128" width="10" height="18" fill="#34d399"/>
+            <ellipse cx="47" cy="145" rx="22" ry="6" fill="rgba(52, 211, 153, 0.25)" stroke="#34d399" stroke-width="1.5"/>
+            <rect x="30" y="378" width="36" height="46" fill="#020617" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="3,2"/>
+            <text x="24" y="120" fill="#34d399" font-family="monospace" font-size="9" font-weight="bold">FLOWER TOP (z=21.5", Ø4.0")</text>
+            <text x="22" y="372" fill="#fbbf24" font-family="monospace" font-size="8.5">3.55"×3.57" Retrieval</text>
+          </g>
+
+          <!-- SUBSYSTEM 1: CHASSIS & MECANUM WHEELS -->
+          <g id="svgSub-chassis" style="cursor:pointer" onclick="selectSubsystem('chassis')">
+            <rect x="172" y="365" width="279" height="44" fill="#0f172a" stroke="#38bdf8" stroke-width="2" rx="5"/>
+            <circle cx="212" cy="398" r="26" fill="rgba(14, 116, 144, 0.45)" stroke="#22d3ee" stroke-width="2"/>
+            <circle cx="212" cy="398" r="8" fill="#22d3ee"/>
+            <circle cx="410" cy="398" r="26" fill="rgba(14, 116, 144, 0.45)" stroke="#22d3ee" stroke-width="2"/>
+            <circle cx="410" cy="398" r="8" fill="#22d3ee"/>
+            <!-- Pinpoint Pod -->
+            <rect x="295" y="388" width="42" height="36" fill="rgba(167, 139, 250, 0.35)" stroke="#a78bfa" stroke-width="1.5" rx="3"/>
+            <circle cx="316" cy="415" r="10" fill="#a78bfa"/>
+            <text x="252" y="382" fill="#e2e8f0" font-family="monospace" font-size="9.5" font-weight="bold">15.5" CHASSIS (4× 435 RPM + Pinpoint v2)</text>
+          </g>
+
+          <!-- G409 Sloped Top Deck Shield -->
+          <path d="M 380 280 L 450 365" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="3,2"/>
+          <text x="418" y="318" fill="#94a3b8" font-family="monospace" font-size="8.5">G409 40° Spill Guard</text>
+
+          <!-- SUBSYSTEM 2: GATEKEEPER INTAKE & DE-POLLINATOR -->
+          <g id="svgSub-intake" style="cursor:pointer" onclick="selectSubsystem('intake')">
+            <!-- De-pollinator fork -->
+            <rect id="svgDepolFork" x="148" y="408" width="35" height="8" fill="#34d399" rx="2"/>
+            <!-- Sprung Floating Bottom Ramp -->
+            <path id="svgIntakeRamp" d="M 168 412 L 255 370" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+            <!-- Silicone Star Rollers -->
+            <circle cx="185" cy="366" r="19" fill="rgba(52, 211, 153, 0.35)" stroke="#34d399" stroke-width="2"/>
+            <circle cx="228" cy="348" r="17" fill="rgba(52, 211, 153, 0.35)" stroke="#34d399" stroke-width="2"/>
+            <!-- G407 Hard-Stop Gate & G408 Color/Range Sensor -->
+            <rect id="svgHardGate" x="158" y="345" width="7" height="28" fill="#fb7185" rx="2"/>
+            <circle cx="162" cy="342" r="5" fill="#fb7185"/>
+            <text x="148" y="330" fill="#fb7185" font-family="monospace" font-size="8.5" font-weight="bold">G407 Gate + G408 Lip Sensor</text>
+          </g>
+
+          <!-- SUBSYSTEM 3: SPRUNG SINGLE-FILE MAGAZINE -->
+          <g id="svgSub-magazine" style="cursor:pointer" onclick="selectSubsystem('magazine')">
+            <!-- Fixed back wall -->
+            <path d="M 262 372 Q 285 305 315 245" fill="none" stroke="#a78bfa" stroke-width="3.5"/>
+            <!-- Sprung front wall -->
+            <path id="svgMagSwingWall" d="M 232 340 Q 252 282 282 228" fill="none" stroke="#a78bfa" stroke-width="3" stroke-dasharray="6,3"/>
+            <!-- 4 Staged Balls in Magazine -->
+            <circle id="svgBall1" cx="250" cy="356" r="16" fill="rgba(251, 191, 36, 0.85)" stroke="#fef08a" stroke-width="1.5"/>
+            <circle id="svgBall2" cx="264" cy="322" r="16" fill="rgba(251, 191, 36, 0.85)" stroke="#fef08a" stroke-width="1.5"/>
+            <circle id="svgBall3" cx="279" cy="288" r="16" fill="rgba(251, 191, 36, 0.85)" stroke="#fef08a" stroke-width="1.5"/>
+            <circle id="svgBall4" cx="294" cy="254" r="16" fill="rgba(251, 191, 36, 0.85)" stroke="#fef08a" stroke-width="1.5"/>
+            <text x="288" y="340" fill="#a78bfa" font-family="monospace" font-size="9" font-weight="bold">4-BALL SPRUNG COLUMN (0.55s Burst)</text>
+          </g>
+
+          <!-- SUBSYSTEM 4: 270° TURRET & DUAL-WHEEL TOPSPIN LAUNCHER -->
+          <g id="svgSub-shooter" style="cursor:pointer" onclick="selectSubsystem('shooter')">
+            <!-- Turret Bearing Base -->
+            <rect x="305" y="242" width="84" height="14" fill="#1e293b" stroke="#fbbf24" stroke-width="2" rx="3"/>
+            <!-- Lower 96mm Rhino + 2x Steel Flywheel -->
+            <circle cx="348" cy="222" r="24" fill="rgba(251, 191, 36, 0.3)" stroke="#fbbf24" stroke-width="2.5"/>
+            <circle cx="348" cy="222" r="14" fill="rgba(251, 191, 36, 0.55)" stroke="#fde68a" stroke-width="1.5"/>
+            <!-- Upper 72mm Counter-Wheel (4.2:3 faster surface speed -> Topspin!) -->
+            <circle id="svgUpperWheel" cx="305" cy="195" r="18" fill="rgba(251, 113, 133, 0.35)" stroke="#fb7185" stroke-width="2.5"/>
+            <text x="358" y="196" fill="#fbbf24" font-family="monospace" font-size="9.5" font-weight="bold">96mm Rhino + 2× Steel Mass</text>
+            <text x="358" y="210" fill="#fb7185" font-family="monospace" font-size="9" font-weight="bold">+ 72mm Top Counter-Wheel (Topspin!)</text>
+            <!-- Limelight 3A -->
+            <rect x="372" y="220" width="22" height="16" fill="#064e3b" stroke="#34d399" stroke-width="1.5" rx="2"/>
+            <text x="398" y="232" fill="#34d399" font-family="monospace" font-size="8.5">Limelight 3A</text>
+          </g>
+
+          <!-- SUBSYSTEM 5: CARBON-FIBER STINGER FLOWER CAPPER -->
+          <g id="svgSub-stinger" style="cursor:pointer" onclick="selectSubsystem('stinger')">
+            <line id="svgStingerArm" x1="255" y1="255" x2="185" y2="215" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/>
+            <circle id="svgStingerTip" cx="185" cy="215" r="9" fill="rgba(251, 146, 60, 0.4)" stroke="#fb923c" stroke-width="2"/>
+            <text id="svgStingerText" x="155" y="182" fill="#fb923c" font-family="monospace" font-size="9" font-weight="bold">CF "Stinger" Flower Arm</text>
+          </g>
+
+          <!-- Trajectory Arc to Upward HIVE CELL -->
+          <path id="svgShotArc" d="M 326 205 Q 465 25 615 88" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowAmber)"/>
+          <!-- Upward HIVE CELL Target Preview on Top Right -->
+          <g transform="translate(595, 52)">
+            <polygon points="0,42 52,12 78,28 45,76 12,68" fill="rgba(251, 113, 133, 0.2)" stroke="#fb7185" stroke-width="2"/>
+            <text x="-28" y="8" fill="#fb7185" font-family="monospace" font-size="9.5" font-weight="bold">HIVE UP-CELL (Lip 53.5")</text>
+            <text x="-28" y="92" fill="#34d399" font-family="monospace" font-size="8.5">AprilTag Cluster (IDs 30-45)</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- VIEW 3: 2D TOP-DOWN PACKAGING SVG -->
+      <div class="view-pane" id="pane-top2d">
+        <svg class="diagram-svg" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg">
+          <rect width="700" height="480" fill="#020617"/>
+          <rect width="700" height="480" fill="url(#gridSide)"/>
+
+          <!-- R105 18" W x 24" L Expansion Envelope -->
+          <rect x="110" y="65" width="440" height="330" fill="none" stroke="#fb7185" stroke-width="1.4" stroke-dasharray="6,4" rx="6"/>
+          <text x="120" y="82" fill="#fb7185" font-family="monospace" font-size="10" font-weight="bold">R105.A HORIZONTAL LIMIT: 18.0" WIDE × 24.0" LONG</text>
+
+          <!-- R102 18" x 18" Starting Box -->
+          <rect x="165" y="65" width="330" height="330" fill="rgba(34, 211, 238, 0.03)" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,4" rx="4"/>
+          <text x="175" y="386" fill="#22d3ee" font-family="monospace" font-size="9.5">R102 Starting Square (18.0" × 18.0")</text>
+
+          <!-- Actual Robot Footprint (14.5" W x 15.5" L) -->
+          <rect x="188" y="96" width="284" height="266" fill="#0f172a" stroke="#38bdf8" stroke-width="2.2" rx="10" onclick="selectSubsystem('chassis')" style="cursor:pointer"/>
+
+          <!-- 4 Mecanum Wheels + 435 RPM Motors -->
+          <g onclick="selectSubsystem('chassis')" style="cursor:pointer">
+            <rect x="198" y="106" width="54" height="28" fill="rgba(8, 51, 68, 0.8)" stroke="#22d3ee" stroke-width="1.5" rx="3"/>
+            <rect x="408" y="106" width="54" height="28" fill="rgba(8, 51, 68, 0.8)" stroke="#22d3ee" stroke-width="1.5" rx="3"/>
+            <rect x="198" y="324" width="54" height="28" fill="rgba(8, 51, 68, 0.8)" stroke="#22d3ee" stroke-width="1.5" rx="3"/>
+            <rect x="408" y="324" width="54" height="28" fill="rgba(8, 51, 68, 0.8)" stroke="#22d3ee" stroke-width="1.5" rx="3"/>
+            <text x="262" y="124" fill="#94a3b8" font-family="monospace" font-size="9">M1/M2: 435 RPM Left Drive</text>
+            <text x="262" y="342" fill="#94a3b8" font-family="monospace" font-size="9">M3/M4: 435 RPM Right Drive</text>
+          </g>
+
+          <!-- Pinpoint v2 Dead-Wheel Pods -->
+          <g onclick="selectSubsystem('chassis')" style="cursor:pointer">
+            <rect x="295" y="142" width="44" height="16" fill="rgba(167, 139, 250, 0.35)" stroke="#a78bfa" stroke-width="1.5" rx="2"/>
+            <rect x="272" y="210" width="16" height="44" fill="rgba(167, 139, 250, 0.35)" stroke="#a78bfa" stroke-width="1.5" rx="2"/>
+            <text x="294" y="170" fill="#a78bfa" font-family="monospace" font-size="8.5">Pinpoint v2 X/Y Pods</text>
+          </g>
+
+          <!-- Front Full-Width 14.0" Intake + 30° Wall-Sweep Wings -->
+          <g onclick="selectSubsystem('intake')" style="cursor:pointer">
+            <polygon points="188,115 156,138 156,320 188,343" fill="rgba(52, 211, 153, 0.2)" stroke="#34d399" stroke-width="2"/>
+            <line x1="172" y1="142" x2="172" y2="316" stroke="#34d399" stroke-width="5" stroke-dasharray="8,4"/>
+            <!-- Concave FLOWER Pipe V-Guide -->
+            <path d="M 156 205 L 170 229 L 156 253" fill="none" stroke="#fb923c" stroke-width="2.5"/>
+            <text x="42" y="195" fill="#34d399" font-family="monospace" font-size="9.5" font-weight="bold">14.0" WIDE INTAKE</text>
+            <text x="42" y="208" fill="#cbd5e1" font-family="monospace" font-size="8.5">+ 30° Wall-Sweep Wings</text>
+            <text x="42" y="221" fill="#fb7185" font-family="monospace" font-size="8.5">+ G407/G408 Lip Sensors</text>
+            <text x="42" y="234" fill="#fb923c" font-family="monospace" font-size="8.5">+ G415 Flower V-Bumper</text>
+          </g>
+
+          <!-- Center Single-File Magazine Channel -->
+          <g onclick="selectSubsystem('magazine')" style="cursor:pointer">
+            <rect x="205" y="192" width="155" height="74" fill="rgba(167, 139, 250, 0.18)" stroke="#a78bfa" stroke-width="2" rx="4"/>
+            <circle cx="228" cy="229" r="15" fill="rgba(251, 191, 36, 0.8)" stroke="#fff" stroke-width="1"/>
+            <circle cx="262" cy="229" r="15" fill="rgba(251, 191, 36, 0.8)" stroke="#fff" stroke-width="1"/>
+            <circle cx="298" cy="229" r="19" fill="rgba(251, 113, 133, 0.85)" stroke="#fff" stroke-width="1"/>
+            <circle cx="338" cy="229" r="15" fill="rgba(251, 191, 36, 0.8)" stroke="#fff" stroke-width="1"/>
+            <text x="212" y="280" fill="#a78bfa" font-family="monospace" font-size="9" font-weight="bold">Single-File Mixed Queue (Pollen + Nectar)</text>
+          </g>
+
+          <!-- Rear-Centered 270° Turret -->
+          <g onclick="selectSubsystem('shooter')" style="cursor:pointer">
+            <circle cx="398" cy="229" r="54" fill="rgba(251, 191, 36, 0.16)" stroke="#fbbf24" stroke-width="2.2"/>
+            <path d="M 398 229 L 595 110 A 220 220 0 0 1 595 348 Z" fill="rgba(251, 191, 36, 0.08)" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="4,4"/>
+            <rect id="svgTopTurretBarrel" x="385" y="213" width="68" height="32" fill="rgba(251, 191, 36, 0.45)" stroke="#fbbf24" stroke-width="2" rx="4"/>
+            <text x="485" y="226" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="bold">270° REAR TURRET CONE</text>
+            <text x="485" y="240" fill="#cbd5e1" font-family="monospace" font-size="8.5">400°/s Slew • Dual 6000 RPM</text>
+          </g>
+
+          <!-- Carbon Fiber Stinger Arm Slot -->
+          <g onclick="selectSubsystem('stinger')" style="cursor:pointer">
+            <rect x="200" y="164" width="135" height="16" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5" rx="3"/>
+            <text x="205" y="158" fill="#fb923c" font-family="monospace" font-size="8.5" font-weight="bold">CF Stinger Arm Bay (140g)</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- VIEW 4: ELECTRONICS, SENSORS & ACTUATOR ARCHITECTURE SVG -->
+      <div class="view-pane" id="pane-elec2d">
+        <svg class="diagram-svg" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg">
+          <rect width="700" height="480" fill="#020617"/>
+          <rect width="700" height="480" fill="url(#gridSide)"/>
+
+          <!-- Arrows between hubs and subsystems -->
+          <g stroke-width="1.6" fill="none">
+            <path d="M 215 115 L 290 115" stroke="#fbbf24" marker-end="url(#arrowAmber)"/>
+            <path d="M 215 240 L 290 240" stroke="#22d3ee" marker-end="url(#arrowCyan)"/>
+            <path d="M 215 365 L 290 365" stroke="#34d399" marker-end="url(#arrowCyan)"/>
+            <path d="M 455 115 L 515 115" stroke="#fbbf24" marker-end="url(#arrowAmber)"/>
+            <path d="M 455 240 L 515 240" stroke="#a78bfa" marker-end="url(#arrowCyan)"/>
+            <path d="M 455 365 L 515 365" stroke="#fb7185" marker-end="url(#arrowCyan)"/>
+          </g>
+
+          <!-- Left Column: Power & Vision Coprocessors -->
+          <rect x="25" y="65" width="190" height="95" rx="6" fill="#0f172a"/>
+          <rect x="25" y="65" width="190" height="95" rx="6" fill="rgba(120, 53, 15, 0.35)" stroke="#fbbf24" stroke-width="1.5"/>
+          <text x="38" y="88" fill="#fbbf24" font-family="monospace" font-size="11" font-weight="bold">12V 3000mAh NiMH (R601)</text>
+          <text x="38" y="106" fill="#e2e8f0" font-family="monospace" font-size="9.5">• 20A Mini Blade Fuse</text>
+          <text x="38" y="122" fill="#e2e8f0" font-family="monospace" font-size="9.5">• Protected Main Switch (R603)</text>
+          <text x="38" y="138" fill="#fde68a" font-family="monospace" font-size="9">• Live V_batt Feedforward Scale</text>
+
+          <rect x="25" y="190" width="190" height="100" rx="6" fill="#0f172a"/>
+          <rect x="25" y="190" width="190" height="100" rx="6" fill="rgba(8, 51, 68, 0.45)" stroke="#22d3ee" stroke-width="1.5"/>
+          <text x="38" y="213" fill="#22d3ee" font-family="monospace" font-size="11" font-weight="bold">VISION &amp; LOCALIZATION</text>
+          <text x="38" y="231" fill="#e2e8f0" font-family="monospace" font-size="9.5">• Limelight 3A (R702 Table 12-9)</text>
+          <text x="38" y="247" fill="#cbd5e1" font-family="monospace" font-size="9">  AprilTagCluster IDs 30–45</text>
+          <text x="38" y="263" fill="#e2e8f0" font-family="monospace" font-size="9.5">• goBILDA Pinpoint v2 (1500Hz)</text>
+          <text x="38" y="279" fill="#cbd5e1" font-family="monospace" font-size="9">  2× 4-Bar Dead-Wheel Pods</text>
+
+          <rect x="25" y="315" width="190" height="105" rx="6" fill="#0f172a"/>
+          <rect x="25" y="315" width="190" height="105" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+          <text x="38" y="338" fill="#34d399" font-family="monospace" font-size="11" font-weight="bold">BALL &amp; TURRET SENSORS</text>
+          <text x="38" y="356" fill="#e2e8f0" font-family="monospace" font-size="9.5">• 2× Lip Color-Rangefinders</text>
+          <text x="38" y="372" fill="#cbd5e1" font-family="monospace" font-size="9">  Pre-Control G408 Reject</text>
+          <text x="38" y="388" fill="#e2e8f0" font-family="monospace" font-size="9.5">• 3× Column Beam/ToF Sensors</text>
+          <text x="38" y="404" fill="#e2e8f0" font-family="monospace" font-size="9.5">• 8192 CPR Turret Abs Encoder</text>
+
+          <!-- Center Column: Control Hub, Expansion Hub, 6V Servo Hub -->
+          <rect x="290" y="65" width="165" height="100" rx="6" fill="#0f172a"/>
+          <rect x="290" y="65" width="165" height="100" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+          <text x="302" y="88" fill="#a78bfa" font-family="monospace" font-size="11" font-weight="bold">REV CONTROL HUB</text>
+          <text x="302" y="106" fill="#e2e8f0" font-family="monospace" font-size="9.5">• SDK 12.0 + Pedro 3.0.2</text>
+          <text x="302" y="122" fill="#e2e8f0" font-family="monospace" font-size="9.5">• Manual Bulk Cache (&lt;3.5ms)</text>
+          <text x="302" y="138" fill="#cbd5e1" font-family="monospace" font-size="9">• Ports 0–3: M1–M4 Drive</text>
+          <text x="302" y="152" fill="#cbd5e1" font-family="monospace" font-size="9">• Servos: S6 Pitch, S8 Latch</text>
+
+          <rect x="290" y="190" width="165" height="100" rx="6" fill="#0f172a"/>
+          <rect x="290" y="190" width="165" height="100" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+          <text x="302" y="213" fill="#a78bfa" font-family="monospace" font-size="11" font-weight="bold">REV EXPANSION HUB</text>
+          <text x="302" y="231" fill="#e2e8f0" font-family="monospace" font-size="9.5">• RS485 High-Speed Bus</text>
+          <text x="302" y="247" fill="#cbd5e1" font-family="monospace" font-size="9">• Port 0–1: M5/M6 Shooter</text>
+          <text x="302" y="263" fill="#cbd5e1" font-family="monospace" font-size="9">• Port 2: M7 Front Intake</text>
+          <text x="302" y="279" fill="#cbd5e1" font-family="monospace" font-size="9">• Port 3: M8 Column Feed</text>
+
+          <rect x="290" y="315" width="165" height="105" rx="6" fill="#0f172a"/>
+          <rect x="290" y="315" width="165" height="105" rx="6" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1.5"/>
+          <text x="302" y="338" fill="#fb7185" font-family="monospace" font-size="11" font-weight="bold">6V SERVO HUB / INJECTOR</text>
+          <text x="302" y="356" fill="#e2e8f0" font-family="monospace" font-size="9.5">• Regulated 6V High-Power Rail</text>
+          <text x="302" y="372" fill="#cbd5e1" font-family="monospace" font-size="9">• S1: G407 Lip Gate (Axon+)</text>
+          <text x="302" y="386" fill="#cbd5e1" font-family="monospace" font-size="9">• S2: Flower Fork | S3: Stopper</text>
+          <text x="302" y="400" fill="#cbd5e1" font-family="monospace" font-size="9">• S4: Turret | S5: Cam | S7: Arm</text>
+
+          <!-- Right Column: Actuated Subsystems (8 Motors + 8 Servos) -->
+          <rect x="515" y="65" width="165" height="95" rx="6" fill="#0f172a"/>
+          <rect x="515" y="65" width="165" height="95" rx="6" fill="rgba(8, 51, 68, 0.45)" stroke="#22d3ee" stroke-width="1.5"/>
+          <text x="526" y="86" fill="#22d3ee" font-family="monospace" font-size="10.5" font-weight="bold">DRIVETRAIN (4M, 0S)</text>
+          <text x="526" y="104" fill="#e2e8f0" font-family="monospace" font-size="9">4× 5203 435 RPM Mecanum</text>
+          <text x="526" y="120" fill="#cbd5e1" font-family="monospace" font-size="9">Foresight Path Follower</text>
+          <text x="526" y="136" fill="#34d399" font-family="monospace" font-size="9">+14 pts vs 600 RPM in Sim</text>
+
+          <rect x="515" y="185" width="165" height="110" rx="6" fill="#0f172a"/>
+          <rect x="515" y="185" width="165" height="110" rx="6" fill="rgba(120, 53, 15, 0.4)" stroke="#fbbf24" stroke-width="1.5"/>
+          <text x="526" y="206" fill="#fbbf24" font-family="monospace" font-size="10.5" font-weight="bold">TURRET LAUNCHER (2M, 3S)</text>
+          <text x="526" y="224" fill="#e2e8f0" font-family="monospace" font-size="9">2× 6000 RPM + 2× Steel Mass</text>
+          <text x="526" y="239" fill="#e2e8f0" font-family="monospace" font-size="9">96mm + 72mm Topspin Pair</text>
+          <text x="526" y="254" fill="#cbd5e1" font-family="monospace" font-size="9">S4 Turret | S5 Cam | S6 Pitch</text>
+          <text x="526" y="270" fill="#34d399" font-family="monospace" font-size="9">isReadyToFire() Hardware Gate</text>
+
+          <rect x="515" y="315" width="165" height="105" rx="6" fill="#0f172a"/>
+          <rect x="515" y="315" width="165" height="105" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+          <text x="526" y="336" fill="#34d399" font-family="monospace" font-size="10.5" font-weight="bold">INTAKE, MAG &amp; STINGER</text>
+          <text x="526" y="354" fill="#e2e8f0" font-family="monospace" font-size="9">M7 Intake (1150 RPM → 2070)</text>
+          <text x="526" y="369" fill="#e2e8f0" font-family="monospace" font-size="9">M8 Sprung Column (1150 RPM)</text>
+          <text x="526" y="384" fill="#cbd5e1" font-family="monospace" font-size="9">S1 Lip Gate | S2 Flower Fork</text>
+          <text x="526" y="399" fill="#fb923c" font-family="monospace" font-size="9">S7/S8 CF Stinger Arm (0.8s Cap)</text>
+        </svg>
+      </div>
+
+      <!-- Subsystem Selector Pills -->
+      <div class="subsystem-bar">
+        <button class="sub-pill active" id="pill-shooter" onclick="selectSubsystem('shooter')">
+          <span class="dot-ind" style="background:#fbbf24"></span> 1. 270° Dual-Wheel Topspin Turret
+        </button>
+        <button class="sub-pill" id="pill-intake" onclick="selectSubsystem('intake')">
+          <span class="dot-ind" style="background:#34d399"></span> 2. Gatekeeper Intake &amp; De-Pollinator
+        </button>
+        <button class="sub-pill" id="pill-magazine" onclick="selectSubsystem('magazine')">
+          <span class="dot-ind" style="background:#a78bfa"></span> 3. Sprung 4-Ball Column Magazine
+        </button>
+        <button class="sub-pill" id="pill-stinger" onclick="selectSubsystem('stinger')">
+          <span class="dot-ind" style="background:#fb923c"></span> 4. Carbon-Fiber "Stinger" Flower Capper
+        </button>
+        <button class="sub-pill" id="pill-chassis" onclick="selectSubsystem('chassis')">
+          <span class="dot-ind" style="background:#22d3ee"></span> 5. 14.5"×15.5" 435 RPM Chassis &amp; Pinpoint v2
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Column: Dynamic Engineering Inspector -->
+    <div class="inspector-card">
+      <div class="insp-header">
+        <h3 class="insp-title" id="inspTitle">🎯 270° Dual-Wheel Topspin Turret</h3>
+        <span class="insp-tag" id="inspTag">2 Motors • 3 Servos</span>
+      </div>
+
+      <div class="insp-metrics">
+        <div class="metric-box">
+          <div class="metric-k" id="m1k">Wheel Pair &amp; Spin</div>
+          <div class="metric-v" id="m1v">96mm + 72mm (4.2:3 Topspin)</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-k" id="m2k">Cam Gap / Compression</div>
+          <div class="metric-v" id="m2v">67mm (Pollen) / 87mm (Nectar)</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-k" id="m3k">Actuators</div>
+          <div class="metric-v" id="m3v">2× 5203 6000RPM + 3× Servos</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-k" id="m4k">Simulated Hit Rate</div>
+          <div class="metric-v" id="m4v">98.2% (0% Bounce-Out)</div>
+        </div>
+      </div>
+
+      <ul class="insp-list" id="inspList">
+        <li><strong>Solves the 44.18% Backspin Bounce-Out Problem:</strong> Instead of a single wheel against a fixed hood (which imparts backspin that bounces out of the 60°-tilted upward CELL), the upper 72mm Rhino wheel is belted <code>4.2 : 3</code> so its surface moves ~5% faster than the lower 96mm wheel, imparting <strong>gentle topspin</strong> that dives over the 53.5" lip and grabs the back wall of the CELL.</li>
+        <li><strong>Bi-Positional Eccentric Cam Gap (55 ms):</strong> When the top column ToF sensor detects a <code>2.80" POLLEN</code> vs. <code>3.62" NECTAR</code>, Servo S5 flips between two hard mechanical stops (<code>67.0 mm</code> vs. <code>87.0 mm</code>) so both ball sizes receive ~4.5 mm compression without jamming.</li>
+        <li><strong>High-Inertia 4-Ball Volley:</strong> Dual <code>goBILDA 82mm Steel Flywheels (2× 152g)</code> + voltage-scaled feedforward (<code>12.5V / V_batt</code>) keep RPM sag under 2% across a 0.55s 4-ball burst.</li>
+        <li><strong>Anti-Blocker Pitch (60°–82°):</strong> Elevates up to 82° to lob directly over an opponent's legal <code>29.0" tall shot-blocker</code> (Q&amp;A Q2/Q8/Q20).</li>
+      </ul>
+
+      <div class="rule-callout" id="inspRule">
+        <strong>TU07 Rule &amp; Q&amp;A Compliance (G417, §10.5.1, R105):</strong> Fire control is gated on <code>AprilTagClusterDetection</code> confirming the upward CELL roll &lt; 90° for 250 ms (preventing mid-tip shots that can disrupt damper contact under <code>§10.5.1</code>).
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Summary Cards -->
+  <div class="bottom-cards">
+    <div class="sum-card">
+      <h4 style="color:var(--amber)">📊 Why Single-Channel Beats Dual-Turret Sorters</h4>
+      <p>NCSSM's 12,000-match physics simulation proved every extra kilogram of robot mass costs <strong>-6 points/match</strong> in acceleration and settling time. A single-channel sprung column + 55ms cam-gap turret saves <strong>3.8 kg</strong> and 2 motors over dual-turret "potato sorters" while firing all 4 balls in <strong>0.55s (+60 pts burst bonus)</strong>.</p>
+    </div>
+    <div class="sum-card">
+      <h4 style="color:var(--rose)">🛡️ Bulletproof G407 &amp; G408 Pre-Control Defense</h4>
+      <p>Official Q&amp;A Q3, Q4 &amp; Q23 ruled there is <strong>NO momentary exception</strong> to <code>G407</code> (4-ball cap) or <code>G408</code> (opponent Nectar), and internal eject-sorters are penalized as <strong>STRATEGIC (Major Foul + Yellow Card)</strong>. Our front-lip sensors deflect opponent Nectar and drop a physical polycarbonate gate <em>before</em> capture.</p>
+    </div>
+    <div class="sum-card">
+      <h4 style="color:var(--emerald)">🐝 3-Tip Auto + 0.8s "Stinger" Flower Endgame</h4>
+      <p>Because the upward CELL starts with 3 Nectar (124g), only <strong>3 preloaded Pollen</strong> trigger Tip #1 (+20 pts &amp; unlocks Nectar #1). Our bottom De-Pollinator extracts 8 more Pollen from 2 Flowers for a <strong>73-pt, 3-Tip Auto</strong>, while the 140g CF Stinger caps Flowers in the final 15s on the way to Park.</p>
+    </div>
+  </div>
+
+<script>
+  // State
+  let currentView = 'iso3d';
+  let selectedSub = 'shooter';
+  let ballMode = 'pollen'; // 'pollen' | 'nectar' | 'reject'
+  let turretDeg = 0;
+  let pitchDeg = 72;
+  let depolOut = false;
+  let stingerUp = false;
+
+  // 3D Camera & Volley Animation
+  let rotYaw = -0.62;
+  let rotPitch = 0.42;
+  let isDragging = false;
+  let lastX = 0, lastY = 0;
+  let volleyBalls = [];
+  let animTick = 0;
+
+  const SUBSYSTEM_DATA = {
+    shooter: {
+      title: '🎯 270° Dual-Wheel Topspin Turret',
+      tag: '2 Motors • 3 Servos',
+      m1k: 'Wheel Pair & Spin', m1v: '96mm + 72mm (4.2:3 Topspin)',
+      m2k: 'Cam Gap / Compression', m2v: '67mm (Pollen) / 87mm (Nectar)',
+      m3k: 'Actuators', m3v: '2× 5203 6000RPM + S4/S5/S6',
+      m4k: 'Simulated Hit Rate', m4v: '98.2% (0% Bounce-Out)',
+      items: [
+        '<strong>Solves the 44.18% Backspin Bounce-Out Problem:</strong> Instead of a single wheel against a fixed hood (which imparts backspin that bounces out of the 60°-tilted upward CELL), the upper 72mm Rhino wheel is belted <code>4.2 : 3</code> so its surface moves ~5% faster than the lower 96mm wheel, imparting <strong>gentle topspin</strong> that dives over the 53.5" lip and grabs the back wall of the CELL.',
+        '<strong>Bi-Positional Eccentric Cam Gap (55 ms):</strong> When the top column ToF sensor detects a <code>2.80" POLLEN</code> vs. <code>3.62" NECTAR</code>, Servo S5 flips between two hard mechanical stops (<code>67.0 mm</code> vs. <code>87.0 mm</code>) so both ball sizes receive ~4.5 mm compression without jamming.',
+        '<strong>High-Inertia 4-Ball Volley:</strong> Dual <code>goBILDA 82mm Steel Flywheels (2× 152g)</code> + voltage-scaled feedforward (<code>12.5V / V_batt</code>) keep RPM sag under 2% across a 0.55s 4-ball burst.',
+        '<strong>Anti-Blocker Pitch (60°–82°):</strong> Elevates up to 82° to lob directly over an opponent\'s legal <code>29.0" tall shot-blocker</code> (Q&A Q2/Q8/Q20).'
+      ],
+      rule: '<strong>TU07 Rule & Q&A Compliance (G417, §10.5.1, R105):</strong> Fire control is gated on <code>AprilTagClusterDetection</code> confirming the upward CELL roll < 90° for 250 ms (preventing mid-tip shots that can disrupt damper contact under <code>§10.5.1</code>).'
+    },
+    intake: {
+      title: '🌿 "Gatekeeper" Intake & Flower De-Pollinator',
+      tag: '1 Motor • 2 Servos',
+      m1k: 'Intake Width & Speed', m1v: '14.0" Wide @ 2,070 RPM',
+      m2k: 'Lip Filtering Latency', m2v: '50ms Gate / 120ms Reject',
+      m3k: 'Actuators', m3v: '1× 5203 1150RPM + S1/S2',
+      m4k: 'Flower Extraction', m4v: '4 Pollen in 1.0s (Bottom)',
+      items: [
+        '<strong>14.0" Full-Width Mouth + 30° Wall-Sweep Wings:</strong> Allows the driver to slide along the perimeter wall at a 30° angle and scoop an entire 4-ball HIVE spill in <strong>0.8 seconds</strong> (vs. 6.0s driving straight, per NCSSM sim Lesson 8).',
+        '<strong>Sprung Floating Bottom Ramp:</strong> Passively flexes down 21 mm when a <code>3.62" NECTAR</code> enters so the 50mm 30A silicone star rollers never over-compress or stall.',
+        '<strong>Pre-Control Opponent Nectar Deflection (G408):</strong> Dual digital color-rangefinders aimed 35 mm <em>ahead</em> of the front ramp lip spot opponent Nectar and pulse <code>-1.0</code> reverse power for 120 ms before the ball climbs the lip (a legal deflection under <code>G407.E</code>).',
+        '<strong>Deployable Bottom-Flower De-Pollinator (Servo S2):</strong> Extends a 3.2" Delrin twin-tine fork into the <code>3.55"×3.57"</code> Flower Retrieval Opening to unseat and vacuum all 4 stacked Pollen in 1.0s.'
+      ],
+      rule: '<strong>TU07 Rule & Q&A Compliance (G407, G408, G418.B):</strong> Q&A Q3, Q4 & Q23 state there is NO momentary exception to G407/G408. Servo S1 drops a hard polycarbonate blocker across the front lip the instant the 4th ball enters.'
+    },
+    magazine: {
+      title: '🟣 Sprung Single-File 4-Ball Column Magazine',
+      tag: '1 Motor • 1 Servo',
+      m1k: 'Capacity & Order', m1v: 'Any 4 Pollen / Nectar Mix',
+      m2k: '4-Ball Volley Time', m2v: '0.55 Seconds (+60 pt Bonus)',
+      m3k: 'Actuators', m3v: '1× 5203 1150RPM + S3 Gate',
+      m4k: 'Channel Width Range', m4v: '68mm–88mm Constant-Force',
+      items: [
+        '<strong>Why Single-File Beats Spindexers:</strong> BIOBUZZ requires no color-ordering inside the HIVE CELL. A continuous UHMW-lined chimney holds any mix of 4 Pollen/Nectar in half the footprint of a rotary spindexer.',
+        '<strong>Anti-Snag Solid Walls:</strong> Polling balls have 11.2 mm holes and Nectar has 16.1 mm holes; continuous polycarbonate walls prevent the perforation snagging that plagued DECODE spindexers.',
+        '<strong>Constant-Force Sprung Swing Rail:</strong> Dual vertical stacks of 72mm Gecko wheels automatically widen from 68 mm (Pollen) to 88 mm (Nectar) while maintaining uniform feed traction.',
+        '<strong>Pre-Shot Ball Type Identification:</strong> Top ToF + Color sensor identifies whether the next staged ball at Servo S3 is Pollen (2.8") or Nectar (3.6") so the shooter cam gap and RPM pre-set automatically.'
+      ],
+      rule: '<strong>TU07 Rule Compliance (G407.F):</strong> Once Servo S3 opens and a ball leaves contact with the upper shooter wheels, it no longer counts toward the 4-ball possession limit.'
+    },
+    stinger: {
+      title: '🐝 Carbon-Fiber "Stinger" Flower Capper',
+      tag: '0 Motors • 2 Servos',
+      m1k: 'Mechanism Mass', m1v: '140 grams (0.31 lb)',
+      m2k: 'Deploy Height', m2v: 'z = 24.0" (Under 29" Limit)',
+      m3k: 'Actuators', m3v: 'S7 Axon MAX+ Lift + S8 Latch',
+      m4k: 'Flower Cap Cycle', m4v: '0.8s (+7 to +21 pt Swing)',
+      items: [
+        '<strong>Maximum Endgame ROI for Minimal Weight:</strong> Full linear-slide elevators add 3–4 lbs (costing ~15 pts in TeleOp driving speed) for Flowers that give 0 RPs. The 140g carbon-fiber Stinger arm uses <strong>0 DC motors</strong> and scores Nectar in 0.8 seconds!',
+        '<strong>Solves the 0.38" Flower Clearance Problem:</strong> Nectar is <code>3.62"</code> and the Flower top opening at <code>z = 21.5"</code> is <code>4.00"</code> (only 4.8 mm clearance per side!). Launching Nectar from a distance is nearly impossible.',
+        '<strong>Self-Centering G415 Concave V-Bumper:</strong> Driving into a Flower seats the chassis V-guide against the outer HIPS pipes, mechanically indexing the Stinger arm dead-center over the 4.0" opening at <code>z = 24.0"</code>.'
+      ],
+      rule: '<strong>TU07 Rule Compliance (G410, G415, G418.A, R105.A):</strong> Software locks out S7/S8 until <code>matchTimer <= 60.0s</code> to prevent a 20-pt G410 Major Foul. Concave Flower pipe alignment is explicitly legal under the G415 orange box.'
+    },
+    chassis: {
+      title: '⚡ 14.5"×15.5" 435 RPM Chassis & Pinpoint v2',
+      tag: '4 Motors • 0 Servos',
+      m1k: 'Footprint & Weight', m1v: '14.5" W × 15.5" L • 16.5 lb',
+      m2k: 'Drive Gearing', m2v: '4× 435 RPM (100mm Mecanum)',
+      m3k: 'Localization', m3v: 'goBILDA Pinpoint v2 (1500Hz)',
+      m4k: 'Loop Time', m4v: '2.8 ms (Manual Bulk Read)',
+      items: [
+        '<strong>Simulation-Backed Sizing & Weight:</strong> NCSSM\'s 12,000-match simulator proved a ~15" chassis at ~15–17 lb with 435–500 RPM gearing scores <strong>+34 points/match more</strong> than an 18", 29 lb, 600+ RPM robot because 73% of TeleOp is accelerating and settling between the HIVE and wall spills.',
+        '<strong>Immune to Moving HIVE AprilTags:</strong> Because BIOBUZZ AprilTags rock ±30° on the HIVE CELLS, MegaTag2 global vision pose fails. Two sprung 4-bar dead-wheel pods + Pinpoint v2 IMU fusion maintain sub-inch pose accuracy all match.',
+        '<strong>Recessed Switch & G409 Roof:</strong> Main power switch is recessed behind a protective aluminum guard (`G419.A`), and 40° angled polycarbonate top plates shed any balls spilling from a tipping HIVE (`G409`).'
+      ],
+      rule: '<strong>TU07 Rule Compliance (R102, R104, G403, G409):</strong> Fits inside the 18" starting cube with 3.5" width margin; zero powered motion during the 8s Auto→TeleOp transition (G403).'
+    }
+  };
+
+  function switchView(viewId, btnEl) {
+    currentView = viewId;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+    document.querySelectorAll('.view-pane').forEach(p => p.classList.remove('active'));
+    document.getElementById('pane-' + viewId).classList.add('active');
+
+    const hint = document.getElementById('viewportHint');
+    if (viewId === 'iso3d') hint.textContent = 'Drag to rotate 3D • Click any subsystem pill below to inspect';
+    else if (viewId === 'side2d') hint.textContent = '2D Side Cross-Section • Shows R102 (18") vs R105 (24"×29") & Ball Path';
+    else if (viewId === 'top2d') hint.textContent = '2D Top-Down Packaging • 14.5"×15.5" Chassis, 14.0" Intake & 270° Turret Cone';
+    else hint.textContent = 'Hardware & Control Topology • 8 Motors, 8 Servos, Dual Hubs + 6V Servo Hub';
+  }
+
+  function selectSubsystem(subId) {
+    selectedSub = subId;
+    document.querySelectorAll('.sub-pill').forEach(p => p.classList.remove('active'));
+    const pill = document.getElementById('pill-' + subId);
+    if (pill) pill.classList.add('active');
+
+    const d = SUBSYSTEM_DATA[subId];
+    document.getElementById('inspTitle').innerHTML = d.title;
+    document.getElementById('inspTag').textContent = d.tag;
+    document.getElementById('m1k').textContent = d.m1k;
+    document.getElementById('m1v').textContent = d.m1v;
+    document.getElementById('m2k').textContent = d.m2k;
+    document.getElementById('m2v').textContent = d.m2v;
+    document.getElementById('m3k').textContent = d.m3k;
+    document.getElementById('m3v').textContent = d.m3v;
+    document.getElementById('m4k').textContent = d.m4k;
+    document.getElementById('m4v').textContent = d.m4v;
+    document.getElementById('inspList').innerHTML = d.items.map(i => `<li>${i}</li>`).join('');
+    document.getElementById('inspRule').innerHTML = d.rule;
+  }
+
+  function setBallMode(mode) {
+    ballMode = mode;
+    document.getElementById('btnPollen').className = 'mini-btn' + (mode === 'pollen' ? ' active-pollen' : '');
+    document.getElementById('btnNectar').className = 'mini-btn' + (mode === 'nectar' ? ' active-nectar' : '');
+    document.getElementById('btnReject').className = 'mini-btn' + (mode === 'reject' ? ' active-reject' : '');
+
+    const modeLabel = document.getElementById('modeLabel');
+    const simReadout = document.getElementById('simReadout');
+    const upperWheel = document.getElementById('svgUpperWheel');
+    const intakeRamp = document.getElementById('svgIntakeRamp');
+    const magSwing = document.getElementById('svgMagSwingWall');
+    const hardGate = document.getElementById('svgHardGate');
+    const balls = [1, 2, 3, 4].map(i => document.getElementById('svgBall' + i));
+
+    if (mode === 'pollen') {
+      modeLabel.textContent = 'POLLEN (2.80" / 25g)';
+      simReadout.textContent = 'Cam Gap: 67.0 mm (Pollen) | Flywheel: 4,850 RPM Topspin';
+      upperWheel.setAttribute('cy', '195');
+      intakeRamp.setAttribute('d', 'M 168 412 L 255 370');
+      magSwing.setAttribute('d', 'M 232 340 Q 252 282 282 228');
+      hardGate.setAttribute('y', '345');
+      balls.forEach(b => {
+        b.setAttribute('r', '15');
+        b.setAttribute('fill', 'rgba(251, 191, 36, 0.88)');
+      });
+    } else if (mode === 'nectar') {
+      modeLabel.textContent = 'NECTAR (3.62" / 41g)';
+      simReadout.textContent = 'Cam Gap: 87.0 mm (Nectar) | Flywheel: 5,420 RPM Topspin';
+      upperWheel.setAttribute('cy', '186');
+      intakeRamp.setAttribute('d', 'M 168 418 L 255 378');
+      magSwing.setAttribute('d', 'M 224 340 Q 244 282 274 228');
+      hardGate.setAttribute('y', '345');
+      balls.forEach(b => {
+        b.setAttribute('r', '19');
+        b.setAttribute('fill', 'rgba(251, 113, 133, 0.88)');
+      });
+    } else {
+      modeLabel.textContent = 'G408 LIP REJECT + G407 GATE';
+      simReadout.textContent = 'G408 Opponent Nectar Deflected at Lip (-1.0 Rev 120ms) | Gate CLOSED';
+      hardGate.setAttribute('y', '376');
+      balls.forEach((b, idx) => {
+        b.setAttribute('r', idx === 2 ? '19' : '15');
+        b.setAttribute('fill', idx === 2 ? 'rgba(251, 113, 133, 0.88)' : 'rgba(251, 191, 36, 0.88)');
+      });
+    }
+  }
+
+  function updateSliders() {
+    turretDeg = parseInt(document.getElementById('turretSlider').value, 10);
+    pitchDeg = parseInt(document.getElementById('pitchSlider').value, 10);
+    document.getElementById('turretVal').textContent = `${turretDeg}° ${turretDeg === 0 ? '(Rear)' : (turretDeg > 0 ? 'Left' : 'Right')}`;
+    document.getElementById('pitchVal').textContent = `${pitchDeg}° ${pitchDeg >= 76 ? '(Over Blocker)' : 'Lob'}`;
+
+    // Update 2D Top Turret Barrel rotation
+    const barrel = document.getElementById('svgTopTurretBarrel');
+    if (barrel) {
+      barrel.setAttribute('transform', `rotate(${turretDeg} 398 229)`);
+    }
+    // Update 2D Side Shot Arc
+    const arc = document.getElementById('svgShotArc');
+    if (arc) {
+      const peakY = 140 - (pitchDeg - 60) * 5.2;
+      arc.setAttribute('d', `M 326 205 Q 465 ${peakY} 615 88`);
+    }
+  }
+
+  function toggleMech(which) {
+    if (which === 'depol') {
+      depolOut = !depolOut;
+      document.getElementById('btnDepol').className = 'mini-btn' + (depolOut ? ' active-toggle' : '');
+      const fork = document.getElementById('svgDepolFork');
+      if (fork) {
+        fork.setAttribute('x', depolOut ? '48' : '148');
+        fork.setAttribute('width', depolOut ? '125' : '35');
+      }
+      selectSubsystem('intake');
+    } else if (which === 'stinger') {
+      stingerUp = !stingerUp;
+      document.getElementById('btnStinger').className = 'mini-btn' + (stingerUp ? ' active-toggle' : '');
+      const arm = document.getElementById('svgStingerArm');
+      const tip = document.getElementById('svgStingerTip');
+      const txt = document.getElementById('svgStingerText');
+      if (arm && tip && txt) {
+        if (stingerUp) {
+          arm.setAttribute('x2', '48');
+          arm.setAttribute('y2', '108');
+          tip.setAttribute('cx', '48');
+          tip.setAttribute('cy', '108');
+          txt.setAttribute('x', '60');
+          txt.setAttribute('y', '102');
+          txt.textContent = 'Stinger Deployed (z=24.0" < 29" R105)';
+        } else {
+          arm.setAttribute('x2', '185');
+          arm.setAttribute('y2', '215');
+          tip.setAttribute('cx', '185');
+          tip.setAttribute('cy', '215');
+          txt.setAttribute('x', '155');
+          txt.setAttribute('y', '182');
+          txt.textContent = 'CF "Stinger" Flower Arm';
+        }
+      }
+      selectSubsystem('stinger');
+    }
+    const deployVal = document.getElementById('deployVal');
+    if (depolOut && stingerUp) deployVal.textContent = '21.5"L × 24.0"H (R105 Legal)';
+    else if (depolOut) deployVal.textContent = 'De-Pollinator Out (18.7"L)';
+    else if (stingerUp) deployVal.textContent = 'Stinger Up (24.0"H)';
+    else deployVal.textContent = 'Stowed (18" Cube)';
+  }
+
+  function triggerVolley() {
+    volleyBalls = [0, -0.22, -0.44, -0.66].map(t => ({ t }));
+  }
+
+  // 3D Isometric Renderer on Canvas
+  const canvas = document.getElementById('isoCanvas');
+  const ctx = canvas.getContext('2d');
+
+  canvas.addEventListener('mousedown', e => { isDragging = true; lastX = e.clientX; lastY = e.clientY; });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    rotYaw += dx * 0.008;
+    rotPitch = Math.max(0.12, Math.min(1.15, rotPitch + dy * 0.006));
+  });
+
+  function project3D(x, y, z) {
+    // x: front(-)/rear(+), y: left(-)/right(+), z: up(+)
+    const cy = Math.cos(rotYaw), sy = Math.sin(rotYaw);
+    const cp = Math.cos(rotPitch), sp = Math.sin(rotPitch);
+    const rx = x * cy - y * sy;
+    const ry = x * sy + y * cy;
+    const sx = 310 + rx * 10.5;
+    const sy2 = 355 - z * cp * 10.5 + ry * sp * 10.5;
+    return { x: sx, y: sy2, depth: ry * cp + z * sp };
+  }
+
+  function drawWireBox(x0, x1, y0, y1, z0, z1, strokeCol, dashed = false, lineWidth = 1.2) {
+    const pts = [
+      project3D(x0, y0, z0), project3D(x1, y0, z0), project3D(x1, y1, z0), project3D(x0, y1, z0),
+      project3D(x0, y0, z1), project3D(x1, y0, z1), project3D(x1, y1, z1), project3D(x0, y1, z1)
+    ];
+    const edges = [
+      [0,1],[1,2],[2,3],[3,0],
+      [4,5],[5,6],[6,7],[7,4],
+      [0,4],[1,5],[2,6],[3,7]
+    ];
+    ctx.save();
+    ctx.strokeStyle = strokeCol;
+    ctx.lineWidth = lineWidth;
+    if (dashed) ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    edges.forEach(([a, b]) => {
+      ctx.moveTo(pts[a].x, pts[a].y);
+      ctx.lineTo(pts[b].x, pts[b].y);
+    });
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawSolidPrism(x0, x1, y0, y1, z0, z1, fillCol, strokeCol, highlight = false) {
+    const v = [
+      project3D(x0, y0, z0), project3D(x1, y0, z0), project3D(x1, y1, z0), project3D(x0, y1, z0),
+      project3D(x0, y0, z1), project3D(x1, y0, z1), project3D(x1, y1, z1), project3D(x0, y1, z1)
+    ];
+    const faces = [
+      [0,1,5,4], [1,2,6,5], [2,3,7,6], [3,0,4,7], [4,5,6,7]
+    ];
+    ctx.save();
+    ctx.fillStyle = fillCol;
+    ctx.strokeStyle = highlight ? '#ffffff' : strokeCol;
+    ctx.lineWidth = highlight ? 2.2 : 1.3;
+    faces.forEach(f => {
+      ctx.beginPath();
+      ctx.moveTo(v[f[0]].x, v[f[0]].y);
+      ctx.lineTo(v[f[1]].x, v[f[1]].y);
+      ctx.lineTo(v[f[2]].x, v[f[2]].y);
+      ctx.lineTo(v[f[3]].x, v[f[3]].y);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    });
+    ctx.restore();
+  }
+
+  function drawSphere3D(x, y, z, radiusIn, col, outline = '#fff') {
+    const p = project3D(x, y, z);
+    const rPx = radiusIn * 10.5;
+    ctx.save();
+    const grad = ctx.createRadialGradient(p.x - rPx*0.3, p.y - rPx*0.3, rPx*0.1, p.x, p.y, rPx);
+    grad.addColorStop(0, '#ffffff');
+    grad.addColorStop(0.25, col);
+    grad.addColorStop(1, '#0f172a');
+    ctx.fillStyle = grad;
+    ctx.strokeStyle = outline;
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, rPx, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function render3D() {
+    animTick += 0.03;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Subtle background grid on z=0 tile floor
+    ctx.save();
+    ctx.strokeStyle = '#1e293b';
+    ctx.lineWidth = 0.8;
+    for (let g = -18; g <= 24; g += 6) {
+      const p1 = project3D(g, -18, 0), p2 = project3D(g, 18, 0);
+      ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+    }
+    for (let g = -18; g <= 18; g += 6) {
+      const p1 = project3D(-18, g, 0), p2 = project3D(24, g, 0);
+      ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+    }
+    ctx.restore();
+
+    // R105 Expansion Box (24" L x 18" W x 29" H)
+    drawWireBox(-13.5, 10.5, -9, 9, 0, 29, 'rgba(251, 113, 133, 0.38)', true, 1.1);
+    // R102 Starting Cube (18" x 18" x 18")
+    drawWireBox(-9, 9, -9, 9, 0, 18, 'rgba(34, 211, 238, 0.42)', true, 1.2);
+
+    // 1. CHASSIS (15.5" L x 14.5" W, z=1.5 to 4.5)
+    const chHi = selectedSub === 'chassis';
+    drawSolidPrism(-7.75, 7.75, -7.25, -5.25, 1.5, 4.5, 'rgba(14, 116, 144, 0.55)', '#22d3ee', chHi);
+    drawSolidPrism(-7.75, 7.75, 5.25, 7.25, 1.5, 4.5, 'rgba(14, 116, 144, 0.55)', '#22d3ee', chHi);
+    drawSolidPrism(-6.5, 6.5, -5.25, 5.25, 1.5, 2.5, 'rgba(15, 23, 42, 0.8)', '#38bdf8', chHi);
+
+    // 4 Mecanum Wheels
+    [[-5.5, -6.5], [5.5, -6.5], [-5.5, 6.5], [5.5, 6.5]].forEach(([wx, wy]) => {
+      drawSphere3D(wx, wy, 2.0, 1.9, '#0891b2', chHi ? '#fff' : '#22d3ee');
+    });
+    // Pinpoint v2 Odometry Center Module
+    drawSolidPrism(-1.5, 1.5, -1.5, 1.5, 0.4, 2.8, 'rgba(167, 139, 250, 0.6)', '#a78bfa', chHi);
+
+    // 2. GATEKEEPER INTAKE & DE-POLLINATOR (Front = -x)
+    const inHi = selectedSub === 'intake';
+    if (depolOut) {
+      drawSolidPrism(-12.2, -7.5, -2.5, 2.5, 0.3, 1.2, 'rgba(52, 211, 153, 0.75)', '#34d399', true);
+    }
+    // Intake Roller Bar across front (-8.2, y=-6.8 to +6.8, z=3.4)
+    drawSolidPrism(-8.6, -7.0, -6.8, 6.8, 2.6, 4.4, 'rgba(16, 185, 129, 0.55)', '#34d399', inHi);
+    // G407 Hard-stop Lip Gate
+    const gateZ = ballMode === 'reject' ? 0.8 : 4.6;
+    drawSolidPrism(-8.9, -8.5, -6.5, 6.5, gateZ, gateZ + 1.8, 'rgba(251, 113, 133, 0.75)', '#fb7185', inHi);
+
+    // 3. SPRUNG SINGLE-FILE MAGAZINE (Inclined from front-bottom to center-top)
+    const magHi = selectedSub === 'magazine';
+    const magGap = ballMode === 'nectar' ? 2.1 : 1.6;
+    drawSolidPrism(-5.0, 2.2, -magGap, magGap, 2.8, 10.5, 'rgba(124, 58, 237, 0.32)', '#a78bfa', magHi);
+
+    // 4 Staged Balls inside Magazine
+    const bRadius = ballMode === 'nectar' ? 1.81 : 1.40;
+    const bColor = ballMode === 'nectar' ? '#fb7185' : '#fbbf24';
+    [[-4.2, 3.6], [-2.5, 5.4], [-0.8, 7.2], [0.9, 9.0]].forEach(([bx, bz], idx) => {
+      const col = (ballMode === 'reject' && idx === 0) ? '#3b82f6' : bColor;
+      drawSphere3D(bx, 0, bz, bRadius, col, magHi ? '#fff' : '#fde68a');
+    });
+
+    // 4. 270° REAR-CENTERED TURRET & DUAL-WHEEL LAUNCHER
+    const shHi = selectedSub === 'shooter';
+    const rad = (turretDeg * Math.PI) / 180;
+    const tx = 3.2, ty = 0, tz = 11.2;
+    drawSolidPrism(0.5, 5.8, -3.2, 3.2, 9.8, 11.2, 'rgba(251, 191, 36, 0.35)', '#fbbf24', shHi);
+    // Lower 96mm Flywheel + Upper 72mm Counter-wheel
+    const camOffset = ballMode === 'nectar' ? 3.5 : 2.8;
+    drawSphere3D(tx + Math.cos(rad)*1.2, ty + Math.sin(rad)*1.2, tz + 1.4, 1.9, '#f59e0b', shHi ? '#fff' : '#fbbf24');
+    drawSphere3D(tx - Math.cos(rad)*0.8, ty - Math.sin(rad)*0.8, tz + 1.4 + camOffset, 1.4, '#fb7185', shHi ? '#fff' : '#fb7185');
+
+    // 5. CARBON-FIBER STINGER FLOWER CAPPER ARM
+    const stHi = selectedSub === 'stinger';
+    if (stingerUp) {
+      drawSolidPrism(-10.5, -2.0, -4.8, -3.6, 10.0, 24.0, 'rgba(251, 146, 60, 0.65)', '#fb923c', true);
+      drawSphere3D(-10.2, -4.2, 23.8, 1.81, '#fb7185', '#fb923c');
+    } else {
+      drawSolidPrism(-4.5, 1.0, -4.8, -3.6, 9.2, 13.5, 'rgba(251, 146, 60, 0.45)', '#fb923c', stHi);
+    }
+
+    // Draw trajectory arc from turret in direction of turretDeg & pitchDeg
+    ctx.save();
+    ctx.strokeStyle = '#fbbf24';
+    ctx.lineWidth = 2.0;
+    ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    for (let s = 0; s <= 1.0; s += 0.05) {
+      const dist = s * 18.0;
+      const fx = tx + Math.cos(rad) * dist;
+      const fy = ty + Math.sin(rad) * dist;
+      const fz = (tz + 2.5) + s * (pitchDeg - 42) * 0.65 - (s * s) * 11.0;
+      const pt = project3D(fx, fy, fz);
+      if (s === 0) ctx.moveTo(pt.x, pt.y);
+      else ctx.lineTo(pt.x, pt.y);
+    }
+    ctx.stroke();
+    ctx.restore();
+
+    // Animate 4-Ball Volley along trajectory if triggered
+    volleyBalls.forEach(vb => {
+      vb.t += 0.028;
+      if (vb.t >= 0 && vb.t <= 1.0) {
+        const s = vb.t;
+        const dist = s * 18.0;
+        const fx = tx + Math.cos(rad) * dist;
+        const fy = ty + Math.sin(rad) * dist;
+        const fz = (tz + 2.5) + s * (pitchDeg - 42) * 0.65 - (s * s) * 11.0;
+        drawSphere3D(fx, fy, fz, bRadius, bColor, '#ffffff');
+      }
+    });
+    volleyBalls = volleyBalls.filter(vb => vb.t <= 1.05);
+
+    // Labels in 3D space
+    const lblR105 = project3D(-13.5, -9, 29.2);
+    ctx.fillStyle = '#fb7185';
+    ctx.font = 'bold 10px monospace';
+    ctx.fillText('R105 Limit (18"×24"×29"H)', lblR105.x + 4, lblR105.y - 4);
+
+    const lblR102 = project3D(-9, 9, 18.2);
+    ctx.fillStyle = '#22d3ee';
+    ctx.fillText('R102 Start Cube (18"³)', lblR102.x + 4, lblR102.y - 4);
+
+    const lblFront = project3D(-11.5, 0, 0.2);
+    ctx.fillStyle = '#34d399';
+    ctx.fillText('◀ FRONT (14.0" Intake)', lblFront.x - 45, lblFront.y + 14);
+
+    requestAnimationFrame(render3D);
+  }
+
+  render3D();
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+{
+ "cnc_turret_mounting_deck_plate_clean": {
+  "stock": "5052-H32 aluminium",
+  "thickness": 6.0,
+  "nominal": 6.0,
+  "levels": [
+   216.0,
+   222.0
+  ],
+  "flat_2d": true,
+  "nonthrough_holes": 0,
+  "outline_mm": [
+   180.0,
+   360.0
+  ],
+  "dxf": true,
+  "step": true,
+  "holes": 40,
+  "by_kind": {
+   "3.4 mm clearance (M3)": 24,
+   "4.5 mm clearance (M4)": 4,
+   "M4 x 0.7 TAP (3.3 mm drill)": 12
+  }
+ },
+ "turret_side_plate_left_clean": {
+  "stock": "5052-H32 aluminium",
+  "thickness": 6.0,
+  "nominal": 6.0,
+  "levels": [
+   55.0,
+   61.0
+  ],
+  "flat_2d": true,
+  "nonthrough_holes": 0,
+  "outline_mm": [
+   172.0,
+   240.0
+  ],
+  "dxf": true,
+  "step": true,
+  "holes": 6,
+  "by_kind": {
+   "14 mm bearing bore (1611 flanged bearing, press/slip)": 3,
+   "3.4 mm clearance (M3)": 1,
+   "M4 x 0.7 TAP (3.3 mm drill)": 2
+  }
+ },
+ "turret_side_plate_right_clean": {
+  "stock": "5052-H32 aluminium",
+  "thickness": 6.0,
+  "nominal": 6.0,
+  "levels": [
+   -61.0,
+   -55.0
+  ],
+  "flat_2d": true,
+  "nonthrough_holes": 0,
+  "outline_mm": [
+   172.0,
+   240.0
+  ],
+  "dxf": true,
+  "step": true,
+  "holes": 7,
+  "by_kind": {
+   "14 mm bearing bore (1611 flanged bearing, press/slip)": 3,
+   "3.4 mm clearance (M3)": 2,
+   "M4 x 0.7 TAP (3.3 mm drill)": 2
+  }
+ },
+ "turret_outboard_double_shear_plate_left": {
+  "stock": "5052-H32 aluminium",
+  "thickness": 5.0,
+  "nominal": 5.0,
+  "levels": [
+   85.0,
+   90.0
+  ],
+  "flat_2d": true,
+  "nonthrough_holes": 0,
+  "outline_mm": [
+   112.0,
+   116.0
+  ],
+  "dxf": true,
+  "step": true,
+  "holes": 4,
+  "by_kind": {
+   "14 mm bearing bore (1611 flanged bearing, press/slip)": 1,
+   "23.60 mm hole (as drawn)": 1,
+   "4.5 mm clearance (M4)": 2
+  }
+ },
+ "turret_outboard_double_shear_plate_right": {
+  "stock": "5052-H32 aluminium",
+  "thickness": 5.0,
+  "nominal": 5.0,
+  "levels": [
+   -95.0,
+   -90.0
+  ],
+  "flat_2d": true,
+  "nonthrough_holes": 0,
+  "outline_mm": [
+   116.0,
+   224.0
+  ],
+  "dxf": true,
+  "step": true,
+  "holes": 9,
+  "by_kind": {
+   "14 mm bearing bore (1611 flanged bearing, press/slip)": 1,
+   "23.60 mm hole (as drawn)": 1,
+   "3.4 mm clearance (M3)": 5,
+   "4.5 mm clearance (M4)": 2
+  }
+ }
+}
