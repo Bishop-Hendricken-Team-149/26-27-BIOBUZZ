@@ -1,0 +1,7 @@
+# print files (3MF/STL) ARE committed; full-robot STEP/GLB exports are not (see the root .gitignore)
+/STEP/
+/GLB/
+/DXF/
+/tmp/
+__pycache__/
+*.zip

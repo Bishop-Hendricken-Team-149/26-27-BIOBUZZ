@@ -1,0 +1,690 @@
+{
+ "4001-0025-4008": {
+  "url": "https://www.gobilda.com/4001-series-clamping-servo-to-shaft-coupler-25-tooth-spline-to-8mm-rex-bore/",
+  "price": 9.99,
+  "pack": 1,
+  "name": "4001 Series Clamping Servo to Shaft Coupler (25 Tooth Spline to 8mm REX\u00ae Bore)",
+  "note": "Confirmed on product page.",
+  "checked": "2026-11-16"
+ },
+ "1611-0514-4008": {
+  "url": "https://www.gobilda.com/1611-series-flanged-ball-bearing-8mm-rex-id-x-14mm-od-5mm-thickness-2-pack/",
+  "price": 5.99,
+  "pack": 2,
+  "name": "1611 Series Flanged Ball Bearing (8mm REX\u00ae ID x 14mm OD, 5mm Thickness) - 2 Pack",
+  "note": "SKU confirmed. Price is for a 2-pack.",
+  "checked": "2026-11-16"
+ },
+ "1611-0514-0008": {
+  "url": "https://www.gobilda.com/1611-series-flanged-ball-bearing-8mm-id-x-14mm-od-5mm-thickness-2-pack/",
+  "price": 3.99,
+  "pack": 2,
+  "name": "1611 Series Flanged Ball Bearing (8mm ID x 14mm OD, 5mm Thickness) - 2 Pack",
+  "note": "Plain 8 mm round bore, listed for reference. Price is for a 2-pack.",
+  "checked": "2026-11-16"
+ },
+ "1310-0016-4008": {
+  "url": "https://www.gobilda.com/1310-series-hyper-hub-8mm-rex-bore/",
+  "price": 7.99,
+  "pack": 1,
+  "name": "1310 Series Hyper Hub (8mm REX\u00ae Bore)",
+  "note": "",
+  "checked": "2026-11-16"
+ },
+ "1309-0016-4008": {
+  "url": "https://www.gobilda.com/1309-series-sonic-hub-8mm-rex-bore/",
+  "price": 7.99,
+  "pack": 1,
+  "name": "1309 Series Sonic Hub (8mm REX\u00ae Bore)",
+  "note": "",
+  "checked": "2026-11-16"
+ },
+ "1313-1632-4008": {
+  "url": "https://www.gobilda.com/1313-series-hyper-hub-8mm-rex-bore/",
+  "price": 12.99,
+  "pack": 1,
+  "name": "1313 Series Hyper Hub (8mm REX\u00ae Bore)",
+  "note": "Newer hyper hub on the 8mm REX hubs category page. Reference only.",
+  "checked": "2026-11-16"
+ },
+ "3213-3606-0002": {
+  "url": "https://www.gobilda.com/96mm-mecanum-wheel-set-70a-durometer-bearing-supported-rollers/",
+  "price": 169.99,
+  "pack": 1,
+  "name": "96mm Mecanum Wheel Set (70A Durometer Bearing Supported Rollers)",
+  "note": "The page lists no set contents and mentions no hubs, so hubs are not included and must be bought separately. Related Products on the page: 'Sonic Hubs', 'Hyper Hubs', 1611-0514-4008 8mm REX bearing, and 1611-0514-0006. Both 1309 and 1310 hubs are 8mm REX/16mm-pattern options. Wheels per set not stated on the page (unverified).",
+  "checked": "2026-11-16"
+ },
+ "3801-0613-0100": {
+  "url": "https://www.gobilda.com/2-pos-jst-vh-mh-fc-to-3-5mm-bullet-mh-fc-adaptor-100mm-length/",
+  "price": 3.99,
+  "pack": 1,
+  "name": "2-Pos JST VH [MH-FC] to 3.5mm Bullet [MH-FC] Adaptor (100mm Length)",
+  "note": "Connects a goBILDA motor's 3.5mm bullet leads directly to a REV hub JST VH motor port. Only one length (100mm) is sold. Extend on the bullet side with 3802-1213-0300. REV JST VH cables have plugs on both ends and will not mate with this adaptor (inferred, unverified).",
+  "checked": "2026-11-16"
+ },
+ "3802-1213-0300": {
+  "url": "https://www.gobilda.com/3-5mm-bullet-extension-mh-fc-to-fh-mc-300mm-length/",
+  "price": 2.99,
+  "pack": 1,
+  "name": "3.5mm Bullet Extension (MH-FC to FH-MC, 300mm Length)",
+  "note": "3.5mm bullet extension. 300mm is the only length listed on the goBILDA 3.5mm Bullet category page.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1412-PK4": {
+  "url": "https://www.revrobotics.com/JST-VH-2-pin-Motor-Cables/",
+  "price": 9.75,
+  "pack": 4,
+  "name": "JST VH 2-pin Motor Cable - 30cm - 4 Pack",
+  "note": "JST VH to JST VH, a hub-side cable. Will not plug into goBILDA bullet leads without the 3801-0613-0100 adaptor.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1413-PK4": {
+  "url": "https://www.revrobotics.com/JST-VH-2-pin-Motor-Cables/",
+  "price": 12.5,
+  "pack": 4,
+  "name": "JST VH 2-pin Motor Cable - 50cm - 4 Pack",
+  "note": "NOTE: REV-31-1413 is a JST VH MOTOR cable, not an RS485 cable.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1526-PK4": {
+  "url": "https://www.revrobotics.com/JST-VH-2-pin-Motor-Cables/",
+  "price": 22.25,
+  "pack": 4,
+  "name": "JST VH 2-pin Motor Cable - 100cm - 4 Pack",
+  "note": "",
+  "checked": "2026-11-16"
+ },
+ "3801-0709-0150": {
+  "url": "https://www.gobilda.com/4-pos-jst-ph-mh-fc-to-4-pos-jst-xh-mh-fc-adaptor-150mm-length/",
+  "price": 2.89,
+  "pack": 1,
+  "name": "4-Pos JST PH [MH-FC] to 4-Pos JST XH [MH-FC] Adaptor (150mm Length)",
+  "note": "Connects the 4-pos JST XH on a goBILDA 5203 encoder to the 4-pos JST PH encoder port on a REV hub.",
+  "checked": "2026-11-16"
+ },
+ "3801-0709-0300": {
+  "url": "https://www.gobilda.com/4-pos-jst-ph-mh-fc-to-4-pos-jst-xh-mh-fc-adaptor-300mm-length/",
+  "price": 2.99,
+  "pack": 1,
+  "name": "4-Pos JST PH [MH-FC] to 4-Pos JST XH [MH-FC] Adaptor (300mm Length)",
+  "note": "Connects the 4-pos JST XH on a goBILDA 5203 encoder to the 4-pos JST PH encoder port on a REV hub.",
+  "checked": "2026-11-16"
+ },
+ "3801-0709-0600": {
+  "url": "https://www.gobilda.com/4-pos-jst-ph-mh-fc-to-4-pos-jst-xh-mh-fc-adaptor-600mm-length/",
+  "price": 2.99,
+  "pack": 1,
+  "name": "4-Pos JST PH [MH-FC] to 4-Pos JST XH [MH-FC] Adaptor (600mm Length)",
+  "note": "Connects the 4-pos JST XH on a goBILDA 5203 encoder to the 4-pos JST PH encoder port on a REV hub.",
+  "checked": "2026-11-16"
+ },
+ "3804-0707-0600": {
+  "url": "https://www.gobilda.com/jst-ph-cable-4-pos-jst-ph-mh-fc-to-mh-fc-600mm-length/",
+  "price": 3.19,
+  "pack": 1,
+  "name": "JST PH Cable (4-Pos JST PH, MH-FC to MH-FC, 600mm Length)",
+  "note": "JST PH 4-pos extension (PH to PH), 600mm.",
+  "checked": "2026-11-16"
+ },
+ "3802-1718-0150": {
+  "url": "https://www.gobilda.com/servo-extension-3-pos-tjc8-mh-fc-to-fh-mc-150mm-length/",
+  "price": 4.99,
+  "pack": 1,
+  "name": "Servo Extension (3-Pos TJC8, MH-FC to FH-MC, 150mm Length)",
+  "note": "TJC8 servo extension. Lengths sold: 150/300/450/600/900/1200 mm. There is no 1000 mm version.",
+  "checked": "2026-11-16"
+ },
+ "3802-1718-0300": {
+  "url": "https://www.gobilda.com/servo-extension-3-pos-tjc8-mh-fc-to-fh-mc-300mm-length/",
+  "price": 4.99,
+  "pack": 1,
+  "name": "Servo Extension (3-Pos TJC8, MH-FC to FH-MC, 300mm Length)",
+  "note": "TJC8 servo extension. Lengths sold: 150/300/450/600/900/1200 mm. There is no 1000 mm version.",
+  "checked": "2026-11-16"
+ },
+ "3802-1718-0450": {
+  "url": "https://www.gobilda.com/servo-extension-3-pos-tjc8-mh-fc-to-fh-mc-450mm-length/",
+  "price": 5.49,
+  "pack": 1,
+  "name": "Servo Extension (3-Pos TJC8, MH-FC to FH-MC, 450mm Length)",
+  "note": "TJC8 servo extension. Lengths sold: 150/300/450/600/900/1200 mm. There is no 1000 mm version.",
+  "checked": "2026-11-16"
+ },
+ "3802-1718-0600": {
+  "url": "https://www.gobilda.com/servo-extension-3-pos-tjc8-mh-fc-to-fh-mc-600mm-length/",
+  "price": 5.99,
+  "pack": 1,
+  "name": "Servo Extension (3-Pos TJC8, MH-FC to FH-MC, 600mm Length)",
+  "note": "TJC8 servo extension. Lengths sold: 150/300/450/600/900/1200 mm. There is no 1000 mm version.",
+  "checked": "2026-11-16"
+ },
+ "3802-1718-0900": {
+  "url": "https://www.gobilda.com/servo-extension-3-pos-tjc8-mh-fc-to-fh-mc-900mm-length/",
+  "price": 6.99,
+  "pack": 1,
+  "name": "Servo Extension (3-Pos TJC8, MH-FC to FH-MC, 900mm Length)",
+  "note": "TJC8 servo extension. Lengths sold: 150/300/450/600/900/1200 mm. There is no 1000 mm version.",
+  "checked": "2026-11-16"
+ },
+ "3802-1718-1200": {
+  "url": "https://www.gobilda.com/servo-extension-3-pos-tjc8-mh-fc-to-fh-mc-1200mm-length/",
+  "price": 7.99,
+  "pack": 1,
+  "name": "Servo Extension (3-Pos TJC8, MH-FC to FH-MC, 1200mm Length)",
+  "note": "TJC8 servo extension. Lengths sold: 150/300/450/600/900/1200 mm. There is no 1000 mm version.",
+  "checked": "2026-11-16"
+ },
+ "3802-0102-0150": {
+  "url": "https://www.gobilda.com/xt30-extension-fh-mc-to-mh-fc-150mm-length/",
+  "price": 4.49,
+  "pack": 1,
+  "name": "XT30 Extension (FH-MC to MH-FC, 150mm Length)",
+  "note": "goBILDA XT30 extension, FH-MC to MH-FC.",
+  "checked": "2026-11-16"
+ },
+ "3802-0102-0300": {
+  "url": "https://www.gobilda.com/xt30-extension-fh-mc-to-mh-fc-300mm-length/",
+  "price": 4.99,
+  "pack": 1,
+  "name": "XT30 Extension (FH-MC to MH-FC, 300mm Length)",
+  "note": "goBILDA XT30 extension, FH-MC to MH-FC.",
+  "checked": "2026-11-16"
+ },
+ "3802-0102-0600": {
+  "url": "https://www.gobilda.com/xt30-extension-fh-mc-to-mh-fc-600mm-length/",
+  "price": 5.49,
+  "pack": 1,
+  "name": "XT30 Extension (FH-MC to MH-FC, 600mm Length)",
+  "note": "goBILDA XT30 extension, FH-MC to MH-FC.",
+  "checked": "2026-11-16"
+ },
+ "3805-0102-0150": {
+  "url": "https://www.gobilda.com/xt30-y-harness-single-fh-mc-xt30-to-dual-mh-fc-xt30-150mm-length/",
+  "price": 4.99,
+  "pack": 1,
+  "name": "XT30 Y-Harness (Single FH-MC XT30 to Dual MH-FC XT30, 150mm Length)",
+  "note": "XT30 Y-harness, 1 to 2. Useful for splitting power to the hub and the servo power module.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1392-PK2": {
+  "url": "https://www.revrobotics.com/XT30-Extension-Cables/",
+  "price": 9.25,
+  "pack": 2,
+  "name": "XT30 Extension Cable - 30cm - 2 Pack",
+  "note": "Variant price read after selecting the 30cm option. REV-31-1386 is a Sensor Splitter Cable, not an XT30 cable.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1394-PK2": {
+  "url": "https://www.revrobotics.com/XT30-Extension-Cables/",
+  "price": 10.5,
+  "pack": 2,
+  "name": "XT30 Extension Cable - 50cm - 2 Pack",
+  "note": "Variant price read after selecting the 50cm option.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1417-PK2": {
+  "url": "https://www.revrobotics.com/JST-PH-3-Pin-Communication-Cables/",
+  "price": 5.0,
+  "pack": 2,
+  "name": "JST PH 3-pin Communication Cable - 30cm - 2 Pack",
+  "note": "RS485 hub-to-hub cable (page: 'RS485 - Daisy-chain communication to a second Expansion Hub').",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1418-PK2": {
+  "url": "https://www.revrobotics.com/JST-PH-3-Pin-Communication-Cables/",
+  "price": 6.0,
+  "pack": 2,
+  "name": "JST PH 3-pin Communication Cable - 50cm - 2 Pack",
+  "note": "RS485 cable.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1565-PK2": {
+  "url": "https://www.revrobotics.com/JST-PH-3-Pin-Communication-Cables/",
+  "price": 7.75,
+  "pack": 2,
+  "name": "JST PH 3-pin Communication Cable - 100cm - 2 Pack",
+  "note": "RS485 cable.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1407-PK4": {
+  "url": "https://www.revrobotics.com/JST-PH-4-pin-Sensor-Cables/",
+  "price": 7.75,
+  "pack": 4,
+  "name": "JST PH 4-pin Sensor Cable - 30cm - 4 Pack",
+  "note": "I2C/digital/analog/encoder.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1408-PK4": {
+  "url": "https://www.revrobotics.com/JST-PH-4-pin-Sensor-Cables/",
+  "price": 9.75,
+  "pack": 4,
+  "name": "JST PH 4-pin Sensor Cable - 50cm - 4 Pack",
+  "note": "Current SKU carries the -PK4 suffix.",
+  "checked": "2026-11-16"
+ },
+ "REV-31-1409-PK4": {
+  "url": "https://www.revrobotics.com/JST-PH-4-pin-Sensor-Cables/",
+  "price": 14.75,
+  "pack": 4,
+  "name": "JST PH 4-pin Sensor Cable - 100cm - 4 Pack",
+  "note": "",
+  "checked": "2026-11-16"
+ },
+ "3101-0012-0001": {
+  "url": "https://www.gobilda.com/battery-charger-nicad-nimh-12-1/",
+  "price": 14.99,
+  "pack": 1,
+  "name": "12V Battery Charger (NiCad/NiMH, XT30 Connector)",
+  "note": "Charger lead is XT30 [FH-MC] and the battery 3100-0012-0020 is XT30 [MH-FC], so they mate directly with no adapter. Charges at 1.0A.",
+  "checked": "2026-11-16"
+ },
+ "3100-0012-0020": {
+  "url": "https://www.gobilda.com/12v-nimh-nested-battery-3000mah-mh-fc-xt30-connector/",
+  "price": 64.99,
+  "pack": 1,
+  "name": "12V NiMH Nested Battery (3000mAh, MH-FC XT30 Connector)",
+  "note": "Reference. The spec table says 'Fuse: 20A mini blade', which is an ATM/mini fuse, not the standard ATO/ATC size.",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B0DS29R9HW": {
+  "url": "https://www.amazon.com/dp/B0DS29R9HW",
+  "price": 4.99,
+  "pack": 25,
+  "name": "(25Pcs) 20 Amp Mini Car Fuses, 20A Automotive Fuses, Blade Fuse for Car/RV/Truck/SUV/Motorcycle/Boat",
+  "note": "Mini blade 20A, 32V. Matches the battery's '20A mini blade' fuse. Amazon price can vary.",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B0DSCG7J18": {
+  "url": "https://www.amazon.com/s?k=20A+ATO+ATC+standard+blade+fuse",
+  "price": 4.99,
+  "pack": 25,
+  "name": "(25Pcs) 20 Amp Standard Car Fuses, 20A Automotive Fuse(ATO/ATC), Blade Fuse for Car/RV/Truck/SUV/Motorcycle/Boat",
+  "note": "Standard ATO/ATC size, which does NOT fit the goBILDA battery. Price read from search results only; /dp page not opened.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0008": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-8mm-length/",
+  "price": 3.19,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (8mm Length)",
+  "note": "25-pack price. Page also offers a 250-pack (SKU 2800-0004-0008-250pk). 250pk $15.99.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0010": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-10mm-length/",
+  "price": 3.39,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (10mm Length)",
+  "note": "25-pack price. Page also offers a 250-pack (SKU 2800-0004-0010-250pk). Marked OUT OF STOCK on 2026-11-16. 250pk $16.99.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0012": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-12mm-length/",
+  "price": 3.59,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (12mm Length)",
+  "note": "25-pack price. Page also offers a 250-pack (SKU 2800-0004-0012-250pk). 250pk $17.99.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0014": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-14mm-length/",
+  "price": 3.69,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (14mm Length)",
+  "note": "25-pack price. Page also offers a 250-pack (SKU 2800-0004-0014-250pk). 250pk $18.49.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0016": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-16mm-length/",
+  "price": 3.79,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (16mm Length)",
+  "note": "25-pack price. Page also offers a 250-pack (SKU 2800-0004-0016-250pk). 250pk $18.99.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0020": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-20mm-length-25-pack/",
+  "price": 3.99,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (20mm Length) - 25 Pack",
+  "note": "25-pack price.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0025": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-25mm-length-25-pack/",
+  "price": 4.19,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (25mm Length) - 25 Pack",
+  "note": "25-pack price.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0030": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-30mm-length-25-pack/",
+  "price": 4.29,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (30mm Length) - 25 Pack",
+  "note": "25-pack price.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0035": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-35mm-length-25-pack/",
+  "price": 4.39,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (35mm Length) - 25 Pack",
+  "note": "25-pack price.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0040": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-40mm-length-25-pack/",
+  "price": 4.69,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (40mm Length) - 25 Pack",
+  "note": "25-pack price.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0045": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-45mm-length-25-pack/",
+  "price": 4.89,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (45mm Length) - 25 Pack",
+  "note": "25-pack price.",
+  "checked": "2026-11-16"
+ },
+ "2800-0004-0060": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-60mm-length-25-pack/",
+  "price": 5.99,
+  "pack": 25,
+  "name": "M4 x 0.7mm Zinc-Plated Socket Head Screw (60mm Length) - 25 Pack",
+  "note": "25-pack price.",
+  "checked": "2026-11-16"
+ },
+ "2812-0004-0007": {
+  "url": "https://www.gobilda.com/m4-x-0-7mm-nylock-nut/",
+  "price": 2.99,
+  "pack": 25,
+  "name": "M4 x 0.7mm Nylock Nut",
+  "note": "Nylon-insert locknut, 25-pack. A 250-pack (2812-0004-0007-250pk) is $14.99.",
+  "checked": "2026-11-16"
+ },
+ "2800-0003-0006": {
+  "url": "https://www.gobilda.com/zinc-plated-steel-socket-head-screw-m3-x-0-5mm-6mm-length-6-pack/",
+  "price": 2.99,
+  "pack": 6,
+  "name": "Zinc-Plated Steel Socket Head Screw (M3 x 0.5mm, 6mm Length) - 6 Pack",
+  "note": "goBILDA M3 SHCS come only in 6-packs, lengths 6/8/10/12 mm.",
+  "checked": "2026-11-16"
+ },
+ "2800-0003-0008": {
+  "url": "https://www.gobilda.com/zinc-plated-steel-socket-head-screw-m3-x-0-5mm-8mm-length-6-pack/",
+  "price": 3.09,
+  "pack": 6,
+  "name": "Zinc-Plated Steel Socket Head Screw (M3 x 0.5mm, 8mm Length) - 6 Pack",
+  "note": "goBILDA M3 SHCS come only in 6-packs, lengths 6/8/10/12 mm.",
+  "checked": "2026-11-16"
+ },
+ "2800-0003-0010": {
+  "url": "https://www.gobilda.com/zinc-plated-steel-socket-head-screw-m3-x-0-5mm-10mm-length-6-pack/",
+  "price": 3.19,
+  "pack": 6,
+  "name": "Zinc-Plated Steel Socket Head Screw (M3 x 0.5mm, 10mm Length) - 6 Pack",
+  "note": "goBILDA M3 SHCS come only in 6-packs, lengths 6/8/10/12 mm.",
+  "checked": "2026-11-16"
+ },
+ "2800-0003-0012": {
+  "url": "https://www.gobilda.com/zinc-plated-steel-socket-head-screw-m3-x-0-5mm-12mm-length-6-pack/",
+  "price": 3.29,
+  "pack": 6,
+  "name": "Zinc-Plated Steel Socket Head Screw (M3 x 0.5mm, 12mm Length) - 6 Pack",
+  "note": "goBILDA M3 SHCS come only in 6-packs, lengths 6/8/10/12 mm.",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B0FGV5FCBN": {
+  "url": "https://www.amazon.com/dp/B0FGV5FCBN",
+  "price": 9.99,
+  "pack": 1120,
+  "name": "1120PCS M3 Socket Screws Assortment Kit,M3x6/8/10/12/16/20/25/30 mm",
+  "note": "12.9-grade alloy steel, black zinc. Kit of 1120 pcs including nuts and washers, lengths M3x6/8/10/12/16/20/25/30. Per-length counts are not stated in the bullets (unverified).",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B0CX16JZ6Z": {
+  "url": "https://www.amazon.com/dp/B0CX16JZ6Z",
+  "price": 4.59,
+  "pack": 100,
+  "name": "Hordion 100Pcs M3-0.5mm Nylon Lock Nut Stainless Steel Nylon Insert Locknut",
+  "note": "goBILDA sells no M3 nylock nut (Nuts category lists M4 only).",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B012T9JTTW": {
+  "url": "https://www.amazon.com/dp/B012T9JTTW",
+  "price": 7.59,
+  "pack": 100,
+  "name": "uxcell M3x4mm 12.9 Alloy Steel Hex Socket Set Cap Point Grub Screws 100pcs",
+  "note": "Cup-point M3x4 set screw (listing says 'Cap Point'). goBILDA sells only M5 set screws (2806 series), no M3.",
+  "checked": "2026-11-16"
+ },
+ "2910-0920-4008": {
+  "url": "https://www.gobilda.com/2910-series-aluminum-clamping-collar-8mm-rex-id-x-20mm-od-9mm-length/",
+  "price": 4.99,
+  "pack": 1,
+  "name": "2910 Series Aluminum Clamping Collar (8mm REX\u00ae ID x 20mm OD, 9mm Length)",
+  "note": "Already has a REX bore.",
+  "checked": "2026-11-16"
+ },
+ "2923-1024-4008": {
+  "url": "https://www.gobilda.com/polycarbonate-clamping-collar-8mm-rex-bore-4-pack/",
+  "price": 4.99,
+  "pack": 4,
+  "name": "Polycarbonate Clamping Collar (8mm REX\u00ae Bore) - 4 Pack",
+  "note": "REX-bore alternative.",
+  "checked": "2026-11-16"
+ },
+ "2920-0001-4008": {
+  "url": "https://www.gobilda.com/2920-series-steel-set-screw-collar-8mm-rex-bore-2-pack/",
+  "price": 5.99,
+  "pack": 2,
+  "name": "2920 Series Steel Set-Screw Collar (8mm REX\u00ae Bore) - 2 Pack",
+  "note": "REX-bore alternative.",
+  "checked": "2026-11-16"
+ },
+ "2910-0921-0008": {
+  "url": "https://www.gobilda.com/2910-series-aluminum-clamping-collar-8mm-id-x-21mm-od-9mm-length/",
+  "price": 4.99,
+  "pack": 1,
+  "name": "2910 Series Aluminum Clamping Collar (8mm ID x 21mm OD, 9mm Length)",
+  "note": "Round 8 mm bore. Reference only. Price from the Collars category listing.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0020": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-2mm-length-4-pack/",
+  "price": 2.79,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 2mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0030": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-3mm-length-4-pack/",
+  "price": 2.99,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 3mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0040": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-4mm-length-4-pack/",
+  "price": 2.99,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 4mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0060": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-6mm-length-4-pack/",
+  "price": 3.49,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 6mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0070": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-7mm-length-4-pack/",
+  "price": 3.79,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 7mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0080": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-8mm-length-4-pack/",
+  "price": 3.99,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 8mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0090": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-9mm-length-4-pack/",
+  "price": 4.24,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 9mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm. OUT OF STOCK on 2026-11-16.",
+  "checked": "2026-11-16"
+ },
+ "1522-0010-0120": {
+  "url": "https://www.gobilda.com/1522-series-8mm-id-spacer-10mm-od-12mm-length-4-pack/",
+  "price": 4.99,
+  "pack": 4,
+  "name": "1522 Series 8mm ID Spacer (10mm OD, 12mm Length) - 4 Pack",
+  "note": "8mm ID round bore, slips over REX shaft. From the 8mm ID x 10mm OD Spacers category. Lengths sold: 2/3/4/6/7/8/9/12 mm; there is no 25 mm.",
+  "checked": "2026-11-16"
+ },
+ "1520-4012-0080": {
+  "url": "https://www.gobilda.com/8mm-rex-plastic-spacer-12mm-rex-od-8mm-length-12-pack/",
+  "price": 4.99,
+  "pack": 12,
+  "name": "8mm REX\u00ae Plastic Spacer (12mm REX\u00ae OD, 8mm Length) - 12 Pack",
+  "note": "True REX-bore spacer. Only 8/12/16 mm are listed in the category. Price from the category listing.",
+  "checked": "2026-11-16"
+ },
+ "1520-4012-0120": {
+  "url": "https://www.gobilda.com/8mm-rex-plastic-spacer-12mm-rex-od-12mm-length-12-pack/",
+  "price": 4.99,
+  "pack": 12,
+  "name": "8mm REX\u00ae Plastic Spacer (12mm REX\u00ae OD, 12mm Length) - 12 Pack",
+  "note": "True REX-bore spacer. Only 8/12/16 mm are listed in the category. Price from the category listing.",
+  "checked": "2026-11-16"
+ },
+ "1520-4012-0160": {
+  "url": "https://www.gobilda.com/8mm-rex-plastic-spacer-12mm-rex-od-16mm-length-12-pack/",
+  "price": 4.99,
+  "pack": 12,
+  "name": "8mm REX\u00ae Plastic Spacer (12mm REX\u00ae OD, 16mm Length) - 12 Pack",
+  "note": "True REX-bore spacer. Only 8/12/16 mm are listed in the category. Price from the category listing.",
+  "checked": "2026-11-16"
+ },
+ "1529-0012-0100": {
+  "url": "https://www.gobilda.com/8mm-id-steel-spacer-12mm-od-10mm-length-4-pack/",
+  "price": 1.99,
+  "pack": 4,
+  "name": "8mm ID Steel Spacer (12mm OD, 10mm Length) - 4 Pack",
+  "note": "Steel, 8mm ID x 12mm OD. Category lists only 10/30/43/48 mm.",
+  "checked": "2026-11-16"
+ },
+ "1529-0012-0300": {
+  "url": "https://www.gobilda.com/8mm-id-steel-spacer-12mm-od-30mm-length-4-pack/",
+  "price": 4.69,
+  "pack": 4,
+  "name": "8mm ID Steel Spacer (12mm OD, 30mm Length) - 4 Pack",
+  "note": "Steel, 8mm ID x 12mm OD. Category lists only 10/30/43/48 mm.",
+  "checked": "2026-11-16"
+ },
+ "1529-0012-0430": {
+  "url": "https://www.gobilda.com/8mm-id-steel-spacer-12mm-od-43mm-length-4-pack/",
+  "price": 6.39,
+  "pack": 4,
+  "name": "8mm ID Steel Spacer (12mm OD, 43mm Length) - 4 Pack",
+  "note": "Steel, 8mm ID x 12mm OD. Category lists only 10/30/43/48 mm.",
+  "checked": "2026-11-16"
+ },
+ "1529-0012-0480": {
+  "url": "https://www.gobilda.com/8mm-id-steel-spacer-12mm-od-48mm-length-4-pack/",
+  "price": 6.99,
+  "pack": 4,
+  "name": "8mm ID Steel Spacer (12mm OD, 48mm Length) - 4 Pack",
+  "note": "Steel, 8mm ID x 12mm OD. Category lists only 10/30/43/48 mm.",
+  "checked": "2026-11-16"
+ },
+ "SVC-SendCutSend": {
+  "url": "https://sendcutsend.com/materials/6061-aluminum/",
+  "price": null,
+  "pack": 1,
+  "name": "SendCutSend",
+  "note": "No price: quote only. NO metric 5/6 mm. 6061 page lists '.187\" 4.75mm' and '.250\" 6.35mm' (also .040-.750\"). 5052 FAQ lists '.187\u2033 (4.75mm), .250\u2033 (6.35mm)'. Tapping: YES, metric taps (e.g. 6061 .187\": 'Largest Tap M16 x 2.0, Smallest Tap M2 x 0.4'). Accepts DXF/STEP.",
+  "checked": "2026-11-16"
+ },
+ "SVC-JLCCNC": {
+  "url": "https://jlccnc.com/help/article/materials-supported-in-sheet-metal-fabrication",
+  "price": null,
+  "pack": 1,
+  "name": "JLCCNC",
+  "note": "No price: quote only. 5 mm and 6 mm YES, but only in Aluminum 5052 (no 6061 sheet): 'Aluminum 5052 800mm 0.5 / 0.8 /1.0 / 1.2 / 1.5 / 2.0 / 2.5 / 3.0 / 4.0 / 5.0 / 6.0'. Max part length 800 mm. Tapping: YES ('laser cutting, bending, tapping and countersinking').",
+  "checked": "2026-11-16"
+ },
+ "SVC-Xometry-EU": {
+  "url": "https://xometry.eu/en/laser-cutting/",
+  "price": null,
+  "pack": 1,
+  "name": "Xometry-EU",
+  "note": "No price: quote only. 5 mm and 6 mm YES: 'Aluminium 6061 / 3.3211 / Al-Mg1SiCu | 2 mm, 3 mm, 4 mm, 5 mm, 6 mm'; 'Aluminium 5052 ... 4 mm, 5 mm, 6 mm'. Tapping not stated on this page (unverified). Xometry US (xometry.com/sheet-cutting/standard-sheet-sizes/) is inch-only: 6061 '0.160\u201d, 0.190\u201d, 0.250\u201d'.",
+  "checked": "2026-11-16"
+ },
+ "SVC-PCBWay": {
+  "url": "https://www.pcbway.com/rapid-prototyping/Sheet-metal/sheet-cutting.html",
+  "price": null,
+  "pack": 1,
+  "name": "PCBWay",
+  "note": "No price: quote only. Lists Aluminum 5052-H32 and 6061-T6 with '0.1mm-10mm Thickness' overall. Exact 5/6 mm aluminium availability is not itemised (UNVERIFIED; check in quote). Tapping: YES, 'Tapping and countersinking are handled via separate post-processing'.",
+  "checked": "2026-11-16"
+ },
+ "SVC-OSHCut": {
+  "url": "https://www.oshcut.com/materialdetails/aluminum-6061-t6",
+  "price": null,
+  "pack": 1,
+  "name": "OSHCut",
+  "note": "No price: quote only. NO metric 5/6 mm. 6061 T6 thicknesses: '0.125\" (1/8\") 0.188\" (3/16\") 0.25\" (1/4\") ...'. Tapping: YES ('Metal thread tapping up to 1.5\" in diameter, in steel, stainless, aluminum').",
+  "checked": "2026-11-16"
+ },
+ "SVC-Protocase": {
+  "url": "https://www.protocase.com/products/materials/aluminum/",
+  "price": null,
+  "pack": 1,
+  "name": "Protocase",
+  "note": "No price: quote only. NO metric 5/6 mm. 5052-H32 '0.188\"', '0.25\"'; 6061-T651 '0.25\"'. Tapping not checked on this page (UNVERIFIED).",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B07YSV66Y5": {
+  "url": "https://www.amazon.com/dp/B07YSV66Y5",
+  "price": 9.99,
+  "pack": 50,
+  "name": "ruthex M4 Threaded Inserts - 50 Pieces RX-M4x8.1 Brass Heat Set Insert",
+  "note": "live page 2026-11-16",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B08K1BVGN9": {
+  "url": "https://www.amazon.com/dp/B08K1BVGN9",
+  "price": 29.99,
+  "pack": 100,
+  "name": "ruthex Threaded Inserts M2 + M3 + M4 + M5 Assortment Box - 70 + 100 + 50 + 50 Pieces",
+  "note": "priced per 100 RX-M3x5.7; its 50 M4x8.1 are spares. live page 2026-11-16",
+  "checked": "2026-11-16"
+ },
+ "AMZ-B0GJZ8Q32D": {
+  "url": "https://www.amazon.com/dp/B0GJZ8Q32D",
+  "price": 9.99,
+  "pack": 1,
+  "name": "Dianrui 133 PCS Extension Spring Assortment Kit 18 Different Sizes",
+  "note": "includes 0.22\"x1.0\" and 0.18\"x1.18\" springs; live page 2026-11-16",
+  "checked": "2026-11-16"
+ }
+}

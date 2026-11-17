@@ -1,0 +1,2253 @@
+{
+ "custom": [
+  {
+   "name": "drivetrain_rex_wheel_axle_front_left",
+   "vol_cm3": 3.601,
+   "bbox_mm": [
+    164.26,
+    132.05,
+    44.09,
+    171.74,
+    218.0,
+    51.91
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_front_left_inner",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    161.05,
+    132.0,
+    41.05,
+    174.95,
+    134.5,
+    54.95
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_front_left_outer",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    161.05,
+    177.5,
+    41.05,
+    174.95,
+    180.0,
+    54.95
+   ]
+  },
+  {
+   "name": "drive_motor_quad_block_mount_front_left",
+   "vol_cm3": 12.326,
+   "bbox_mm": [
+    138.25,
+    134.5,
+    26.5,
+    146.25,
+    177.5,
+    69.5
+   ]
+  },
+  {
+   "name": "drivetrain_rex_wheel_axle_front_right",
+   "vol_cm3": 3.601,
+   "bbox_mm": [
+    164.26,
+    -218.0,
+    44.09,
+    171.74,
+    -132.05,
+    51.91
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_front_right_inner",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    161.05,
+    -134.5,
+    41.05,
+    174.95,
+    -132.0,
+    54.95
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_front_right_outer",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    161.05,
+    -180.0,
+    41.05,
+    174.95,
+    -177.5,
+    54.95
+   ]
+  },
+  {
+   "name": "drive_motor_quad_block_mount_front_right",
+   "vol_cm3": 12.326,
+   "bbox_mm": [
+    138.25,
+    -177.5,
+    26.5,
+    146.25,
+    -134.5,
+    69.5
+   ]
+  },
+  {
+   "name": "drivetrain_rex_wheel_axle_rear_left",
+   "vol_cm3": 3.601,
+   "bbox_mm": [
+    -147.74,
+    132.05,
+    44.09,
+    -140.26,
+    218.0,
+    51.91
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_rear_left_inner",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    -150.95,
+    132.0,
+    41.05,
+    -137.05,
+    134.5,
+    54.95
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_rear_left_outer",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    -150.95,
+    177.5,
+    41.05,
+    -137.05,
+    180.0,
+    54.95
+   ]
+  },
+  {
+   "name": "drive_motor_quad_block_mount_rear_left",
+   "vol_cm3": 12.326,
+   "bbox_mm": [
+    -122.25,
+    134.5,
+    26.5,
+    -114.25,
+    177.5,
+    69.5
+   ]
+  },
+  {
+   "name": "drivetrain_rex_wheel_axle_rear_right",
+   "vol_cm3": 3.601,
+   "bbox_mm": [
+    -147.74,
+    -218.0,
+    44.09,
+    -140.26,
+    -132.05,
+    51.91
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_rear_right_inner",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    -150.95,
+    -134.5,
+    41.05,
+    -137.05,
+    -132.0,
+    54.95
+   ]
+  },
+  {
+   "name": "drivetrain_axle_bearing_rear_right_outer",
+   "vol_cm3": 0.254,
+   "bbox_mm": [
+    -150.95,
+    -180.0,
+    41.05,
+    -137.05,
+    -177.5,
+    54.95
+   ]
+  },
+  {
+   "name": "drive_motor_quad_block_mount_rear_right",
+   "vol_cm3": 12.326,
+   "bbox_mm": [
+    -122.25,
+    -177.5,
+    26.5,
+    -114.25,
+    -134.5,
+    69.5
+   ]
+  },
+  {
+   "name": "intake_upper_pivot_stub_shaft_left_driven",
+   "vol_cm3": 4.441,
+   "bbox_mm": [
+    152.08,
+    56.0,
+    140.08,
+    159.92,
+    148.0,
+    147.92
+   ]
+  },
+  {
+   "name": "intake_upper_pivot_stub_shaft_right",
+   "vol_cm3": 2.317,
+   "bbox_mm": [
+    152.08,
+    -148.0,
+    140.08,
+    159.92,
+    -100.0,
+    147.92
+   ]
+  },
+  {
+   "name": "intake_floating_front_rex_shaft",
+   "vol_cm3": 10.476,
+   "bbox_mm": [
+    195.02,
+    -108.5,
+    72.58,
+    202.86,
+    108.5,
+    80.42
+   ]
+  },
+  {
+   "name": "intake_stage1_m7_pulley_20t",
+   "vol_cm3": 8.958,
+   "bbox_mm": [
+    85.3,
+    55.6,
+    102.63,
+    121.53,
+    67.6,
+    138.86
+   ]
+  },
+  {
+   "name": "intake_stage1_pivot_pulley_20t",
+   "vol_cm3": 8.958,
+   "bbox_mm": [
+    137.88,
+    55.6,
+    125.88,
+    174.12,
+    67.6,
+    162.12
+   ]
+  },
+  {
+   "name": "intake_stage1_htd5m_215mm_belt",
+   "vol_cm3": 3.938,
+   "bbox_mm": [
+    85.9,
+    57.1,
+    103.23,
+    173.52,
+    66.1,
+    161.52
+   ]
+  },
+  {
+   "name": "intake_stage2_pivot_pulley_20t",
+   "vol_cm3": 8.958,
+   "bbox_mm": [
+    137.88,
+    86.0,
+    125.88,
+    174.12,
+    98.0,
+    162.12
+   ]
+  },
+  {
+   "name": "intake_stage2_floating_pulley_20t",
+   "vol_cm3": 8.958,
+   "bbox_mm": [
+    180.82,
+    86.0,
+    58.38,
+    217.05,
+    98.0,
+    94.62
+   ]
+  },
+  {
+   "name": "intake_stage2_htd5m_260mm_belt",
+   "vol_cm3": 4.748,
+   "bbox_mm": [
+    138.48,
+    87.5,
+    58.98,
+    216.45,
+    96.5,
+    161.52
+   ]
+  },
+  {
+   "name": "floating_spoked_compliant_wheel_1",
+   "vol_cm3": 27.961,
+   "bbox_mm": [
+    175.44,
+    -82.0,
+    53.0,
+    222.44,
+    -62.0,
+    100.0
+   ]
+  },
+  {
+   "name": "floating_spoked_compliant_wheel_2",
+   "vol_cm3": 27.961,
+   "bbox_mm": [
+    175.44,
+    -48.0,
+    53.0,
+    222.44,
+    -28.0,
+    100.0
+   ]
+  },
+  {
+   "name": "floating_spoked_compliant_wheel_3",
+   "vol_cm3": 27.961,
+   "bbox_mm": [
+    175.44,
+    -10.0,
+    53.0,
+    222.44,
+    10.0,
+    100.0
+   ]
+  },
+  {
+   "name": "floating_spoked_compliant_wheel_4",
+   "vol_cm3": 27.961,
+   "bbox_mm": [
+    175.44,
+    28.0,
+    53.0,
+    222.44,
+    48.0,
+    100.0
+   ]
+  },
+  {
+   "name": "floating_spoked_compliant_wheel_5",
+   "vol_cm3": 27.961,
+   "bbox_mm": [
+    175.44,
+    62.0,
+    53.0,
+    222.44,
+    82.0,
+    100.0
+   ]
+  },
+  {
+   "name": "intake_arm_pivot_bearing_left",
+   "vol_cm3": 0.792,
+   "bbox_mm": [
+    149.05,
+    100.1,
+    137.05,
+    162.95,
+    107.9,
+    150.95
+   ]
+  },
+  {
+   "name": "intake_arm_front_bearing_left",
+   "vol_cm3": 0.792,
+   "bbox_mm": [
+    191.99,
+    100.1,
+    69.55,
+    205.89,
+    107.9,
+    83.45
+   ]
+  },
+  {
+   "name": "floating_intake_swing_arm_left",
+   "vol_cm3": 14.915,
+   "bbox_mm": [
+    137.34,
+    100.0,
+    65.0,
+    210.44,
+    108.0,
+    168.19
+   ]
+  },
+  {
+   "name": "intake_upright_bearing_and_stop_plate_left",
+   "vol_cm3": 12.963,
+   "bbox_mm": [
+    131.0,
+    124.0,
+    119.0,
+    181.0,
+    131.9,
+    168.58
+   ]
+  },
+  {
+   "name": "intake_upright_pivot_bearing_left",
+   "vol_cm3": 0.781,
+   "bbox_mm": [
+    149.05,
+    124.1,
+    137.05,
+    162.95,
+    131.8,
+    150.95
+   ]
+  },
+  {
+   "name": "intake_lower_hard_stop_pin_left",
+   "vol_cm3": 1.603,
+   "bbox_mm": [
+    161.28,
+    100.0,
+    101.09,
+    169.28,
+    131.9,
+    109.09
+   ]
+  },
+  {
+   "name": "intake_upper_hard_stop_pin_left",
+   "vol_cm3": 1.206,
+   "bbox_mm": [
+    130.14,
+    100.0,
+    137.55,
+    138.14,
+    124.0,
+    145.55
+   ]
+  },
+  {
+   "name": "intake_arm_pivot_bearing_right",
+   "vol_cm3": 0.792,
+   "bbox_mm": [
+    149.05,
+    -107.9,
+    137.05,
+    162.95,
+    -100.1,
+    150.95
+   ]
+  },
+  {
+   "name": "intake_arm_front_bearing_right",
+   "vol_cm3": 0.792,
+   "bbox_mm": [
+    191.99,
+    -107.9,
+    69.55,
+    205.89,
+    -100.1,
+    83.45
+   ]
+  },
+  {
+   "name": "floating_intake_swing_arm_right",
+   "vol_cm3": 14.915,
+   "bbox_mm": [
+    137.34,
+    -108.0,
+    65.0,
+    210.44,
+    -100.0,
+    168.19
+   ]
+  },
+  {
+   "name": "intake_upright_bearing_and_stop_plate_right",
+   "vol_cm3": 19.287,
+   "bbox_mm": [
+    131.0,
+    -177.45,
+    119.0,
+    181.0,
+    -124.0,
+    168.58
+   ]
+  },
+  {
+   "name": "intake_upright_pivot_bearing_right",
+   "vol_cm3": 0.781,
+   "bbox_mm": [
+    149.05,
+    -131.8,
+    137.05,
+    162.95,
+    -124.1,
+    150.95
+   ]
+  },
+  {
+   "name": "intake_lower_hard_stop_pin_right",
+   "vol_cm3": 1.603,
+   "bbox_mm": [
+    161.28,
+    -131.9,
+    101.09,
+    169.28,
+    -100.0,
+    109.09
+   ]
+  },
+  {
+   "name": "intake_upper_hard_stop_pin_right",
+   "vol_cm3": 1.206,
+   "bbox_mm": [
+    130.14,
+    -124.0,
+    137.55,
+    138.14,
+    -100.0,
+    145.55
+   ]
+  },
+  {
+   "name": "gecko1_rex_shaft_cantilever",
+   "vol_cm3": 4.924,
+   "bbox_mm": [
+    156.33,
+    -79.5,
+    126.27,
+    164.17,
+    22.5,
+    134.11
+   ]
+  },
+  {
+   "name": "gecko2_rex_shaft",
+   "vol_cm3": 6.855,
+   "bbox_mm": [
+    -10.48,
+    -71.0,
+    196.32,
+    -2.64,
+    71.0,
+    204.16
+   ]
+  },
+  {
+   "name": "magazine_j2_jackshaft_right",
+   "vol_cm3": 1.931,
+   "bbox_mm": [
+    28.23,
+    -91.0,
+    154.48,
+    36.07,
+    -51.0,
+    162.32
+   ]
+  },
+  {
+   "name": "magazine_j2_pivot_pin_left",
+   "vol_cm3": 0.965,
+   "bbox_mm": [
+    28.23,
+    51.0,
+    154.48,
+    36.07,
+    71.0,
+    162.32
+   ]
+  },
+  {
+   "name": "magazine_j2_shroud_bearing_right",
+   "vol_cm3": 0.406,
+   "bbox_mm": [
+    25.2,
+    -55.0,
+    151.45,
+    39.1,
+    -51.0,
+    165.35
+   ]
+  },
+  {
+   "name": "magazine_j2_shroud_bearing_left",
+   "vol_cm3": 0.406,
+   "bbox_mm": [
+    25.2,
+    51.0,
+    151.45,
+    39.1,
+    55.0,
+    165.35
+   ]
+  },
+  {
+   "name": "magazine_j2_ds_plate_bearing",
+   "vol_cm3": 0.507,
+   "bbox_mm": [
+    25.2,
+    -91.0,
+    151.45,
+    39.1,
+    -86.0,
+    165.35
+   ]
+  },
+  {
+   "name": "magazine_b1_m8_pulley_33t",
+   "vol_cm3": 6.177,
+   "bbox_mm": [
+    86.74,
+    -64.1,
+    103.74,
+    121.26,
+    -55.6,
+    138.26
+   ]
+  },
+  {
+   "name": "magazine_b1_gecko1_pulley_33t",
+   "vol_cm3": 6.177,
+   "bbox_mm": [
+    143.0,
+    -64.1,
+    112.94,
+    177.51,
+    -55.6,
+    147.45
+   ]
+  },
+  {
+   "name": "magazine_b1_htd3m_213mm_belt",
+   "vol_cm3": 1.805,
+   "bbox_mm": [
+    87.24,
+    -62.85,
+    104.24,
+    177.01,
+    -56.85,
+    146.95
+   ]
+  },
+  {
+   "name": "magazine_b2_m8_pulley_32t",
+   "vol_cm3": 5.783,
+   "bbox_mm": [
+    87.22,
+    -79.4,
+    104.22,
+    120.78,
+    -70.9,
+    137.78
+   ]
+  },
+  {
+   "name": "magazine_b2_j2_pulley_32t",
+   "vol_cm3": 5.783,
+   "bbox_mm": [
+    15.37,
+    -79.4,
+    141.62,
+    48.93,
+    -70.9,
+    175.18
+   ]
+  },
+  {
+   "name": "magazine_b2_htd3m_258mm_belt",
+   "vol_cm3": 2.183,
+   "bbox_mm": [
+    15.87,
+    -78.15,
+    104.72,
+    120.28,
+    -72.15,
+    174.68
+   ]
+  },
+  {
+   "name": "magazine_b3_j2_pulley_33t",
+   "vol_cm3": 6.177,
+   "bbox_mm": [
+    14.9,
+    -64.1,
+    141.15,
+    49.41,
+    -55.6,
+    175.66
+   ]
+  },
+  {
+   "name": "magazine_b3_gecko2_pulley_33t",
+   "vol_cm3": 6.177,
+   "bbox_mm": [
+    -23.81,
+    -64.1,
+    182.99,
+    10.7,
+    -55.6,
+    217.5
+   ]
+  },
+  {
+   "name": "magazine_b3_htd3m_213mm_belt",
+   "vol_cm3": 1.805,
+   "bbox_mm": [
+    -23.31,
+    -62.85,
+    141.65,
+    48.91,
+    -56.85,
+    217.0
+   ]
+  },
+  {
+   "name": "gecko1_retaining_collar",
+   "vol_cm3": 0.726,
+   "bbox_mm": [
+    152.75,
+    16.2,
+    122.69,
+    167.75,
+    22.0,
+    137.69
+   ]
+  },
+  {
+   "name": "gecko1_shaft_spacer_right",
+   "vol_cm3": 5.144,
+   "bbox_mm": [
+    152.25,
+    -50.6,
+    122.19,
+    168.25,
+    -16.2,
+    138.19
+   ]
+  },
+  {
+   "name": "gecko2_shaft_spacer_left",
+   "vol_cm3": 5.144,
+   "bbox_mm": [
+    -14.56,
+    16.2,
+    192.24,
+    1.44,
+    50.6,
+    208.24
+   ]
+  },
+  {
+   "name": "gecko2_shaft_spacer_right",
+   "vol_cm3": 5.144,
+   "bbox_mm": [
+    -14.56,
+    -50.6,
+    192.24,
+    1.44,
+    -16.2,
+    208.24
+   ]
+  },
+  {
+   "name": "gecko1_arm_pivot_bearing_on_m8_shaft",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    97.05,
+    -70.4,
+    114.05,
+    110.95,
+    -64.6,
+    127.95
+   ]
+  },
+  {
+   "name": "gecko1_arm_shaft_bearing",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    153.3,
+    -70.4,
+    123.24,
+    167.2,
+    -64.6,
+    137.14
+   ]
+  },
+  {
+   "name": "gecko1_coaxial_swing_arm_on_m8",
+   "vol_cm3": 8.948,
+   "bbox_mm": [
+    92.5,
+    -78.4,
+    109.5,
+    171.75,
+    -64.5,
+    141.69
+   ]
+  },
+  {
+   "name": "gecko1_arm_shaft_bearing_outer",
+   "vol_cm3": 0.741,
+   "bbox_mm": [
+    153.3,
+    -78.3,
+    123.24,
+    167.2,
+    -71.0,
+    137.14
+   ]
+  },
+  {
+   "name": "gecko1_spring_arm_pin",
+   "vol_cm3": 0.396,
+   "bbox_mm": [
+    142.41,
+    -78.5,
+    112.61,
+    148.41,
+    -64.5,
+    118.61
+   ]
+  },
+  {
+   "name": "gecko1_spring_fixed_pin",
+   "vol_cm3": 0.461,
+   "bbox_mm": [
+    142.91,
+    -78.5,
+    79.11,
+    147.91,
+    -55.0,
+    84.11
+   ]
+  },
+  {
+   "name": "gecko1_return_extension_spring",
+   "vol_cm3": 0.446,
+   "bbox_mm": [
+    142.41,
+    -78.0,
+    83.19,
+    148.41,
+    -72.0,
+    113.3
+   ]
+  },
+  {
+   "name": "gecko2_arm_pivot_bearing_left",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    25.2,
+    64.6,
+    151.45,
+    39.1,
+    70.4,
+    165.35
+   ]
+  },
+  {
+   "name": "gecko2_arm_shaft_bearing_left",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -13.51,
+    64.6,
+    193.29,
+    0.39,
+    70.4,
+    207.19
+   ]
+  },
+  {
+   "name": "gecko2_coaxial_swing_arm_left",
+   "vol_cm3": 6.596,
+   "bbox_mm": [
+    -18.06,
+    64.5,
+    146.9,
+    43.65,
+    70.5,
+    211.74
+   ]
+  },
+  {
+   "name": "gecko2_arm_pivot_bearing_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    25.2,
+    -70.4,
+    151.45,
+    39.1,
+    -64.6,
+    165.35
+   ]
+  },
+  {
+   "name": "gecko2_arm_shaft_bearing_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -13.51,
+    -70.4,
+    193.29,
+    0.39,
+    -64.6,
+    207.19
+   ]
+  },
+  {
+   "name": "gecko2_coaxial_swing_arm_right",
+   "vol_cm3": 6.596,
+   "bbox_mm": [
+    -18.06,
+    -70.5,
+    146.9,
+    43.65,
+    -64.5,
+    211.74
+   ]
+  },
+  {
+   "name": "gecko2_torsion_return_spring",
+   "vol_cm3": 1.184,
+   "bbox_mm": [
+    23.15,
+    -85.4,
+    149.4,
+    41.15,
+    -79.6,
+    167.4
+   ]
+  },
+  {
+   "name": "indexer_gate_rex_shaft",
+   "vol_cm3": 3.784,
+   "bbox_mm": [
+    -81.56,
+    -40.0,
+    89.2,
+    -74.6,
+    50.3,
+    97.1
+   ]
+  },
+  {
+   "name": "indexer_stopper_gate_3prong_fingers",
+   "vol_cm3": 7.282,
+   "bbox_mm": [
+    -85.08,
+    -27.0,
+    86.15,
+    -43.43,
+    27.0,
+    144.27
+   ]
+  },
+  {
+   "name": "unified_continuous_j_chute",
+   "vol_cm3": 413.296,
+   "bbox_mm": [
+    -119.95,
+    -131.9,
+    5.0,
+    188.71,
+    131.9,
+    276.0
+   ]
+  },
+  {
+   "name": "sprung_magazine_shroud_left",
+   "vol_cm3": 135.693,
+   "bbox_mm": [
+    -98.0,
+    51.0,
+    34.47,
+    150.0,
+    63.0,
+    215.9
+   ]
+  },
+  {
+   "name": "sprung_magazine_shroud_right",
+   "vol_cm3": 122.092,
+   "bbox_mm": [
+    -98.0,
+    -63.0,
+    34.47,
+    150.0,
+    -51.0,
+    215.9
+   ]
+  },
+  {
+   "name": "s3_indexer_servo_bracket",
+   "vol_cm3": 10.303,
+   "bbox_mm": [
+    -96.0,
+    55.0,
+    72.02,
+    -30.0,
+    90.0,
+    105.0
+   ]
+  },
+  {
+   "name": "magazine_outboard_double_shear_plate_right",
+   "vol_cm3": 16.793,
+   "bbox_mm": [
+    20.15,
+    -99.0,
+    97.0,
+    128.0,
+    -86.0,
+    171.71
+   ]
+  },
+  {
+   "name": "m7_intake_motor_clamp_saddle_left",
+   "vol_cm3": 64.251,
+   "bbox_mm": [
+    82.41,
+    88.0,
+    72.05,
+    124.41,
+    178.0,
+    141.74
+   ]
+  },
+  {
+   "name": "m8_magazine_motor_clamp_saddle_right",
+   "vol_cm3": 40.258,
+   "bbox_mm": [
+    84.0,
+    -178.0,
+    72.05,
+    124.0,
+    -132.5,
+    94.6
+   ]
+  },
+  {
+   "name": "shooter_main_rex_shaft",
+   "vol_cm3": 8.129,
+   "bbox_mm": [
+    28.52,
+    -97.0,
+    320.05,
+    35.48,
+    97.0,
+    327.95
+   ]
+  },
+  {
+   "name": "shooter_counter_rex_shaft",
+   "vol_cm3": 7.941,
+   "bbox_mm": [
+    -127.42,
+    -96.0,
+    320.08,
+    -119.58,
+    68.5,
+    327.92
+   ]
+  },
+  {
+   "name": "shooter_coaxial_pivot_stub_left",
+   "vol_cm3": 0.637,
+   "bbox_mm": [
+    -111.63,
+    55.2,
+    260.98,
+    -103.79,
+    68.4,
+    268.82
+   ]
+  },
+  {
+   "name": "hood_hinge_stub_shaft_left",
+   "vol_cm3": 0.691,
+   "bbox_mm": [
+    -119.48,
+    50.0,
+    378.05,
+    -112.52,
+    66.5,
+    385.95
+   ]
+  },
+  {
+   "name": "shooter_main_shaft_inner_spacer_left",
+   "vol_cm3": 1.436,
+   "bbox_mm": [
+    24.0,
+    45.2,
+    316.0,
+    40.0,
+    54.8,
+    332.0
+   ]
+  },
+  {
+   "name": "shooter_counter_shaft_inner_spacer_left",
+   "vol_cm3": 5.473,
+   "bbox_mm": [
+    -131.5,
+    18.2,
+    316.0,
+    -115.5,
+    54.8,
+    332.0
+   ]
+  },
+  {
+   "name": "shooter_side_plate_bearing_main_left",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    25.05,
+    55.1,
+    317.05,
+    38.95,
+    60.9,
+    330.95
+   ]
+  },
+  {
+   "name": "shooter_side_plate_bearing_hood_hinge_left",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -122.95,
+    55.1,
+    375.05,
+    -109.05,
+    60.9,
+    388.95
+   ]
+  },
+  {
+   "name": "shooter_side_plate_bearing_pivot_left",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -114.66,
+    55.1,
+    257.95,
+    -100.76,
+    60.9,
+    271.85
+   ]
+  },
+  {
+   "name": "shooter_swing_arm_pivot_bearing_left",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -114.66,
+    62.1,
+    257.95,
+    -100.76,
+    67.9,
+    271.85
+   ]
+  },
+  {
+   "name": "shooter_swing_arm_counter_bearing_left",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -130.45,
+    62.1,
+    317.05,
+    -116.55,
+    67.9,
+    330.95
+   ]
+  },
+  {
+   "name": "shooter_coaxial_swing_arm_left",
+   "vol_cm3": 7.229,
+   "bbox_mm": [
+    -135.0,
+    62.0,
+    253.4,
+    -96.21,
+    68.0,
+    335.5
+   ]
+  },
+  {
+   "name": "shooter_spring_arm_pin_left",
+   "vol_cm3": 0.353,
+   "bbox_mm": [
+    -110.41,
+    62.0,
+    303.38,
+    -104.41,
+    74.5,
+    309.38
+   ]
+  },
+  {
+   "name": "shooter_spring_fixed_pin_left",
+   "vol_cm3": 0.382,
+   "bbox_mm": [
+    -83.0,
+    61.0,
+    297.0,
+    -77.0,
+    74.5,
+    303.0
+   ]
+  },
+  {
+   "name": "shooter_return_extension_spring_left",
+   "vol_cm3": 0.338,
+   "bbox_mm": [
+    -105.62,
+    68.5,
+    298.57,
+    -81.79,
+    74.5,
+    307.81
+   ]
+  },
+  {
+   "name": "shooter_coaxial_pivot_stub_right",
+   "vol_cm3": 0.782,
+   "bbox_mm": [
+    -111.63,
+    -71.4,
+    260.98,
+    -103.79,
+    -55.2,
+    268.82
+   ]
+  },
+  {
+   "name": "hood_hinge_stub_shaft_right",
+   "vol_cm3": 0.812,
+   "bbox_mm": [
+    -119.48,
+    -69.39,
+    378.05,
+    -112.52,
+    -50.0,
+    385.95
+   ]
+  },
+  {
+   "name": "shooter_main_shaft_inner_spacer_right",
+   "vol_cm3": 1.436,
+   "bbox_mm": [
+    24.0,
+    -54.8,
+    316.0,
+    40.0,
+    -45.2,
+    332.0
+   ]
+  },
+  {
+   "name": "shooter_counter_shaft_inner_spacer_right",
+   "vol_cm3": 5.473,
+   "bbox_mm": [
+    -131.5,
+    -54.8,
+    316.0,
+    -115.5,
+    -18.2,
+    332.0
+   ]
+  },
+  {
+   "name": "shooter_side_plate_bearing_main_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    25.05,
+    -60.9,
+    317.05,
+    38.95,
+    -55.1,
+    330.95
+   ]
+  },
+  {
+   "name": "shooter_side_plate_bearing_hood_hinge_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -122.95,
+    -60.9,
+    375.05,
+    -109.05,
+    -55.1,
+    388.95
+   ]
+  },
+  {
+   "name": "shooter_side_plate_bearing_pivot_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -114.66,
+    -60.9,
+    257.95,
+    -100.76,
+    -55.1,
+    271.85
+   ]
+  },
+  {
+   "name": "shooter_swing_arm_pivot_bearing_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -114.66,
+    -67.9,
+    257.95,
+    -100.76,
+    -62.1,
+    271.85
+   ]
+  },
+  {
+   "name": "shooter_swing_arm_counter_bearing_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    -130.45,
+    -67.9,
+    317.05,
+    -116.55,
+    -62.1,
+    330.95
+   ]
+  },
+  {
+   "name": "shooter_coaxial_swing_arm_right",
+   "vol_cm3": 7.229,
+   "bbox_mm": [
+    -135.0,
+    -68.0,
+    253.4,
+    -96.21,
+    -62.0,
+    335.5
+   ]
+  },
+  {
+   "name": "shooter_spring_arm_pin_right",
+   "vol_cm3": 0.353,
+   "bbox_mm": [
+    -110.41,
+    -74.5,
+    303.38,
+    -104.41,
+    -62.0,
+    309.38
+   ]
+  },
+  {
+   "name": "shooter_spring_fixed_pin_right",
+   "vol_cm3": 0.382,
+   "bbox_mm": [
+    -83.0,
+    -74.5,
+    297.0,
+    -77.0,
+    -61.0,
+    303.0
+   ]
+  },
+  {
+   "name": "shooter_return_extension_spring_right",
+   "vol_cm3": 0.338,
+   "bbox_mm": [
+    -105.62,
+    -74.5,
+    298.57,
+    -81.79,
+    -68.5,
+    307.81
+   ]
+  },
+  {
+   "name": "shooter_m6_stub_shaft_coupler",
+   "vol_cm3": 0.479,
+   "bbox_mm": [
+    -114.21,
+    -74.5,
+    258.4,
+    -101.21,
+    -68.6,
+    271.4
+   ]
+  },
+  {
+   "name": "shooter_main_shaft_outer_spacer_left_a",
+   "vol_cm3": 0.69,
+   "bbox_mm": [
+    26.0,
+    61.2,
+    318.0,
+    38.0,
+    72.4,
+    330.0
+   ]
+  },
+  {
+   "name": "shooter_main_shaft_outer_spacer_right",
+   "vol_cm3": 1.761,
+   "bbox_mm": [
+    26.0,
+    -89.8,
+    318.0,
+    38.0,
+    -61.2,
+    330.0
+   ]
+  },
+  {
+   "name": "shooter_ds_left_main_bearing",
+   "vol_cm3": 0.487,
+   "bbox_mm": [
+    25.05,
+    85.1,
+    317.05,
+    38.95,
+    89.9,
+    330.95
+   ]
+  },
+  {
+   "name": "shooter_ds_right_main_bearing",
+   "vol_cm3": 0.487,
+   "bbox_mm": [
+    25.05,
+    -94.9,
+    317.05,
+    38.95,
+    -90.1,
+    330.95
+   ]
+  },
+  {
+   "name": "shooter_left_m5_pulley_20t",
+   "vol_cm3": 8.958,
+   "bbox_mm": [
+    -41.68,
+    72.6,
+    248.33,
+    -5.45,
+    84.6,
+    284.56
+   ]
+  },
+  {
+   "name": "shooter_left_front_wheel_pulley_20t",
+   "vol_cm3": 8.958,
+   "bbox_mm": [
+    13.88,
+    72.6,
+    305.88,
+    50.12,
+    84.6,
+    342.12
+   ]
+  },
+  {
+   "name": "shooter_left_htd5m_260mm_belt",
+   "vol_cm3": 4.748,
+   "bbox_mm": [
+    -41.08,
+    74.1,
+    248.93,
+    49.52,
+    83.1,
+    341.52
+   ]
+  },
+  {
+   "name": "shooter_right_m6_pulley_32t",
+   "vol_cm3": 23.849,
+   "bbox_mm": [
+    -135.37,
+    -87.2,
+    237.23,
+    -80.04,
+    -75.2,
+    292.56
+   ]
+  },
+  {
+   "name": "shooter_right_counter_pulley_16t",
+   "vol_cm3": 5.522,
+   "bbox_mm": [
+    -138.43,
+    -87.2,
+    309.07,
+    -108.57,
+    -75.2,
+    338.93
+   ]
+  },
+  {
+   "name": "shooter_right_htd5m_245mm_belt",
+   "vol_cm3": 4.479,
+   "bbox_mm": [
+    -137.83,
+    -85.7,
+    237.83,
+    -80.64,
+    -76.7,
+    338.33
+   ]
+  },
+  {
+   "name": "shooter_counter_shaft_outer_spacer_right",
+   "vol_cm3": 0.394,
+   "bbox_mm": [
+    -129.5,
+    -74.6,
+    318.0,
+    -117.5,
+    -68.2,
+    330.0
+   ]
+  },
+  {
+   "name": "variable_pitch_exit_hood_full",
+   "vol_cm3": 33.429,
+   "bbox_mm": [
+    -123.5,
+    -54.8,
+    374.5,
+    -92.89,
+    54.8,
+    439.32
+   ]
+  },
+  {
+   "name": "turret_side_plate_foot_bracket_left",
+   "vol_cm3": 33.538,
+   "bbox_mm": [
+    -160.0,
+    61.0,
+    222.0,
+    -40.0,
+    72.0,
+    252.0
+   ]
+  },
+  {
+   "name": "turret_side_plate_left_clean",
+   "vol_cm3": 207.257,
+   "bbox_mm": [
+    -168.0,
+    55.0,
+    222.0,
+    72.0,
+    61.0,
+    394.0
+   ]
+  },
+  {
+   "name": "turret_side_plate_foot_bracket_right",
+   "vol_cm3": 32.444,
+   "bbox_mm": [
+    -160.0,
+    -72.0,
+    222.0,
+    -40.0,
+    -61.0,
+    252.0
+   ]
+  },
+  {
+   "name": "turret_side_plate_right_clean",
+   "vol_cm3": 204.225,
+   "bbox_mm": [
+    -168.0,
+    -61.0,
+    222.0,
+    72.0,
+    -55.0,
+    394.0
+   ]
+  },
+  {
+   "name": "turret_ds_standoff_tube_left_-46",
+   "vol_cm3": 1.899,
+   "bbox_mm": [
+    -51.5,
+    61.0,
+    324.5,
+    -40.5,
+    85.0,
+    335.5
+   ]
+  },
+  {
+   "name": "turret_ds_standoff_tube_left_50",
+   "vol_cm3": 1.899,
+   "bbox_mm": [
+    44.5,
+    61.0,
+    256.5,
+    55.5,
+    85.0,
+    267.5
+   ]
+  },
+  {
+   "name": "turret_outboard_double_shear_plate_left",
+   "vol_cm3": 61.844,
+   "bbox_mm": [
+    -56.0,
+    85.0,
+    222.0,
+    56.0,
+    90.0,
+    338.0
+   ]
+  },
+  {
+   "name": "turret_ds_standoff_tube_right_-60",
+   "vol_cm3": 2.295,
+   "bbox_mm": [
+    -65.5,
+    -90.0,
+    234.5,
+    -54.5,
+    -61.0,
+    245.5
+   ]
+  },
+  {
+   "name": "turret_ds_standoff_tube_right_50",
+   "vol_cm3": 2.295,
+   "bbox_mm": [
+    44.5,
+    -90.0,
+    256.5,
+    55.5,
+    -61.0,
+    267.5
+   ]
+  },
+  {
+   "name": "turret_outboard_double_shear_plate_right",
+   "vol_cm3": 125.089,
+   "bbox_mm": [
+    -168.0,
+    -95.0,
+    222.0,
+    56.0,
+    -90.0,
+    338.0
+   ]
+  },
+  {
+   "name": "turret_flywheel_motor_saddle_left_m5",
+   "vol_cm3": 121.417,
+   "bbox_mm": [
+    -59.57,
+    94.0,
+    222.0,
+    12.43,
+    178.0,
+    256.0
+   ]
+  },
+  {
+   "name": "turret_flywheel_motor_saddle_right_m6",
+   "vol_cm3": 114.973,
+   "bbox_mm": [
+    -143.71,
+    -183.0,
+    222.0,
+    -71.71,
+    -99.0,
+    256.0
+   ]
+  },
+  {
+   "name": "turret_servo_cradle_s6_hood",
+   "vol_cm3": 54.105,
+   "bbox_mm": [
+    -143.0,
+    -118.3,
+    340.0,
+    -77.0,
+    -61.0,
+    392.2
+   ]
+  },
+  {
+   "name": "dfrobot_huskylens_mount_block",
+   "vol_cm3": 10.167,
+   "bbox_mm": [
+    40.0,
+    -100.0,
+    316.0,
+    75.25,
+    -72.1,
+    334.0
+   ]
+  },
+  {
+   "name": "cnc_turret_mounting_deck_plate_clean",
+   "vol_cm3": 284.459,
+   "bbox_mm": [
+    -168.0,
+    -180.0,
+    216.0,
+    12.0,
+    180.0,
+    222.0
+   ]
+  },
+  {
+   "name": "odom_pod_center_y_strafe_rear_cradle",
+   "vol_cm3": 10.148,
+   "bbox_mm": [
+    -168.0,
+    -40.0,
+    9.0,
+    -120.55,
+    -8.0,
+    46.0
+   ]
+  },
+  {
+   "name": "odom_pod_left_x_rail_cradle",
+   "vol_cm3": 6.932,
+   "bbox_mm": [
+    -139.0,
+    84.45,
+    9.0,
+    -121.0,
+    132.0,
+    46.0
+   ]
+  },
+  {
+   "name": "pinpoint_v2_mount_plate",
+   "vol_cm3": 8.665,
+   "bbox_mm": [
+    -47.0,
+    -94.5,
+    72.05,
+    30.0,
+    -57.0,
+    75.15
+   ]
+  },
+  {
+   "name": "rev_control_hub_mount_plate_right",
+   "vol_cm3": 39.758,
+   "bbox_mm": [
+    -119.5,
+    -131.9,
+    80.0,
+    24.0,
+    -129.1,
+    179.3
+   ]
+  },
+  {
+   "name": "rev_expansion_hub_mount_plate_left",
+   "vol_cm3": 39.505,
+   "bbox_mm": [
+    -119.5,
+    129.1,
+    80.0,
+    24.0,
+    131.9,
+    179.3
+   ]
+  },
+  {
+   "name": "rev_main_power_switch_housing",
+   "vol_cm3": 27.395,
+   "bbox_mm": [
+    -137.0,
+    129.5,
+    222.05,
+    -91.0,
+    162.5,
+    249.45
+   ]
+  },
+  {
+   "name": "main_power_switch_impact_guard_cage",
+   "vol_cm3": 48.711,
+   "bbox_mm": [
+    -146.0,
+    115.0,
+    222.0,
+    -82.0,
+    169.0,
+    264.0
+   ]
+  },
+  {
+   "name": "g407_blocker_pivot_stub_left_servo",
+   "vol_cm3": 2.679,
+   "bbox_mm": [
+    152.52,
+    112.0,
+    164.05,
+    159.48,
+    175.94,
+    171.95
+   ]
+  },
+  {
+   "name": "g407_blocker_web_rex_bearing_left",
+   "vol_cm3": 0.481,
+   "bbox_mm": [
+    148.0,
+    132.0,
+    160.0,
+    164.0,
+    136.0,
+    176.0
+   ]
+  },
+  {
+   "name": "g407_blocker_pivot_stub_right",
+   "vol_cm3": 1.159,
+   "bbox_mm": [
+    152.08,
+    -136.0,
+    164.08,
+    159.92,
+    -112.0,
+    171.92
+   ]
+  },
+  {
+   "name": "g407_front_lip_blocker_gate",
+   "vol_cm3": 28.196,
+   "bbox_mm": [
+    147.0,
+    -118.0,
+    159.0,
+    226.32,
+    118.0,
+    285.77
+   ]
+  },
+  {
+   "name": "g407_blocker_bearing_right",
+   "vol_cm3": 0.589,
+   "bbox_mm": [
+    149.05,
+    -117.9,
+    161.05,
+    162.95,
+    -112.1,
+    174.95
+   ]
+  },
+  {
+   "name": "asymmetrical_funnel_wing_left_long",
+   "vol_cm3": 62.947,
+   "bbox_mm": [
+    184.0,
+    54.55,
+    6.0,
+    228.0,
+    180.0,
+    76.0
+   ]
+  },
+  {
+   "name": "asymmetrical_funnel_wing_right_short",
+   "vol_cm3": 47.174,
+   "bbox_mm": [
+    184.0,
+    -180.0,
+    6.0,
+    222.0,
+    -54.71,
+    76.0
+   ]
+  },
+  {
+   "name": "g409_sloped_deck_shed_shield_left",
+   "vol_cm3": 21.476,
+   "bbox_mm": [
+    -165.0,
+    127.0,
+    222.0,
+    -60.0,
+    180.0,
+    266.47
+   ]
+  },
+  {
+   "name": "g409_sloped_deck_shed_shield_right",
+   "vol_cm3": 35.634,
+   "bbox_mm": [
+    -60.0,
+    -180.0,
+    222.0,
+    10.0,
+    -127.0,
+    266.47
+   ]
+  },
+  {
+   "name": "s1_servo_guard_cage",
+   "vol_cm3": 42.889,
+   "bbox_mm": [
+    135.8,
+    136.0,
+    118.0,
+    196.2,
+    229.0,
+    181.1
+   ]
+  },
+  {
+   "name": "robot_sign_left_149_plate_red",
+   "vol_cm3": 40.716,
+   "bbox_mm": [
+    -97.0,
+    180.6,
+    127.0,
+    77.0,
+    183.6,
+    205.0
+   ]
+  },
+  {
+   "name": "robot_sign_left_numeral_1_white",
+   "vol_cm3": 0.752,
+   "bbox_mm": [
+    23.0,
+    183.6,
+    137.25,
+    49.0,
+    184.6,
+    194.75
+   ]
+  },
+  {
+   "name": "robot_sign_left_numeral_4_white",
+   "vol_cm3": 1.035,
+   "bbox_mm": [
+    -27.0,
+    183.6,
+    137.25,
+    7.0,
+    184.6,
+    194.75
+   ]
+  },
+  {
+   "name": "robot_sign_left_numeral_9_white",
+   "vol_cm3": 1.182,
+   "bbox_mm": [
+    -73.0,
+    183.6,
+    137.25,
+    -39.0,
+    184.6,
+    194.75
+   ]
+  },
+  {
+   "name": "sign_rail_bolt_spacer_left_-28_112",
+   "vol_cm3": 1.563,
+   "bbox_mm": [
+    -32.0,
+    134.5,
+    108.0,
+    -24.0,
+    180.0,
+    116.0
+   ]
+  },
+  {
+   "name": "sign_rail_bolt_spacer_left_-28_208",
+   "vol_cm3": 1.563,
+   "bbox_mm": [
+    -32.0,
+    134.5,
+    204.0,
+    -24.0,
+    180.0,
+    212.0
+   ]
+  },
+  {
+   "name": "sign_rail_bolt_spacer_left_4_112",
+   "vol_cm3": 1.563,
+   "bbox_mm": [
+    0.0,
+    134.5,
+    108.0,
+    8.0,
+    180.0,
+    116.0
+   ]
+  },
+  {
+   "name": "sign_rail_bolt_spacer_left_4_208",
+   "vol_cm3": 1.563,
+   "bbox_mm": [
+    0.0,
+    134.5,
+    204.0,
+    8.0,
+    180.0,
+    212.0
+   ]
+  },
+  {
+   "name": "robot_sign_left_slide_rail_bottom",
+   "vol_cm3": 10.417,
+   "bbox_mm": [
+    -100.0,
+    180.0,
+    106.0,
+    77.0,
+    186.0,
+    130.0
+   ]
+  },
+  {
+   "name": "robot_sign_left_slide_rail_top",
+   "vol_cm3": 6.673,
+   "bbox_mm": [
+    -100.0,
+    180.0,
+    202.0,
+    77.0,
+    186.0,
+    213.0
+   ]
+  },
+  {
+   "name": "robot_sign_right_149_plate_red",
+   "vol_cm3": 40.716,
+   "bbox_mm": [
+    -97.0,
+    -183.6,
+    127.0,
+    77.0,
+    -180.6,
+    205.0
+   ]
+  },
+  {
+   "name": "robot_sign_right_numeral_1_white",
+   "vol_cm3": 0.752,
+   "bbox_mm": [
+    -69.0,
+    -184.6,
+    137.25,
+    -43.0,
+    -183.6,
+    194.75
+   ]
+  },
+  {
+   "name": "robot_sign_right_numeral_4_white",
+   "vol_cm3": 1.035,
+   "bbox_mm": [
+    -27.0,
+    -184.6,
+    137.25,
+    7.0,
+    -183.6,
+    194.75
+   ]
+  },
+  {
+   "name": "robot_sign_right_numeral_9_white",
+   "vol_cm3": 1.182,
+   "bbox_mm": [
+    19.0,
+    -184.6,
+    137.25,
+    53.0,
+    -183.6,
+    194.75
+   ]
+  },
+  {
+   "name": "robot_sign_right_slide_rail_bottom",
+   "vol_cm3": 10.417,
+   "bbox_mm": [
+    -100.0,
+    -186.0,
+    106.0,
+    77.0,
+    -180.0,
+    130.0
+   ]
+  },
+  {
+   "name": "robot_sign_right_slide_rail_top",
+   "vol_cm3": 6.673,
+   "bbox_mm": [
+    -100.0,
+    -186.0,
+    202.0,
+    77.0,
+    -180.0,
+    213.0
+   ]
+  },
+  {
+   "name": "staged_pollen_1_queued",
+   "vol_cm3": 188.354,
+   "bbox_mm": [
+    -45.17,
+    -35.56,
+    92.25,
+    25.95,
+    35.56,
+    163.37
+   ]
+  },
+  {
+   "name": "staged_pollen_2_queued",
+   "vol_cm3": 188.354,
+   "bbox_mm": [
+    20.83,
+    -35.56,
+    64.24,
+    91.95,
+    35.56,
+    135.36
+   ]
+  },
+  {
+   "name": "staged_nectar_ball_92mm_approaching_mouth",
+   "vol_cm3": 407.056,
+   "bbox_mm": [
+    222.03,
+    -45.98,
+    0.0,
+    313.98,
+    45.98,
+    91.95
+   ]
+  }
+ ],
+ "cots": [
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_17hole_left:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_10hole_rear:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_5hole_tower_rear_left:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/tower_base_mount_rear_left:2",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_4hole_intake_upright_left:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_mecanum_96mm_front_left:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_mecanum_96mm_front_right:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_5203_motor_m1_drive:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_5203_motor_m2_drive:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_5203_motor_m3_drive:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_5203_motor_m4_drive:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/official_rev_control_hub_31_1595:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/official_rev_expansion_hub_31_1153:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/official_gobilda_pinpoint_v2:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/official_gobilda_4bar_odometry_pod:1",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_17hole_left:2",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_5hole_tower_rear_left:2",
+  "/robot_base_core:1/strafer_chassis_stage:1/tower_base_mount_rear_left:3",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_5hole_tower_rear_left:3",
+  "/robot_base_core:1/strafer_chassis_stage:1/tower_base_mount_rear_left:4",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_5hole_tower_rear_left:4",
+  "/robot_base_core:1/strafer_chassis_stage:1/tower_base_mount_rear_left:5",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_4hole_intake_upright_left:2",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_1120_10hole_rear:2",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_mecanum_96mm_front_right:2",
+  "/robot_base_core:1/strafer_chassis_stage:1/gobilda_mecanum_96mm_front_left:2",
+  "/robot_base_core:1/gatekeeper_intake_stage:1/gobilda_5203_motor_m7_intake:1",
+  "/robot_base_core:1/gatekeeper_intake_stage:1/servo_s1_g407_lip_gate:1",
+  "/robot_base_core:1/sprung_magazine_stage:1/gobilda_gecko_wheel_72mm_1:1",
+  "/robot_base_core:1/sprung_magazine_stage:1/gobilda_5203_motor_m8_magazine:1",
+  "/robot_base_core:1/sprung_magazine_stage:1/servo_s3_magazine_stopper:1",
+  "/robot_base_core:1/sprung_magazine_stage:1/gobilda_gecko_wheel_72mm_1:2",
+  "/turret_launcher_assembly:1/gobilda_5203_motor_m5_shooter_master:1",
+  "/turret_launcher_assembly:1/gobilda_5203_motor_m6_shooter_follower:1",
+  "/turret_launcher_assembly:1/gobilda_rhino_wheel_96mm:1",
+  "/turret_launcher_assembly:1/gobilda_counter_wheel_72mm_topspin:1",
+  "/turret_launcher_assembly:1/servo_s6_pitch_adjust:1",
+  "/rev_2m_distance_sensor_ball_count_1:1",
+  "/rev_2m_distance_sensor_ball_count_2:1",
+  "/rev_color_sensor_v3_throat:1",
+  "/rev_color_sensor_v3_lip:1",
+  "/gobilda_servo_power_injector_3125:1",
+  "/rev_main_power_switch_31_1387:1",
+  "/dfrobot_huskylens_sen0305:1",
+  "/gobilda_nested_battery_mount_1209:1",
+  "/gobilda_servo_rex_coupler_s3:1",
+  "/gobilda_servo_rex_coupler_s1:1",
+  "/gobilda_servo_rex_coupler_s6:1",
+  "/gobilda_1313_flywheel_hub_left:1",
+  "/gobilda_1313_flywheel_hub_right:1",
+  "/gobilda_flywheel_plate_left_a:1",
+  "/gobilda_flywheel_plate_left_b:1",
+  "/gobilda_flywheel_plate_right_a:1",
+  "/gobilda_flywheel_plate_right_b:1",
+  "/gobilda_12v_nimh_nested_battery_3100:1",
+  "/gobilda_2315_miter_gear_30t:1",
+  "/gobilda_2315_miter_gear_30t:2",
+  "/gobilda_2315_miter_gear_30t:3",
+  "/gobilda_2315_miter_gear_30t:4",
+  "/gobilda_2315_miter_gear_30t:5",
+  "/gobilda_2315_miter_gear_30t:6",
+  "/gobilda_2315_miter_gear_30t:7",
+  "/gobilda_2315_miter_gear_30t:8",
+  "/gobilda_1613_thrust_bearing_8mm:1",
+  "/gobilda_1613_thrust_bearing_8mm:2",
+  "/gobilda_1613_thrust_bearing_8mm:3",
+  "/gobilda_1613_thrust_bearing_8mm:4",
+  "/official_gobilda_4bar_odometry_pod:2",
+  "/gobilda_1120_10hole_rear:3"
+ ],
+ "pods": {
+  "/robot_base_core:1/strafer_chassis_stage:1/official_gobilda_4bar_odometry_pod:1": {
+   "wheel_center_xy_mm": [
+    -95.0,
+    111.5
+   ],
+   "wheel_bbox_mm": [
+    -125.7,
+    108.0,
+    -6.32,
+    -64.3,
+    115.0,
+    54.02
+   ]
+  },
+  "/official_gobilda_4bar_odometry_pod:2": {
+   "wheel_center_xy_mm": [
+    -147.7,
+    14.01
+   ],
+   "wheel_bbox_mm": [
+    -151.2,
+    -16.69,
+    -6.32,
+    -144.2,
+    44.71,
+    54.02
+   ]
+  }
+ }
+}

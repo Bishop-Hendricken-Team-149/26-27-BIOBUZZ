@@ -1,0 +1,56 @@
+{
+  "mass_kg": 12.39,
+  "mass_lb": 27.3,
+  "cg_mm": [
+    -10.3,
+    1.5,
+    128.1
+  ],
+  "by_class_kg": {
+    "cots_known": 5.5,
+    "cots_alu": 2.48,
+    "custom_pulley_alu": 1.75,
+    "custom_printed": 1.26,
+    "custom_silver": 0.82,
+    "cots_steel": 0.35,
+    "custom_bearing_steel": 0.09,
+    "custom_compliant_teal": 0.08,
+    "custom_belt_black": 0.03,
+    "custom_stop_alu": 0.02,
+    "custom_spring_steel": 0.0
+  },
+  "n_wheels": 4,
+  "wheel_contacts_mm": [
+    [
+      168.0,
+      200.0,
+      -2.9
+    ],
+    [
+      168.0,
+      -200.0,
+      -7.1
+    ],
+    [
+      -144.0,
+      200.0,
+      -7.1
+    ],
+    [
+      -144.0,
+      -200.0,
+      -2.9
+    ]
+  ],
+  "wheelbase_mm": 312.0,
+  "track_mm": 400.0,
+  "static_tip_angles_deg": {
+    "forward_deg": 54.3,
+    "backward_deg": 46.2,
+    "left_deg": 57.2,
+    "right_deg": 57.6
+  },
+  "accel_to_tip_g": 1.04,
+  "front_axle_load_fraction": 0.429,
+  "left_right_offset_mm": 1.5
+}

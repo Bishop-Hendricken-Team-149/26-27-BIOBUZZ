@@ -1,0 +1,670 @@
+{
+  "printed_holes": {
+    "drivetrain_rex_wheel_axle_front_left": 0,
+    "drive_motor_quad_block_mount_front_left": 8,
+    "drivetrain_rex_wheel_axle_front_right": 0,
+    "drive_motor_quad_block_mount_front_right": 8,
+    "drivetrain_rex_wheel_axle_rear_left": 0,
+    "drive_motor_quad_block_mount_rear_left": 8,
+    "drivetrain_rex_wheel_axle_rear_right": 0,
+    "drive_motor_quad_block_mount_rear_right": 8,
+    "floating_spoked_compliant_wheel_1": 0,
+    "floating_spoked_compliant_wheel_2": 0,
+    "floating_spoked_compliant_wheel_3": 0,
+    "floating_spoked_compliant_wheel_4": 0,
+    "floating_spoked_compliant_wheel_5": 0,
+    "floating_intake_swing_arm_left": 0,
+    "floating_intake_swing_arm_right": 0,
+    "magazine_j2_jackshaft_right": 0,
+    "gecko1_coaxial_swing_arm_on_m8": 1,
+    "gecko2_coaxial_swing_arm_left": 0,
+    "gecko2_coaxial_swing_arm_right": 0,
+    "indexer_stopper_gate_3prong_fingers": 0,
+    "unified_continuous_j_chute": 19,
+    "sprung_magazine_shroud_left": 9,
+    "sprung_magazine_shroud_right": 3,
+    "s3_indexer_servo_bracket": 8,
+    "magazine_outboard_double_shear_plate_right": 4,
+    "m7_intake_motor_clamp_saddle_left": 8,
+    "m8_magazine_motor_clamp_saddle_right": 4,
+    "shooter_coaxial_swing_arm_left": 1,
+    "shooter_coaxial_swing_arm_right": 1,
+    "variable_pitch_exit_hood_full": 0,
+    "turret_side_plate_foot_bracket_left": 6,
+    "turret_side_plate_left_clean": 3,
+    "turret_side_plate_foot_bracket_right": 6,
+    "turret_side_plate_right_clean": 4,
+    "turret_ds_standoff_tube_left_-46": 1,
+    "turret_ds_standoff_tube_left_50": 1,
+    "turret_outboard_double_shear_plate_left": 2,
+    "turret_ds_standoff_tube_right_-60": 1,
+    "turret_ds_standoff_tube_right_50": 1,
+    "turret_outboard_double_shear_plate_right": 7,
+    "turret_flywheel_motor_saddle_left_m5": 7,
+    "turret_flywheel_motor_saddle_right_m6": 7,
+    "turret_servo_cradle_s6_hood": 9,
+    "dfrobot_huskylens_mount_block": 9,
+    "cnc_turret_mounting_deck_plate_clean": 46,
+    "odom_pod_center_y_strafe_rear_cradle": 4,
+    "odom_pod_left_x_rail_cradle": 4,
+    "rev_control_hub_mount_plate_right": 4,
+    "rev_expansion_hub_mount_plate_left": 8,
+    "rev_main_power_switch_housing": 6,
+    "main_power_switch_impact_guard_cage": 3,
+    "g407_front_lip_blocker_gate": 0,
+    "asymmetrical_funnel_wing_left_long": 4,
+    "asymmetrical_funnel_wing_right_short": 4,
+    "g409_sloped_deck_shed_shield_left": 3,
+    "g409_sloped_deck_shed_shield_right": 3,
+    "s1_servo_guard_cage": 8
+  },
+  "devices": {
+    "gobilda_5203_motor_m1_drive:1": [
+      91.7,
+      156.1,
+      47.9,
+      21.6,
+      129.9,
+      21.8,
+      161.7,
+      182.2,
+      74.1
+    ],
+    "gobilda_5203_motor_m2_drive:1": [
+      -67.7,
+      155.9,
+      47.9,
+      -137.7,
+      129.8,
+      21.8,
+      2.4,
+      182.1,
+      74.1
+    ],
+    "gobilda_5203_motor_m3_drive:1": [
+      91.7,
+      -155.9,
+      47.9,
+      21.6,
+      -182.1,
+      21.8,
+      161.7,
+      -129.8,
+      74.1
+    ],
+    "gobilda_5203_motor_m4_drive:1": [
+      -67.7,
+      -156.1,
+      47.9,
+      -137.7,
+      -182.2,
+      21.8,
+      2.4,
+      -129.9,
+      74.1
+    ],
+    "official_rev_control_hub_31_1595:1": [
+      -47.5,
+      -114.2,
+      127.8,
+      -119.0,
+      -129.0,
+      76.3,
+      24.0,
+      -99.5,
+      179.3
+    ],
+    "official_rev_expansion_hub_31_1153:1": [
+      -47.5,
+      114.2,
+      127.8,
+      -119.0,
+      99.5,
+      76.3,
+      24.0,
+      129.0,
+      179.3
+    ],
+    "official_gobilda_pinpoint_v2:1": [
+      8.0,
+      -76.7,
+      84.2,
+      -12.0,
+      -98.0,
+      75.2,
+      28.0,
+      -55.5,
+      93.2
+    ],
+    "official_gobilda_4bar_odometry_pod:1": [
+      -109.0,
+      110.0,
+      23.9,
+      -153.7,
+      88.3,
+      -6.4,
+      -64.2,
+      131.7,
+      54.1
+    ],
+    "gobilda_5203_motor_m7_intake:1": [
+      103.5,
+      126.5,
+      120.7,
+      77.3,
+      56.4,
+      94.5,
+      129.6,
+      196.6,
+      146.9
+    ],
+    "servo_s1_g407_lip_gate:1": [
+      166.0,
+      202.9,
+      167.9,
+      138.8,
+      180.8,
+      157.8,
+      193.2,
+      225.1,
+      178.0
+    ],
+    "gobilda_5203_motor_m8_magazine:1": [
+      103.9,
+      -126.5,
+      120.9,
+      77.8,
+      -196.6,
+      94.8,
+      130.1,
+      -56.4,
+      147.1
+    ],
+    "servo_s3_magazine_stopper:1": [
+      -68.1,
+      77.3,
+      93.1,
+      -95.2,
+      55.1,
+      83.0,
+      -40.9,
+      99.4,
+      103.2
+    ],
+    "gobilda_5203_motor_m5_shooter_master:1": [
+      -23.5,
+      136.5,
+      266.4,
+      -49.7,
+      66.4,
+      240.2,
+      2.6,
+      206.6,
+      292.6
+    ],
+    "gobilda_5203_motor_m6_shooter_follower:1": [
+      -107.8,
+      -141.5,
+      264.8,
+      -133.9,
+      -211.6,
+      238.7,
+      -81.6,
+      -71.4,
+      291.0
+    ],
+    "servo_s6_pitch_adjust:1": [
+      -106.0,
+      -96.4,
+      382.1,
+      -133.2,
+      -118.5,
+      372.0,
+      -78.8,
+      -74.2,
+      392.2
+    ],
+    "rev_color_sensor_v3_throat:1": [
+      -9.6,
+      69.4,
+      127.1,
+      -17.1,
+      61.0,
+      106.4,
+      -2.1,
+      77.9,
+      147.9
+    ],
+    "rev_color_sensor_v3_lip:1": [
+      166.3,
+      69.4,
+      43.5,
+      145.5,
+      61.0,
+      36.0,
+      187.1,
+      77.9,
+      51.0
+    ],
+    "gobilda_servo_power_injector_3125:1": [
+      -10.1,
+      96.2,
+      206.2,
+      -30.5,
+      75.0,
+      196.5,
+      10.4,
+      117.5,
+      216.0
+    ],
+    "rev_main_power_switch_31_1387:1": [
+      -114.0,
+      146.0,
+      242.0,
+      -136.5,
+      130.2,
+      222.9,
+      -91.5,
+      161.8,
+      261.0
+    ],
+    "dfrobot_huskylens_sen0305:1": [
+      78.2,
+      -85.5,
+      345.7,
+      72.0,
+      -111.8,
+      321.9,
+      84.4,
+      -59.2,
+      369.5
+    ],
+    "gobilda_nested_battery_mount_1209:1": [
+      -192.0,
+      12.0,
+      82.0,
+      -216.0,
+      -52.0,
+      72.0,
+      -168.0,
+      76.0,
+      92.0
+    ],
+    "Outside Battery Mount v15:1": [
+      -192.0,
+      12.0,
+      82.0,
+      -216.0,
+      -52.0,
+      72.0,
+      -168.0,
+      76.0,
+      92.0
+    ],
+    "gobilda_12v_nimh_nested_battery_3100:1": [
+      -192.0,
+      62.8,
+      101.8,
+      -213.2,
+      -49.2,
+      80.0,
+      -170.8,
+      174.8,
+      123.6
+    ],
+    "official_gobilda_4bar_odometry_pod:2": [
+      -146.2,
+      0.0,
+      23.9,
+      -167.9,
+      -44.7,
+      -6.4,
+      -124.5,
+      44.8,
+      54.1
+    ],
+    "rev_main_power_switch_housing": [
+      -114.0,
+      146.0,
+      235.8,
+      -137.0,
+      129.5,
+      222.1,
+      -91.0,
+      162.5,
+      249.4
+    ],
+    "main_power_switch_impact_guard_cage": [
+      -114.0,
+      142.0,
+      243.0,
+      -146.0,
+      115.0,
+      222.0,
+      -82.0,
+      169.0,
+      264.0
+    ]
+  },
+  "clearance_hits": {
+    "official_rev_control_hub_31_1595_xmin": [
+      [
+        "Body1",
+        701.2
+      ]
+    ],
+    "official_rev_control_hub_31_1595_xmax": [],
+    "official_rev_control_hub_31_1595_ymin": [
+      [
+        "Body1",
+        9279.1
+      ],
+      [
+        "Body1",
+        27794.9
+      ],
+      [
+        "rev_control_hub_mount_plate_right",
+        33959.1
+      ]
+    ],
+    "official_rev_control_hub_31_1595_ymax": [
+      [
+        "Body1",
+        111.1
+      ],
+      [
+        "Body2",
+        1.9
+      ],
+      [
+        "Body3",
+        1.9
+      ],
+      [
+        "Body4",
+        1.9
+      ],
+      [
+        "Body5",
+        1.9
+      ],
+      [
+        "Body1",
+        61.6
+      ],
+      [
+        "Body2",
+        2.8
+      ],
+      [
+        "Body1",
+        39.5
+      ],
+      [
+        "Body1",
+        58.1
+      ],
+      [
+        "Body1",
+        2.0
+      ],
+      [
+        "Body1",
+        111.1
+      ],
+      [
+        "Body2",
+        1.9
+      ],
+      [
+        "Body3",
+        1.9
+      ],
+      [
+        "Body4",
+        1.9
+      ],
+      [
+        "Body5",
+        1.9
+      ],
+      [
+        "Body1",
+        111.1
+      ],
+      [
+        "Body2",
+        1.9
+      ],
+      [
+        "Body3",
+        1.9
+      ],
+      [
+        "Body4",
+        1.9
+      ],
+      [
+        "Body5",
+        1.9
+      ],
+      [
+        "Body1",
+        1394.6
+      ],
+      [
+        "Body1",
+        1132.0
+      ],
+      [
+        "Body1",
+        2213.6
+      ],
+      [
+        "Body1",
+        68.5
+      ],
+      [
+        "Body1",
+        61.8
+      ],
+      [
+        "Body1",
+        111.6
+      ],
+      [
+        "Body1",
+        61.8
+      ],
+      [
+        "magazine_b2_j2_pulley_32t",
+        1103.8
+      ],
+      [
+        "magazine_b2_htd3m_258mm_belt",
+        267.0
+      ],
+      [
+        "gecko2_coaxial_swing_arm_right",
+        278.2
+      ],
+      [
+        "gecko2_torsion_return_spring",
+        25.2
+      ],
+      [
+        "magazine_outboard_double_shear_plate_right",
+        234.3
+      ]
+    ],
+    "official_rev_control_hub_31_1595_top": [],
+    "official_rev_expansion_hub_31_1153_xmin": [
+      [
+        "Body1",
+        701.2
+      ]
+    ],
+    "official_rev_expansion_hub_31_1153_xmax": [],
+    "official_rev_expansion_hub_31_1153_ymin": [
+      [
+        "Body1",
+        2675.0
+      ],
+      [
+        "Body1",
+        15982.6
+      ],
+      [
+        "Body1",
+        5137.9
+      ],
+      [
+        "Body1",
+        65.8
+      ],
+      [
+        "Body1",
+        64.7
+      ],
+      [
+        "Body1",
+        64.7
+      ],
+      [
+        "Body1",
+        64.7
+      ],
+      [
+        "Body1",
+        64.7
+      ],
+      [
+        "Body1",
+        88.7
+      ],
+      [
+        "gecko2_coaxial_swing_arm_left",
+        278.2
+      ],
+      [
+        "Body1",
+        761.9
+      ],
+      [
+        "Body1",
+        47.6
+      ],
+      [
+        "Body1",
+        21.7
+      ]
+    ],
+    "official_rev_expansion_hub_31_1153_ymax": [
+      [
+        "Body1",
+        16735.3
+      ],
+      [
+        "Body1",
+        27794.9
+      ],
+      [
+        "rev_expansion_hub_mount_plate_left",
+        33741.9
+      ]
+    ],
+    "official_rev_expansion_hub_31_1153_top": [
+      [
+        "Body1",
+        844.4
+      ],
+      [
+        "Body1",
+        114.9
+      ],
+      [
+        "Body1",
+        114.9
+      ],
+      [
+        "Body1",
+        19.6
+      ],
+      [
+        "Body5",
+        2.8
+      ],
+      [
+        "Body1",
+        201.8
+      ],
+      [
+        "Body1",
+        2158.3
+      ],
+      [
+        "Body1",
+        38.9
+      ],
+      [
+        "Body1",
+        24.5
+      ],
+      [
+        "Body1",
+        24.5
+      ]
+    ]
+  },
+  "lowest_parts": [
+    [
+      5.0,
+      "unified_continuous_j_chute"
+    ],
+    [
+      6.0,
+      "asymmetrical_funnel_wing_left_long"
+    ],
+    [
+      6.0,
+      "asymmetrical_funnel_wing_right_short"
+    ],
+    [
+      9.0,
+      "odom_pod_center_y_strafe_rear_cradle"
+    ],
+    [
+      9.0,
+      "odom_pod_left_x_rail_cradle"
+    ],
+    [
+      21.8,
+      "Body1"
+    ],
+    [
+      21.8,
+      "Body1"
+    ],
+    [
+      21.8,
+      "Body1"
+    ],
+    [
+      21.8,
+      "Body1"
+    ],
+    [
+      21.91,
+      "Body1"
+    ],
+    [
+      21.91,
+      "Body1"
+    ],
+    [
+      21.91,
+      "Body1"
+    ]
+  ]
+}

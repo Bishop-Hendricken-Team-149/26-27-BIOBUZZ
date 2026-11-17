@@ -1,0 +1,264 @@
+{
+  "pivoting_on_bores": [
+    "floating_intake_swing_arm_left",
+    "floating_intake_swing_arm_right",
+    "floating_spoked_compliant_wheel_1",
+    "floating_spoked_compliant_wheel_2",
+    "floating_spoked_compliant_wheel_3",
+    "floating_spoked_compliant_wheel_4",
+    "floating_spoked_compliant_wheel_5",
+    "g407_front_lip_blocker_gate",
+    "gecko1_coaxial_swing_arm_on_m8",
+    "gecko2_coaxial_swing_arm_left",
+    "gecko2_coaxial_swing_arm_right",
+    "indexer_stopper_gate_3prong_fingers",
+    "shooter_coaxial_swing_arm_left",
+    "shooter_coaxial_swing_arm_right",
+    "variable_pitch_exit_hood_full"
+  ],
+  "bores_of_unfastened": {},
+  "checked": 63,
+  "unfastened": [],
+  "detail": {
+    "floating_spoked_compliant_wheel_1": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        3.98
+      ]
+    },
+    "floating_spoked_compliant_wheel_2": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        3.98
+      ]
+    },
+    "floating_spoked_compliant_wheel_3": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        3.98
+      ]
+    },
+    "floating_spoked_compliant_wheel_4": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        3.98
+      ]
+    },
+    "floating_spoked_compliant_wheel_5": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        3.98
+      ]
+    },
+    "floating_intake_swing_arm_left": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        7.0
+      ]
+    },
+    "floating_intake_swing_arm_right": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        7.0
+      ]
+    },
+    "gecko1_coaxial_swing_arm_on_m8": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        5.0,
+        7.0
+      ]
+    },
+    "gecko2_coaxial_swing_arm_left": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        7.0
+      ]
+    },
+    "gecko2_coaxial_swing_arm_right": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        7.0
+      ]
+    },
+    "indexer_stopper_gate_3prong_fingers": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        4.02,
+        5.5,
+        7.0
+      ]
+    },
+    "shooter_coaxial_swing_arm_left": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        5.0,
+        7.0
+      ]
+    },
+    "shooter_coaxial_swing_arm_right": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        5.0,
+        7.0
+      ]
+    },
+    "variable_pitch_exit_hood_full": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        4.02,
+        7.5
+      ]
+    },
+    "turret_ds_standoff_tube_left_-46": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        5.5
+      ]
+    },
+    "turret_ds_standoff_tube_left_50": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        5.5
+      ]
+    },
+    "turret_ds_standoff_tube_right_-60": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        5.5
+      ]
+    },
+    "turret_ds_standoff_tube_right_50": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        5.5
+      ]
+    },
+    "g407_front_lip_blocker_gate": {
+      "holes": 0,
+      "paths": 0,
+      "into": [],
+      "category": "moving",
+      "bores": [
+        4.0,
+        4.02,
+        7.0
+      ]
+    },
+    "g409_sloped_deck_shed_shield_right": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": []
+    },
+    "sign_rail_bolt_spacer_left_-28_112": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        4.0
+      ]
+    },
+    "sign_rail_bolt_spacer_left_-28_208": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        4.0
+      ]
+    },
+    "sign_rail_bolt_spacer_left_4_112": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        4.0
+      ]
+    },
+    "sign_rail_bolt_spacer_left_4_208": {
+      "holes": 1,
+      "paths": 1,
+      "into": [
+        "HIVE_QUEEN_v12_Remediation:1"
+      ],
+      "category": "check",
+      "bores": [
+        4.0
+      ]
+    }
+  }
+}

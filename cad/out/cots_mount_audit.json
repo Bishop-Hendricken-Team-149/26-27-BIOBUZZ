@@ -1,0 +1,131 @@
+{
+  "base_core:1+strafer_chassis_stage:1+official_rev_control_hub_31_1595:1": {
+    "holes": 47,
+    "screw_paths": 4,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "se_core:1+strafer_chassis_stage:1+official_rev_expansion_hub_31_1153:1": {
+    "holes": 43,
+    "screw_paths": 4,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "bot_base_core:1+strafer_chassis_stage:1+official_gobilda_pinpoint_v2:1": {
+    "holes": 39,
+    "screw_paths": 6,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "robot_base_core:1+gatekeeper_intake_stage:1+servo_s1_g407_lip_gate:1": {
+    "holes": 18,
+    "screw_paths": 8,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "robot_base_core:1+sprung_magazine_stage:1+servo_s3_magazine_stopper:1": {
+    "holes": 18,
+    "screw_paths": 5,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1",
+      "official_rev_expansion_hub_31_1153:1"
+    ]
+  },
+  "turret_launcher_assembly:1+servo_s6_pitch_adjust:1": {
+    "holes": 18,
+    "screw_paths": 4,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "g407_lip_gate_assembly:1+rev_color_sensor_v3_pcb_left:1": {
+    "holes": 0,
+    "screw_paths": 0,
+    "into": []
+  },
+  "g407_lip_gate_assembly:1+rev_color_sensor_v3_optical_lens_left:1": {
+    "holes": 0,
+    "screw_paths": 0,
+    "into": []
+  },
+  "g407_lip_gate_assembly:1+rev_color_sensor_v3_jst_port_left:1": {
+    "holes": 0,
+    "screw_paths": 0,
+    "into": []
+  },
+  "g407_lip_gate_assembly:1+rev_color_sensor_v3_pcb_left:2": {
+    "holes": 0,
+    "screw_paths": 0,
+    "into": []
+  },
+  "g407_lip_gate_assembly:1+rev_color_sensor_v3_optical_lens_left:2": {
+    "holes": 0,
+    "screw_paths": 0,
+    "into": []
+  },
+  "g407_lip_gate_assembly:1+rev_color_sensor_v3_jst_port_left:2": {
+    "holes": 0,
+    "screw_paths": 0,
+    "into": []
+  },
+  "rev_2m_distance_sensor_ball_count_1:1": {
+    "holes": 2,
+    "screw_paths": 2,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "rev_2m_distance_sensor_ball_count_2:1": {
+    "holes": 2,
+    "screw_paths": 2,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "rev_color_sensor_v3_throat:1": {
+    "holes": 3,
+    "screw_paths": 2,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "rev_color_sensor_v3_lip:1": {
+    "holes": 3,
+    "screw_paths": 2,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "gobilda_servo_power_injector_3125:1": {
+    "holes": 33,
+    "screw_paths": 4,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "rev_main_power_switch_31_1387:1": {
+    "holes": 3,
+    "screw_paths": 3,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "dfrobot_huskylens_sen0305:1": {
+    "holes": 6,
+    "screw_paths": 2,
+    "into": [
+      "HIVE_QUEEN_v12_Remediation:1"
+    ]
+  },
+  "gobilda_nested_battery_mount_1209:1": {
+    "holes": 18,
+    "screw_paths": 12,
+    "into": [
+      "gobilda_1120_10hole_rear:1"
+    ]
+  }
+}

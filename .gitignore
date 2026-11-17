@@ -79,3 +79,18 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+# ---- HIVE-QUEEN CAD workspace (Team 149) ----
+# cad/out holds the BOM, gate report and renders: re-include it (the FTC rule above ignores every out/)
+!cad/out/
+# scratch, probes and the archived v11 deliverables
+cad/tmp/
+cad/_archive_v11/
+# full-robot STEP/GLB exports exceed or approach GitHub's 100 MB limit; the master model lives in
+# Fusion 360 (BHHS FTC 149 / Default Project / FTC 26-27 / HIVE QUEEN v111426m) and re-exports with cad/export_v12.py
+cad/STEP/*.step
+cad/out/*.step
+cad/GLB/*.glb
+# third-party vendor STEP/ZIP files (~390 MB): re-download them, see cad/vendor/README.md
+cad/vendor/*
+!cad/vendor/README.md
+__pycache__/

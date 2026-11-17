@@ -1,0 +1,204 @@
+{
+  "params": {
+    "GROOVE_CLEARANCE": 0.12,
+    "BORE_CLEARANCE": 0.15,
+    "REX_FLAT_R": 3.5,
+    "REX_CORNER_R": 4.0,
+    "SCREW_COUNT": 2,
+    "SCREW_ANGLES": [
+      0.0,
+      180.0
+    ],
+    "SET_SCREW_PILOT_D": 2.5,
+    "SET_SCREW_CLEAR_D": 3.2,
+    "USE_CAPTIVE_NUT": true,
+    "NUT_AF": 5.7,
+    "NUT_THK": 2.6,
+    "NUT_INNER_R": 5.4,
+    "CIRCLE_SEGS": 720,
+    "PLATE": 256.0
+  },
+  "pulleys": [
+    {
+      "file_3mf": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\3MF\\v12\\pulleys\\htd3m_32t_6mm_rex8.3mf",
+      "file_stl": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\STL\\v12\\pulleys\\htd3m_32t_6mm_rex8.stl",
+      "watertight": true,
+      "stl_watertight": true,
+      "bodies": 1,
+      "volume_mm3": 4955.6,
+      "mass_g_petgcf_1.30": 6.4,
+      "bbox_mm": [
+        32.796,
+        32.796,
+        8.5
+      ],
+      "tooth_count_slice_z": 6.26,
+      "tooth_count": 32,
+      "od_measured": 29.796,
+      "root_d_measured": 26.892,
+      "flange_od_measured": 32.796,
+      "bore_af_measured": 7.3,
+      "bore_corner_d_measured": 8.3,
+      "width_measured": 8.5,
+      "fits_256_plate": true,
+      "qty_fit_one_plate": true,
+      "nominal": {
+        "pd": 30.558,
+        "od": 29.796,
+        "flange_d": 32.796,
+        "root_d": 26.891,
+        "bore_af": 7.3,
+        "bore_corner_d": 8.3,
+        "width": 8.5
+      },
+      "midwidth_slice_regions": 2,
+      "name": "htd3m_32t_6mm_rex8",
+      "qty": 2,
+      "teeth": 32,
+      "profile": "3M",
+      "belt_width": 6.0,
+      "replaces": [
+        "magazine_b2_m8_pulley_32t",
+        "magazine_b2_j2_pulley_32t"
+      ],
+      "PASS": true
+    },
+    {
+      "file_3mf": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\3MF\\v12\\pulleys\\htd3m_33t_6mm_rex8.3mf",
+      "file_stl": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\STL\\v12\\pulleys\\htd3m_33t_6mm_rex8.stl",
+      "watertight": true,
+      "stl_watertight": true,
+      "bodies": 1,
+      "volume_mm3": 5325.5,
+      "mass_g_petgcf_1.30": 6.9,
+      "bbox_mm": [
+        33.751,
+        33.751,
+        8.5
+      ],
+      "tooth_count_slice_z": 6.26,
+      "tooth_count": 33,
+      "od_measured": 30.751,
+      "root_d_measured": 27.849,
+      "flange_od_measured": 33.751,
+      "bore_af_measured": 7.3,
+      "bore_corner_d_measured": 8.3,
+      "width_measured": 8.5,
+      "fits_256_plate": true,
+      "qty_fit_one_plate": true,
+      "nominal": {
+        "pd": 31.513,
+        "od": 30.751,
+        "flange_d": 33.751,
+        "root_d": 27.849,
+        "bore_af": 7.3,
+        "bore_corner_d": 8.3,
+        "width": 8.5
+      },
+      "midwidth_slice_regions": 2,
+      "name": "htd3m_33t_6mm_rex8",
+      "qty": 4,
+      "teeth": 33,
+      "profile": "3M",
+      "belt_width": 6.0,
+      "replaces": [
+        "magazine_b1_m8_pulley_33t",
+        "magazine_b1_gecko1_pulley_33t",
+        "magazine_b3_j2_pulley_33t",
+        "magazine_b3_gecko2_pulley_33t"
+      ],
+      "PASS": true
+    },
+    {
+      "file_3mf": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\3MF\\v12\\pulleys\\htd5m_20t_9mm_rex8.3mf",
+      "file_stl": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\STL\\v12\\pulleys\\htd5m_20t_9mm_rex8.stl",
+      "watertight": true,
+      "stl_watertight": true,
+      "bodies": 1,
+      "volume_mm3": 7095.6,
+      "mass_g_petgcf_1.30": 9.2,
+      "bbox_mm": [
+        35.088,
+        35.088,
+        12.0
+      ],
+      "tooth_count_slice_z": 9.0,
+      "tooth_count": 20,
+      "od_measured": 30.688,
+      "root_d_measured": 25.818,
+      "flange_od_measured": 35.088,
+      "bore_af_measured": 7.3,
+      "bore_corner_d_measured": 8.3,
+      "width_measured": 12.0,
+      "fits_256_plate": true,
+      "qty_fit_one_plate": true,
+      "nominal": {
+        "pd": 31.831,
+        "od": 30.688,
+        "flange_d": 35.088,
+        "root_d": 25.816,
+        "bore_af": 7.3,
+        "bore_corner_d": 8.3,
+        "width": 12.0
+      },
+      "midwidth_slice_regions": 2,
+      "name": "htd5m_20t_9mm_rex8",
+      "qty": 6,
+      "teeth": 20,
+      "profile": "5M",
+      "belt_width": 9.0,
+      "replaces": [
+        "intake_stage1_m7_pulley_20t",
+        "intake_stage1_pivot_pulley_20t",
+        "intake_stage2_pivot_pulley_20t",
+        "intake_stage2_floating_pulley_20t",
+        "shooter_left_m5_pulley_20t",
+        "shooter_left_front_wheel_pulley_20t"
+      ],
+      "PASS": true
+    },
+    {
+      "file_3mf": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\3MF\\v12\\pulleys\\htd5m_32t_9mm_rex8.3mf",
+      "file_stl": "C:\\Users\\danu0\\Downloads\\26-27-BIOBUZZ\\cad\\STL\\v12\\pulleys\\htd5m_32t_9mm_rex8.stl",
+      "watertight": true,
+      "stl_watertight": true,
+      "bodies": 1,
+      "volume_mm3": 20935.6,
+      "mass_g_petgcf_1.30": 27.2,
+      "bbox_mm": [
+        54.187,
+        54.187,
+        12.0
+      ],
+      "tooth_count_slice_z": 9.0,
+      "tooth_count": 32,
+      "od_measured": 49.787,
+      "root_d_measured": 45.006,
+      "flange_od_measured": 54.187,
+      "bore_af_measured": 7.3,
+      "bore_corner_d_measured": 8.3,
+      "width_measured": 12.0,
+      "fits_256_plate": true,
+      "qty_fit_one_plate": true,
+      "nominal": {
+        "pd": 50.93,
+        "od": 49.787,
+        "flange_d": 54.187,
+        "root_d": 45.005,
+        "bore_af": 7.3,
+        "bore_corner_d": 8.3,
+        "width": 12.0
+      },
+      "midwidth_slice_regions": 2,
+      "name": "htd5m_32t_9mm_rex8",
+      "qty": 1,
+      "teeth": 32,
+      "profile": "5M",
+      "belt_width": 9.0,
+      "replaces": [
+        "shooter_right_m6_pulley_32t"
+      ],
+      "PASS": true
+    }
+  ]
+}
